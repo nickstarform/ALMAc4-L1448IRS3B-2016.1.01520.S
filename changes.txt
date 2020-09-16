@@ -1,0 +1,147 @@
+Restructured the discussion slightly and added a new minisection to add statistics of other surveys with similar protostellar hierarchies.
+In the mass accretion discussion section, I added a section to discuss the maximal disk transport rate as compared to the accretion rates derived from the bolometric luminosity.
+Added a new subsection in the discussion to address the outflows even though their analysis is left out of the paper.
+
+
+fix up the section that refers to dynamical times and that irs3b-ab could have formed pror
+added a new image to show the spectra of irs3b-c
+
+#####################################################################################################################################
+# reviewer comments
+Title and Abstract.
+
+> In the Abstract, please add uncertainties to the fitted values for the stellar masses obtained from Keplerian rotation to give the reader an idea of the precision when weighing these protostars.
+
+> The title of the paper only refers to IRS3B but, as I understand, part of the novelty of this work is in presenting the resolved structure and kinematics of IRS3A. Perhaps the authors can find a way to reflect this in the title?
+
+
+Section 1.
+
+> The third paragraph in the introduction (Sect 1) seems unbalanced, in that it starts describing observational multiplicity studies but then loses focus by describing current theories of star formation. Splitting the paragraph into two; a paragraph elaborating on observational studies, and a standalone second paragraph condensing the description of current theories, would improve readability.
+
+> End of the fifth paragraph. It is not clear for which of the two disks (IRS 3A or 3B) did Tobin et al. (2016b) find evidence of Keplerian rotation (this becomes obvious later in the text but it could be made clearer here).
+
+
+
+
+(A) It is not easy to realize what is new in the paper and what is already known from Tobin et al. (2016). This starts becoming clearer much later in the text. Since both papers show ALMA observations --Tobin et al. (2016) reports band 6 (1.3 mm) data (and VLA data) and this new paper presents band 7 (0.8mm) observations--, it would go a long way toward improving readability, and the impact of this new work, if the authors make explicit what's new in this work. Perhaps this can be done in the last paragraph of the introduction.
+
+
+
+Section 2.
+
+> The authors do a great job at describing the data processing. I appreciate the detailed description of the self-calibration process. For the sake of reproducibility, the authors should also list the imaging parameters which produced the model used for selfcal. Reporting the improvement levels (e.g. how the noise and the signal-to-noise ratio change before and after self cal) would also be required.
+
+
+
+Section 3.1
+
+> A parenthesis is missing somewhere at the end of the first paragraph.
+
+> In the first paragraph of 3.1.1, the word "resolve" is repeated far too many times. I suggest rewording some of the sentences so the repetition doesn't stand out so much.
+
+> In 3.1.2, please report the uncertainties in the deconvolved sizes in arc-seconds as well as in au. Same for the reported sizes in 3.1.4.
+
+> In 3.1.4, is there an idea of the uncertainty in the inclination angle from the Gaussian fits applied to IRS 3A?
+
+
+
+Section 3.2
+
+> Given that the temperatures mentioned here are only used as a ballpark value to represent the dust in the entire disk, it does not seem to make sense to quote numbers with fractions of a Kelvin (e.g. why 40.1K instead of just 40K?).
+
+> The second paragraph concentrates a large amount of information together. It would be easier for the readers if the results (i.e. disk masses) are reported in a separate paragraph.
+
+> The Rayleigh-Jeans approximation does not seem appropriate for these temperatures and frequencies. How different are the temperatures if the full Planck function is used to convert peak brightness into T_B?
+
+> A comma is missing in the Section's footnote.
+
+
+(B) The last sentence of the section addresses that there is probably mass that is missed since the disks are likely optically thick while equation 1 assumes optical thinness. The authors should mention and discuss other physical aspects that are also neglected when using equation 1 and which might affect the determination of the disk masses. In the last couple of years, the effect of scattering has been put forward as a way to explain missing mass in observations of disks. Scattering removes emission from the light ray making your disk look lighter than it actually is. This is very relevant given the importance of the mass determination to assess the gravitational stability of these disks. I suggest mentioning scattering and whether it could be an important factor here, and discuss it in more detail in Section 6/Discussion.
+
+Some of the works that should be cited and discussed with respect to mass determination are:
+https://ui.adsabs.harvard.edu/abs/2019ApJ...877L..18Z/abstract
+https://ui.adsabs.harvard.edu/abs/2020ApJ...892..136S/abstract
+
+
+Section 3.3
+
+> It is mentioned that there is "a strong emission deficit" in C17O towards IRS 3B-c but in some other parts of the text this is dubbed as "absorption". Are these two terms referring to the same feature?
+
+> The C17O kinematics shows a remarkably Keplerian profile. The way the authors present the data is good and clear, but I can help to wonder if the calculation of a moment 1 map would make their point even more striking (e.g. using the open source tool "bettermoments" by R. Teague, although the authors probably have their own tools). I would do this at least for IRS 3B's C17O emission.
+
+
+Section 4.
+
+> There is a ".." typo in the first paragraph.
+
+> Somewhere in 4.2 the authors should mention or comment on the degeneracy between the mass determination and the inclination angle of the Keplerian disk. Do the protostar masses they report correspond to M*sin(i) or just M? If the latter, do the error bars include the propagation of the uncertainty in the inclination angle?
+
+> When the authors say "high velocity" emission for the disk center determination, which velocities are they referring to? Since the system shows notorious outflows, the authors could comment on how the presence of a fast outflow, or jets, could be contaminating the high velocity channels (and/or explain why this would not be expected).
+
+
+> In the second paragraph, do the extracted PV diagram points correspond to emission higher or lower than 10 sigma? (The usage of the "less than" symbols is confusing).
+
+> In the 3rd paragraph: do the reported error bars in the mass determination correspond to 1 sigma or 3 sigma errors? It is important to clarify this throughout the text for other reported quantities with uncertainties.
+
+> Typo: missing parenthesis in the Keplerian rotation curve equation.
+
+
+Section 5.
+
+> The pdspy modelling is well described and it is great that it is consistent with the analysis presented previously in the paper. However, I would suggest that the authors remove general sentences describing the MCMC technique as it is not within the scope of the paper to describe what MCMC's are for. For example, an MCMC does not provide a "best fit model" but it is just a tool to sample the posterior distributions of the parameters in a given model.
+
+> In 5.1, was the full velocity range used in the pdspy modelling? Were the visibilities averaged in any way to speed up the fitting? It would be very informative for the community if the authors could share which part of the MCMC+RT modeling process dominates the CPU processing times.
+
+
+Section 6.
+
+
+(C) The authors brilliantly show that, although experiencing gravitational instability, the IRS 3B disk is remarkably "Keplerian", plus that it contains an embedded companion source/clump 'c'. There exist several recent works in the literature which report and try to describe the kinematics expected from a companion embedded in a disk in Keplerian rotation. The medium velocity C17O map (Fig. 4) shows that the red emission twists toward IRS 3B-c in a similar way to the reported kinks or kinematic deviations which reveal the presence of sub-stellar companions. Localized kinematic deviations have been discovered in a couple of disks by Pinte et al (although for giant companions of a few Jupiter masses rather than a small protostar):
+https://ui.adsabs.harvard.edu/abs/2018ApJ...860L..13P/abstract
+https://ui.adsabs.harvard.edu/abs/2019NatAs...3.1109P/abstract
+
+These kinematic deviations had been predicted by Perez et al.
+https://ui.adsabs.harvard.edu/abs/2015ApJ...811L...5P/abstract
+https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L..12P/abstract
+
+The predicted and observed deviations in the iso-velocity contours are qualitatively similar to what IRS 3B-c does to the global Keplerian kinematics of IRS 3B's disk. Possibly finer spectral resolutions could even trace miniature rotation/accretion kinematics around 3B-c. A 0.2 Msun clump/protostar should leave an imprint in the disk kinematics, and given that the paper is about "kinematics of a gravitationally unstable disk", these deviations should be presented and described in more detail, and perhaps contrasted/compared with what has been done in kinematics of embedded companions.
+
+
+> About determining the stability of the disks. The authors mentioned in Sect. 3 that varying the dust opacities could change the estimated masses by a factor of 2. This poses a problem since the Toomre Q parameter, with a minimum value of ~0.5, would also change by the same factor, making the disk only marginally unstable. I think the authors could make a stronger case as for why the reported disk masses could be even higher than what is reported here (see my point B).
+
+
+> A brief discussion of the complicated evolutionary pathway in the context of episodic accretion would be of interest. Perhaps there is value in speculating that these structures (not only the clump but also the spirals) could trigger a high accretion event in the future, as in FUor objets. Section 6.3 touches this topic focusing on the IRS-3c clump's energy but only references one of the many works on episodic accretion. Also, there are several new ALMA observations of FUor disks at comparable resolutions but they do not seem to find evidence for gravitational instabilities. Could IRS 3B be a potential FUor source in the future? The excellent work the authors have done designing these observations and presenting them in this paper really yields a good opportunity to speculate about these possible connections.
+
+
+Section 7.
+
+
+> First paragraph, it would be useful to say, for instance, what's the improvement in resolution and sensitivity compared to the previous observations.
+
+> The second result should say something about the uncertainties in the mass determination. I thought the authors mentioned that the disk mass could be considered a lower limit given the optical thickness of the emission but they use the "less than" symbol here. To be honest, the usage of the "less than" symbol is puzzling in other parts of the text as well.
+
+> The fourth point says that IRS3B-c is 0.2 Msun and that this is consistent with lack of disturbance in the disk. Surely a 0.2 Msun star must have a strong kinematic effect (see main point C). Fig.4 actually shows that the kinematics is asymmetric with iso-velocity contours leaning towards IRS3B-c.
+
+> The last paragraph is somewhat contradictory with result #6 which states that IRS 3B is gravitationally unstable while 3A is gravitationally stable, but both disks show prominent spirals. Then the last paragraph says that the spiral structure in 3B is due to self-gravity of a massive disk. What about the spirals in 3A?
+#####################################################################################################################################
+
+# Now after 1st sub
+ReviewerComments:
+> Title Abstract....done
+> Section 1...done
+> section 2...done
+> section 3...done
+> section 4...done
+> section 5...wip
+> section 6...wip
+> section 7...done
+Misc Things:
+> moved optimal mol lines down to appendix
+> moved discussion of obs to appendix, left tables
+> moved discussion of models to appendix
+> moved comparison to other surveys to appendix
+> moved mass accretion to appendix
+> cut extreneous explanation of PV diagrams
+
+

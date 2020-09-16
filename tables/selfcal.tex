@@ -1,0 +1,20 @@
+\movetabledown=2in
+\begin{deluxetable}{lcrrcc}
+\rotate
+\tablewidth{0pt}
+%\rotate
+\tabletypesize{\scriptsize}
+\tablecaption{Self-Calibration}
+\tablehead{
+ \colhead{Step} & \colhead{RMS} & \colhead{IRS3B S/N} & \colhead{IRS3A S/N} & \colhead{Iterations} & \colhead{Solution Integration} \\%& M$_{accreted}$\   \\
+                  & \colhead{(mJy~beam$^{-1}$)}   & \colhead{} & \colhead{} & \colhead{}& \colhead{(s)} \\%& \colhead{M$_{\odot}$} \\
+}
+\startdata
+No-selfcal.  & 6.5 | 74  & 82   | 43  & 26  | 13  & 100  | 100 & \\
+phase-cal. 1 & 4.2 | 25  & 140  | 140 & 48  | 40  & 100  | 110 & ``inf'' \\
+phase-cal. 2 & 1.7 | 11  & 310  | 330 & 120 | 100 & 300  | 500 & 30.25 \\
+phase-cal. 3 & 1.3 | 5.8 & 540  | 620 & 200 | 190 & 3000 | 1500& 12.1 \\
+ampl.-cal.   & 0.7 | 4.3 & 1000 | 840 & 390 | 260 & 2500 | 2500 & ``inf''\\
+\enddata
+\tablecomments{Summary of the parameters required to reproduced the gain and amplitude self-calibrations. The configurations are delineated as C40-6 | C40-3, respectively in the table. ``inf'' indicates the entire scan length, dictated by the time on a single pointing, which is typically 6.05 seconds.}
+\end{deluxetable}\label{table:selfcal}

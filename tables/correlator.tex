@@ -1,0 +1,30 @@
+\begin{deluxetable}{cccccccc}
+\tablewidth{0pt}
+%\rotate
+\tabletypesize{\scriptsize}
+\tablecaption{Continuum and Spectral Line Data}
+\tablehead{
+  \colhead{} & \colhead{MFS Continuum\tablenotemark{a}} & \colhead{\co} & \colhead{\sio\tablenotemark{b}} & \colhead{\htcn/\sot\tablenotemark{c}} & \colhead{\htcop} & \colhead{\cso}  & \colhead{335.5GHz Continuum} \\
+}
+\startdata
+% Spectral Window     & -         & 0          & 1             & 2           & 3          & 4           & 5           \\
+ Rest. Freq. (GHz)   & 341.0     & 346.0             & 347.000030579  & 345.339756     & 346.998347     & 337.061104      & 335.5       \\
+ Center Freq. (GHz)  & 341.0     & 346.778059        & 347.2698586    & 345.3520738    & 347.010582     & 337.0730133     & 335.4708304 \\
+ Chan. Width (km/s)  & 2747.96   & 0.212             & \replaced{0.053}{0.210}          & 0.053          & 0.053          & 0.054           & 0.873       \\
+ Num. Chan.          & 1         & 1920              & 1920           & 1920           & 1920           & 3840            & 1920        \\
+ RMS/chan. (mJy)     & 0.069     & 4.0               & 0.5            & 4.5            & 4.5            & 3.7             & -           \\
+ Integr. (Jy) IRS3B\tablenotemark{d}  & 1.5       & 512.7,809.8\tablenotemark{e} & 7.8, 3.5\tablenotemark{e} & 0.2, 0.1\tablenotemark{e} & 2.6, 4.1\tablenotemark{e}& 2.9, 3.2\tablenotemark{e} & -           \\
+ Integr. (Jy) IRS3A\tablenotemark{d}  & 0.2       & 3.16,67.6\tablenotemark{e}   & 0,0 \tablenotemark{e}     & 2.3, 2.7\tablenotemark{e} & 0.2, 0.4\tablenotemark{e} & 0.1, 0.1\tablenotemark{e} & -           \\
+ Synth. Beam\tablenotemark{f}         & \contbeam & \cobeam           & \siobeam       & \htcnbeam      & 0\farcs21$\times$0\farcs13     & \csobeam        & \tttfbeam   \\
+ Briggs Robust       & 0.5       & 0.5               & 0.5            & 0.5            & 0.5            & 0.5             & -           \\
+ Taper (k$\lambda$)  & -         & -                 & -              & 1000           & 1500            & 1500            & -           \\
+\enddata 
+\tablecomments{The setup of the correlator for the observations}
+\tablenotetext{a}{Multi-Frequency Synthesis (MFS) utilizing the extracted emission from line free spectral channels}
+\tablenotetext{b}{\sio\space was tuned incorrectly for the C40-6 observations.}
+\tablenotetext{c}{The \htcn\space line is blended with the \sot\space line (345.3385377~GHz) and have a velocity separation of \ab1.06~km~s$^{-1}$.}
+\tablenotetext{d}{The integrated flux density for the source, measured by integrated the full emission whose origin is the source. In the case of continuum emission, this is given in \textit{Jy}; in the case of molecular line emission this is given in \textit{Jy~km~s$^{-1}$}.}
+\tablenotetext{e}{The molecular line emission is given as the total integrated flux (Jy~km~s$^{-1}$) for the blue and red-Doppler shifted emission, denote blue, red, respectively.}
+\tablenotetext{f}{The synthesized beam size is provided from the \textit{clean} task for the molecular lines (or continuum for the MFS column) using the briggs robust weighing parameter of 0.5 during image reconstruction.}
+\end{deluxetable}\label{table:obssummary2}
+% The combined observations achieved 0.069~mJy~beam$^{-1}$ (beam: \contbeam) continuum sensitivity, 4~mJy~beam$^{-1}$~channel$^{-1}$~(width: 0.423~km~s$^{-1}$, beam: \cobeam) for \co, 3.7~mJy~beam$^{-1}$~channel$^{-1}$~(width: 0.109~km~s$^{-1}$, beam: \csobeam) for \cso, 4.5~mJy~beam$^{-1}$~channel$^{-1}$~(width: 0.106~km~s$^{-1}$, beam: \htcnbeam) for \htcn/\sot, 4.5~mJy~beam$^{-1}$~channel$^{-1}$~(width: 0.105~km~s$^{-1}$, beam: \htcopbeam) for \htcop, and 0.5~mJy~beam$^{-1}$~channel$^{-1}$~(width: 0.422~km~s$^{-1}$, beam: \siobeam) for \sio.

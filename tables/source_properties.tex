@@ -1,0 +1,23 @@
+\movetabledown=2in
+\begin{splitdeluxetable}{cccccccBccccccccc}
+\rotate
+\tablewidth{0pt}
+%\rotate
+\tabletypesize{\scriptsize}
+\tablecaption{Source Properties}
+\tablehead{
+ \colhead{Source} & \colhead{RA}      & \colhead{Dec}     & \colhead{Inc.\tablenotemark{a}} & \colhead{P.A.\tablenotemark{b}}  & \colhead{Outflow?} & \colhead{V$_{sys}$}      & \colhead{L$_{bol}$}  & \colhead{M$_{dust}$}  & \colhead{FWHM$_{Dust}$\tablenotemark{c} Major Axis} & \colhead{FWHM$_{Dust}$\tablenotemark{c} Minor Axis} & \colhead{FWHM$_{Gas}$\tablenotemark{c} Major Axis} & \colhead{FWHM$_{Gas}$\tablenotemark{c} Minor Axis}  & \colhead{$<$T$_{0}>$} & \colhead{$<$Optical Depth$>$} \\
+                  & \colhead{(J2000)} & \colhead{(J2000)} & \colhead{(\deg)}                & \colhead{(\deg)}                 &                    & \colhead{(km~s$^{-1}$)}  & \colhead{(\lsun)}    & \colhead{(\solm)}                             & \colhead{(\arcsec, au)}                 & \colhead{(\arcsec, au)} & \colhead{(\arcsec, au)}                 & \colhead{(\arcsec, au)}   & \colhead{(K)} & & \\
+}
+\startdata
+ IRS3B-ab & 03:25:36.317 & 30:45:15.005 & 45 & 28  & Joint & 4.75 & 13.0\tablenotemark{e}  & 0.29 & 1.73$\pm$0.05, 498$\pm$14 & 1.22$\pm$0.04, 351$\pm$12 & 2.38$\pm$0.09, 685$\pm$26 & 2.25$\pm$0.08, 648$\pm$23 & 40 & 0.34 \\
+ IRS3B-c  & 03:25:36.382 & 30:45:14.715 & 27 & 21  & Yes   & 4.75 & -\tablenotemark{d}     & 0.07 & 0.28$\pm$0.05, 81$\pm$14  & 0.25$\pm$0.04, 72$\pm$12  & -                         & -                         & 55 & 2.14 \\
+ IRS3A    & 03:25:36.502 & 30:45:21.859 & 69 & 133 & No    & 5.2  & 14.4\tablenotemark{e}  & 0.04 & 0.70$\pm$0.02, 202$\pm$6  & 0.25$\pm$0.01, 72$\pm$3   & 0.52$\pm$0.08, 150$\pm$23 & 0.42$\pm$0.07, 121$\pm$20 & 51 & 0.57 \\
+\enddata
+\tablecomments{Summary of the empirical parameters based from the observations of the system. The sizes were derived from a 2-D Gaussian fit to the continuum and moment 0 emission maps, directly to the visibilities. IRS3B-c is blended with the underlying disk continuum and estimates here are extracted from a 2-D gaussian fit with a zero-level offset to preserve the underlying disk flux and is discussed in Appendix~\ref{sec:tertsub}.}
+\tablenotetext{a}{Inclination is defined such that 0\deg\space is a face-on disk.}
+\tablenotetext{b}{Position angle is defined such that at 0\deg, the major axis of the disk is aligned North and the angle corresponds to East-of-North.}
+\tablenotetext{c}{The circumstellar disks surround IRS3B and IRS3A are ellipsoidal in the dust continuum and molecular line emission.}
+\tablenotetext{d}{The bolometric luminosity is not known at this time.}
+\tablenotetext{e}{The bolometric luminosity is scaled to a distance of 288~pc\space from \citet{2016ApJ...818...73T}.}
+\end{splitdeluxetable}\label{table:obssummary3}

@@ -1,0 +1,223 @@
+# cut text 
+
+
+
+
+
+
+
+
+
+
+
+\begin{leftbox}
+The Affine Invariant MCMC algorithm (\textit{emcee}) utilizes Bayesian statistics at its core which provides a way to marginalize over nuisance parameters (e.g., variance of the priors), map out the posterior for the model, and provide inferences on the parameters of interest. MCMC itself, provides a way to sample a large, degenerate sample of parameter space and move towards regions of higher likelihoods and samples the posterior distributions.
+\end{leftbox}
+
+Here we will look at L1448 IRS3B and IRS3A system in the context of FU Ori-type systems. As the central protostar accretes mass through disk transport, the surface of the central protostar heats. Models have show that for a solar-like star, an accretion rate of $\dot{M} = \sim10^{-5}$~\solm~year$^{-1}$\space will result in a mean luminosity of 50~\lsun\space throughout the protostellar lifetime \citep{1980ApJ...242..226S, 1980ApJ...241..637S}. 
+
+and thus the clump gravitationally stable unless further dynamical perturbations (e.g., accretion and/or shocks) occurs.
+
+This works by reducing the number of spatial axes (RA and Dec) to a single displacement axis along the disk major axis while preserving the velocity axis of the data. In constructing a PV diagram, we have to define a central spatial position where the center of mass is located, then pixels across the minor axis of the disk are integrated up to the length of the semi-minor axis of the disk
+
+We conclude that gravitational instabilities formed the spiral structures observed in both of the disks and, in the case of IRS3B, lead to the fragmentation and multiple-clump formation within the IRS3B disk. 
+
+The wide companion, IRS3A, is separated from IRS3B by \ab7\farcs9$\approx$2300~au and has an orthogonal major axis disk orientation to the IRS3B circumstellar disk. This indicates the angular momentum vectors that describe the two sources are orthogonal and thus require a formation pathway that forms sources with independent angular momentum vectors. Additionally, with both sources having similar ($\delta V<$1~km~s$^{-1}$) system velocities and well ordered data cubes as indicated by the \cso, \htcop, and \htcn/\sot\space observations, these wide sources did not likely form via disk fragmentation or gravitational capture. 
+
+The IRS3B-c tertiary source has already formed a protostar, as evident from jets being driven from it in \sot, \sio, and \co\space \citep[see Appendix; ][]{2016Natur.538..483T} and is likely $<$0.2~\solm\space to remain consistent with these observations; yet this source could accrete significantly more matter, starving the inner continuum sources of the IRS3B disk of accretion material.
+
+Most previous observations towards Class 0 protostars to determine their kinematics and characterize their morphology/disk structure have suffered from low spatial resolution ($>$0\farcs5) and poor sensitivity ($>$10 mJy~beam$^{-1}$~channel$^{-1}$). However, Tobin et al. (2020 in press.) conducted a survey of 328 protostars in the Orion molecular cloud (d\ab$400$~pc) at a similar wavelength, achieving a resolution of 0\farcs1. They found a median total disk mass (dust-to-gas ratio 1:100) for Class 0 sources of 0.08~\solm. 
+
+We do marginally resolve spiral structures, indicating the disk may have regions of marginal instability leading to spiral arm formation, but not strong enough to result in run-away fragmentation. This is similar to the results of \citet[][]{2010ApJ...710.1375K} where Toomre~Q approaches 1 in 1D models but can be larger in 2D and drive spiral arm formation.
+
+Values of the Toomre~Q for the regions the parameter is significantly below 1 is likely due to a combination of temperature underestimates, dust opacity underestimates, and the assumption of a constant dust-to-gas ratio.
+
+ We find that the circumstellar disk of IRS3B is gravitationally unstable near the location of the tertiary source at 230~AU. The instability region continues out towards \ab480~AU, across the regions where the spiral arm structure is resolved. The disk is not stable until the surface density is low at very high radii ($>500$~AU).
+
+\citet{2013ApJ...771...48T} targeting L1527, a low mass ($<$0.5~\solm) Class 0 protostar in Taurus achieved \ab1\arcsec\space molecular line resolution, placing weak constraints on the protostellar mass.
+
+% Figure 18
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{img/TemperatureRadialProfile_IRS3B.eps}
+\end{center}
+\caption{IRS3B radial temperature profile of the disk. The slope is -0.5 and the temperature is scaled such that the temperature of the disk at 100~AU is described via (30~K)$\times(L_{*}$/\lsun)$^{0.25}\approx40.1$~K. This same temperature profile power law is used to describe the disk of IRS3A.}\label{fig:tempprof}
+\end{figure}
+
+\citet{2013ApJ...768..110C} presented a large (33 sources) survey towards known protostellar systems in nearby clouds (d$<$500 pc). This survey was conducted using archival data from the Submillimeter Array (SMA), in the 1.3~mm and 850~\micron\space dust continuum. Their sample found 21 sources in binaries or higher-order multiplies (separations \ab50-5000~AU) with a multiplicity frequency and companion fraction of 0.64 and 0.91 respectively. These frequencies were \ab50\%\space higher than those found in binary surveys towards Class I sources \citep[0.43 between 100-4500~AU e.g.][]{2008AJ....135.2526C} and \ab3$\times$\space more frequent than surveys targeting field stars \citep[0.21; e.g.][]{1991AA...248..485D} within the 50-5000~AU range. However, the \citet{2013ApJ...768..110C} survey suffered from poor spatial resolution, low sensitivity, and targeted mostly well-known protostellar systems, yielding a potentially biased sample.
+
+They confirmed the high multiplicity fraction (MF) on 50-5000~AU scales of \citet{2013ApJ...768..110C} and surpassed them with superior spatial resolution and sensitivity finding the multiplicity fraction of Class 0 protostars \ab57\% (20-10,000~AU scales) and \ab25\% for close ($<$600~AU separation) companions. 
+
+This prompted further observations at superior sensitivity and resolution to understand the kinematics and formation mechanisms of this forming triple protostar system and its wide companion.
+
+ We show the results of our fit, restricted to a representative set of channels in Figure~\ref{fig:c17o_res}. 
+
+
+We also show the resulting PV diagram, if the system geometry is set by the PSDPY model results (Section~\ref{sec:kmodelresults}) in Figure~\ref{fig:l1448irs3b_c17o_pv_kinfit}. While Figure~\ref{fig:l1448irs3b_c17o_pv} shows more symmetric emission across the kinematic center, this selectively fits the highest velocity emission which is more symmetric about its own respective kinematic center.
+
+ Q< 1.4 instabilities
+
+When considering disks of finite scale height, critical values for Q, below which axisymmetric instabilities would occur, were determined to be between \ab0.6 and \ab0.7 \citep{2007ApJ...660.1232K,2015MNRAS.448.1007B}. This is due to the thickness of the disk reduces the effective gravitational potential of the central source. However, \citet{2008gady.book.....B} has shown that the Toomre Q parameter can be $>$1 to excite non-axisymmetric instabilities like the spiral structures found in our archetypal source with an upper limit of $<$2. 
+
+http://articles.adsabs.harvard.edu/cgi-bin/nph-iarticle_query?1966ApJ...146..810J&amp;data_type=PDF_HIGH&amp;whole_paper=YES&amp;type=PRINTER&amp;filetype=.pdf
+
+
+Then following the procedure from \citet{1999ApJ...517..209G}, assuming the dust emission is optically thin and ISM abundances, we derive the emissive mass within each annuli of the disk and derive a radial surface mass density profile from the dust continuum. 
+
+% Figure 11
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.44\textwidth]{img/PV-Diagram_L1448IRS3B_C17O_image_taper1500k_kinmodel_fit.eps}
+\includegraphics[width=0.44\textwidth]{img/PV-Diagram_L1448IRS3B_C17O_image_taper1500k__kinmodel_fit_xtr.eps}
+\end{center}
+\caption{Position-velocity diagrams of IRS3B \cso\space emission with the cyan lines corresponding to the fit of 1.21~\solm, with the system geometry configured from the PSDPY model which has a slightly different kinematic center (Table~\ref{table:pdspykinematic}. The cyan line traces the median fit for numeric Keplerian orbital fit routine while the black lines represent 100 randomly sampled MCMC fits, used to estimate errors. The white/black contours trace regions starting from 3$\sigma$ at 2$\sigma$\space intervals, where $\sigma\approx$0.14~Jy/beam}\label{fig:l1448irs3b_c17o_pv_kinfit}
+\end{figure}
+
+
+The Affine Invariant MCMC algorithm (\textit{emcee}) utilizes Bayesian statistics at its core which provides a way to marginalize over nuisance parameters (e.g. variance of the priors) and provide inferences on the parameters of interest given some set of \textit{priors}. Generally when modeling complex phase space of N model parameters, one has to fine-tune \ab N$^2$\space parameters. However, through marginalization, only a few sets of finely-picked ``\textit{priors}'' are required. Then an integration over the remaining phase space is performed, propagating the uncertainty into the resulting model. This process is performed iteratively, where each set of model ``\textit{priors}'' informs the next model, until convergence. The Bayesian inference methodology allows for users to determine the \textit{priors} of a set of parameters that are used to reduce and finely sample phase space of the model parameters. 
+
+However, \citet{2016AA...592A..56M} showed IRS3A has a very low L$_{submm}$/L$_{bol}$, indicative that it has already accreted most of the mass in the envelope and probably will not grow substantially more.
+%\citet{1998ApJ...501L.205K} showed while there are theories governing the various fragmentation mechanisms of molecular clouds into cores which are the precursors to protostars, the parameters that determine the final pre-stellar cores are uncertain. These parameters are important because observations of various cluster environments seem to obey an initial mass function \citep[e.g][]{1955ApJ...121..161S,2003ARAA..41...57L}.
+
+
+% http://www.cv.nrao.edu/php/splat/sp_basic.php?el1=el1&el2=el2&ls1=ls1&ls5=ls5&displayRecomb=displayRecomb&displayLovas=displayLovas&displaySLAIM=displaySLAIM&displayJPL=displayJPL&displayCDMS=displayCDMS&displayToyaMA=displayToyaMA&displayOSU=displayOSU&displayLisa=displayLisa&displayRFI=displayRFI&data_version=v3.0&no_atmospheric=no_atmospheric&no_potential=no_potential&no_probable=no_probable&include_only_nrao=include_only_nrao&show_orderedfreq_only=show_orderedfreq_only&chemical_name=&band[]=any&redshift=&energy_range_from=&energy_range_to=&energy_range_type=el_cm1&frequency_units=GHz&from=345.33&to=345.35&submit=Search
+
+
+These parameters make up a sub-set of our non-fixed \textit{priors}, with more parameters making up the fixed \textit{priors} that determine properties such as: mass of envelope, inner radius cutoff of the disk, etc.
+Our models indicate the disk is better represented by a truncated disk with a maximum radius of \ab415~AU, instead of an exponentially tapered disk. 
+%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+%\subsection{Continuum}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width=0.9\textwidth]{img/cont_model_cut.eps}
+%\end{center}
+%\caption{IRS3B Continuum Model comparison: \textbf{Left:} A fit of the model visibilities (green line) to the data (blue points). The model reasonably well fits to the visibities and even appears to fit the envelope at the shorter baselines. \textbf{Middle:} A model and data image generated from the visibilities. This image is not used for fitting but provides another method to visibly check the fit of the model. Contours provided follow a grid from 1$\sigma$, 3$\sigma$, 6$\sigma$, 10$\sigma$, and 15$\sigma$ overlaid the data continuum image. \textbf{Right:} A fit of the model (green) to the data (blue) SED. The model reasonably well is constrained by the data and fits the general shape of the SED.}\label{fig:cont_model_cut}
+%\end{figure}
+
+%The continuum modelling methodology is similar to the methods described in the previous section, however we also constrain the model through the SED data in addition to the visibilities. The model structure includes the central protostar, the disk, and a collapsing envelope. The model can encorporate more complex disk structure (truncation, gaps, etc.) whoever, we only seek to characterize the bulk properties of the disk and not model the more complex ring structures. 
+
+%In addition to the ``Pringle Disk'' as described before, we also add an infalling, rotating envelope on the model. Our source, which is still a young system, is likely embedded within an envelope of material, from the remnants of the inital cloud formation.
+
+%We fit these 10 parameters for the continuum models: x$_{0}$, y$_{0}$, $\beta$, h$_0$, L$_{*}$, M$_{D}$,  R$_D$, p.a., i, and a$_{max}$ quantitatively summarized in Table~\ref{table:pdspycontinuum}. However, PDSPY and RADMC-3D are more robust and allow fitting of numerous other parameters, we seek to determine the bulk system parameters that describe the disk. The fit of the visibilities and SED is provided in Figure~\ref{fig:cont_model_cut} while a full fit is provided in Section~\ref{sec:anc}
+
+
+%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+%\subsection{ISM}
+%Through a direct comparison of the surface density between the gas surface density and the dust surface density, we can directly probe the gas-to-dust (GDR) ratio as a function of radius throughout the disk. As shown in Figure~\ref{fig:gdr}, the surface density of the dust follows the surface density of the gas as expected. The dust peaks at a local minima between two local maxima of the gas surface density, indicating a dust trapping mechanism is taking place, confining the gas into this region. %
+
+%The GDR~(Figure~\ref{fig:gdr}) also evolves as a function of radius with the innermost regions on order of \ab10 and then inflates to $>$100 at radii $>$1000~AU. This follows with what we know about the ISM, whose typical GDR is on order of 100. %
+
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width=0.48\textwidth]{img/L1448N-dgr-linear-intensity-c17o_cont.eps}
+%\includegraphics[width=0.48\textwidth]{img/L1448N-dgr-loglog-c17o_cont.eps}
+%\end{center}   
+%\caption{\textbf{Left:} A comparison plot between the dust surface density (blue) and the gas surface density (green) as a function of radius throughout the disk. The dust peaks at a local minima between two local maxima of the gas surface density, indicating a dust trapping mechanism.}\label{fig:gdr}
+%\end{figure}
+
+%discuss peak PV %This actually looks pretty good! The green line has slope of -0.5 right? Can you plot a slope of -1 just for reference starting at around 100~AU? How does the M=0.8 M_sun match up with the fit from flared_model? At R< 30~AU, I think things flatten out because inward of that radius I don't think the emission was getting any closer to the protostar for whatever reason. One of the assumptions that this type of graph maps is that the emission is compact and the position has a direct relationship with the velocity of the keplerian gas. This assumption is not exactly true, especially when a disk is as well-resolved as L1448 IRS3B is. So, that is partly why the points start to drop below the line because the centroid is moving out pretty fast. I think the Keplerian radius is under estimated from plots like these. 
+
+
+%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+\subsection{Misalignment} \citet{2006ApJ...651..301V} showed using \nthp, a cold gas tracer, the objects within L1448N (including IRS3B and IRS3A), share a common envelope, indicative of forming from the same molecular cloud. It is thought objects that form within the same molecular cloud form via the same mechanisms and follow similar evolutionary tracks. However, upon fitting the inclination (IRS3B: 49.4\deg and IRS3A:66\deg) and position angle (IRS3B: 28.9\deg and IRS3A:132\deg) of these two sources, in addition to directions of outflows, these systems appear severely misaligned. 
+
+This could be explained via gravitational capture of a passing field star, however, this scenario is unlikely due to the young age (\ab500~kilo-years) of IRS3B and the relatively low mass of the combined IRS3B ($<$2~\solm) to perform such a wide (2300~AU) capture.
+
+The more likely scenarios are the wide companion, IRS3A, formed at its present location due to turbulent cloud collapse or formed closer to IRS3B and has subsequently migrated outwards. Tobin et al. (2019 in prep.) explores these scenarios more in detail.
+
+
+\subsubsection*{Feeding GI}
+It is thought that massive disks are built up through accreting material from the collapsing protostellar envelope, drawing a possible correlation between an in-falling envelope with the turbulent disk which we can test \citep[e.g.][]{2010ApJ...708.1585K,2010ApJ...725.1485O}. However, to understand the formation and sustainment of these gravitationally unstable disks, we need to directly connect such systems to their surrounding envelopes. Theories suggest multiple formation can occur via turbulent core fragmentation \citep[e.g.][]{2018ApJ...856..147O} and/or disk fragmentation \citep{2010ApJ...710.1375K} and while ALMA is able to detect these systems \citep[see][]{2012MNRAS.420L..53O}, it has yet to be vigorously tested.
+
+%%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+%\subsection{Rotation Analysis}
+%To construct the Peak PV diagram, we fit the the peak intensity of each channel with a 2-D Gaussian to determine the central location of the emission. We plot these results of radius and velocity (relative to system velocity) in Figure~\ref{fig:peakpvc17o} in log-log space. With the points in log-log space we can simultaneously fit a power law function to the set to discern the underlying kinematics more easily. Keplerian rotation is indicated by a slope of \ab-0.5 (v$\propto$R$^{-0.5}$) while conservation of momentum is indicated by a slope of \ab-1 (v$\propto$R$^{-1}$) \citep{2013ApJ...772...22Y,2014ApJ...796..131O}. %
+
+%We analyze the \cso\space emission of IRS3B and identify the disk is well fit by a Keplerian rotation curve with a slope of $-0.5$\space and is indicative of a central mass of 1.1~\solm.%
+
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width=0.8\textwidth]{img/L1448IRS3B_c17o_peakPV.eps}
+%\end{center}
+%\caption{``Peak Position-Velocity'' Diagram of IRS3B \cso\space emission with the black line corresponding to the best fit. This demonstrates the compact ($<$150~AU) emission is well described with a Keplerian disk of roughly 1.1~\solm. The gray points are excluded from the fit.}\label{fig:peakpvc17o}
+%\end{figure}
+%\begin{figure}[H]
+%\begin{center}
+%\includegraphics[width=0.8\textwidth]{img/L1448IRS3B_h13cop_peakPV.eps}
+%\end{center}
+%\caption{``Peak Position-Velocity'' Diagram of IRS3B \htcop\space emission with the black line corresponding to the best fit. This molecule is tracing a region outside the region described by \cso. This is indicative of it tracing an inner envelope or outer disk of IRS3B. The gray points are excluded from the fit.}\label{fig:peakpvh13cop}
+%\end{figure}
+
+%%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+\subsubsection{Surface Density}
+% probably should remove c170 I think and use in different paper
+% need to discuss the removal and point to appendix
+
+With the high spatial and spectral resolution, we constructed  annuli extractions of the continuum and moment map zero (integrated intensity) of \cso. The apertures for the annuli cuts were defined by the area of the synthesized beam with radii spanning out to \ab3\arcsec\space to completely recover the emission. With this method we construct a radial surface density to analyze the stability of the disk~(Figure~\ref{fig:surfacedensity}).
+
+In order to mitigate the effects of the viewing angle of the source, we use the deprojected images, described in the appendix, of the source, which were fit using an inclination of 45\deg\space and a position angle of 28\deg. We deprojected the \textit{UV} coordinates and regenerated new images using the same methods outlined in Section~\ref{sec:obs}. With this deprojection, we can then directly compare the integrated emission found in each respective annuli versus the radius the emission is present. We can then simply divide the recovered flux density by the corresponding aperture area to recover a surface density brightness.
+
+%%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+
+for continuum modeling parameters
+
+for the continuum models are: dust opacity index ($\beta$), disk height (h$_0$), luminosity (L$_{*}$), disk mass (M$_{disk}$), position angle (pa), inclination (inc), and dust grain size distribution (a$_{max}$). 
+
+
+
+%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+\subsubsection*{Dust Trapping}
+The massive disks of IRS3B and IRS3A host a plethora of potential material for forming proto-planetary cores. Furthermore, the recent high frequency detections of exoplanets around MS and protoplanetary disks thus requires a strong link between the planet formation mechanisms and the environment from which they form \citep{2018AA...617A..44K}. However, the exact formation mechanism of protoplanetary systems from gaseous and dusty disks is not yet known. This is the so called ``radial drift'' problem of astrophysics, where particles of intermediate (\ab1~mm) size acquire high drift velocities towards the star, leading to further collisions and fragmentation or accretion onto the protostar long before sufficient time has passed to grow to planetesimal sizes. This barrier halts grain growth processes and is on of the long-standing problems in astrophysics. A possible solution is dust trapping in pressure bumps within the disk, where local pressure maxima provide a channel for dust pile up \citep{2013Sci...340.1199V}. 
+
+Initial inspection of the dust continuum shows highly structured geometry with the presence of spiral arms. The gas emissions data cube is more subtle in the structure and requires additional analysis to discern its structure. Further analyzing the radial surface density profile for IRS3B, the gas appears to have several local maximum, provided different channels for dust trapping to occur. The dust continuum appears to peak within local minima between two local maxima of the gas surface density, perhaps indicative of a dust trapping mechanism. This is further supported as \citet{2015MNRAS.451..974D} showed spiral arms can be caused by pressure bumps within the disk, where the small grains follow with the gaseous material and the larger grains settle into the local minima between pressure walls. This source can potentially be a strong candidate for further observations using various long wavelength bands with high resolution to probe the large dust grain radial profile and determine how coupled the dust and gas are within these channels.
+
+
+
+\subsection{Model Parameters}\label{sec:modelparams}
+% work on this describe images
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/cont_fit.eps}
+\end{center}
+\caption{IRS3B continuum modeling graphical results of the MCMC fit. The axes represent the difference parameters and the plot demonstrates both the co-variance of the parameters and the convergence. Both the blue dots and lines indicate the median fit for each of the parameters and show the respective co-variance fit against a histogram of the same.}\label{fig:stairstep_cont}
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\textwidth]{img/c17o_fit.eps}%wrong corner plot
+\end{center}
+\caption{IRS3B \cso\space kinematic modeling graphical result. Similar to the continuum model fit prior, this plot summarizes the convergence and co-variance of the modeled parameters. Both the blue dots and lines indicate the median fit for each of the parameters and show the respective co-variance fit against a histogram of the same.}\label{fig:stairstep_c17o}
+\end{figure}
+
+
+
+
+%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
+\subsection{Tertiary Subtraction and Source Deprojection}\label{sec:tertsub}
+In order to analyze the circumstellar dust disk of IRS3B, independent of the tertiary, the bright source embedded within the binary spiral arm of the disk needs to be removed. This tertiary source, being the brightest source of this system, contaminates the analysis of the radial disk structure. By removing this source, we can independently study the disk and the tertiary source in order to characterize their properties separately~(Figure~\ref{fig:subclump}).
+
+\begin{figure}[H]
+  \begin{minipage}[c]{\textwidth}
+   \includegraphics[width=0.48\textwidth]{img/L1448IRS3B.cont.ms.apselfcal.concat_deprojsplitMoments.eps} % co
+   \includegraphics[width=0.48\textwidth]{img/Per33_ALMA_cont_robust05_subclump_hrsplitMoments.eps} % co
+  \end{minipage}
+   \caption{Continuum (879~\micron) images of IRS3B. 
+   \textbf{A Top Left:} IRS3B with the tertiary clump removed for analysis. The tertiary model was constructed using a 2D Gaussian with a zero-level offset in order to properly restore the underlying disk emission without introducing additional features. This residual image was then used for further analysis and modeling via RADMC-3D.} \label{fig:subclump}
+\end{figure}
+% work on this
+In order to remove the tertiary source, we fit two Gaussian's with a zero-level offset to the position of the source using the \textit{imfit} task in \textit{CASA}. The offset serves to preserve the emission from the underlying disk emission. We also restricted the imfit task to a 0\farcs8$\times$0\farcs7\space ellipse around the source as to not extend the fit into the surrounding emission from the spiral arms. With these parameters generated from the imfit task, we then constructed a model image of the tertiary that was then used to construct a model visibility dataset via the Fourier transform and set the flux density of the measurement with the task \textit{setjy}. This populates the model column of a \textit{CASA} measurement set with the source visibility data, which we then use the task \textit{uvsub} to subtract this model with the data, producing the residual visibilities without the tertiary. A tertiary subtracted image is generated from this residual dataset and shown in Figure~\ref{fig:subclump}.
+
+
+%#%#%#%#%#%#%#%#%#%#
+
+
+
+
+
+
+
+
+
+
+
