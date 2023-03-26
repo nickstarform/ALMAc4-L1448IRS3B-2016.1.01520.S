@@ -1,23 +1,14 @@
-%#%#%#%#%#%# L1448N Paper %#%#%#%#%#%#%#%#
-%#%# Nickalas Reynolds and John Tobin %#%#
-%#%#%#%#%#%#%# July  2017 %#%#%#%#%#%#%#%#
 
-% SNOOPI For Perseus Region
-%<http://almascience.nrao.edu/aq/?source_name_resolver=L1448N&result_view=observation&public_data=on&science_observations=on#sortCol=Release%20date&sortDir=asc&col_1=_checkbox_selector;;;&col_2=Source%20name;;;&col_3=Project%20code;;;&col_4=PI%20name;;;&col_5=Pub;;;&col_6=RA;;;&col_7=Dec;;;&col_8=Band;;;&col_9=Release%20date;;;&col_10=Observation%20date;;;&col_11=Velocity%20resolution;;;&col_12=Frequency%20support;;;&col_13=Angular%20resolution;;;&col_14=Continuum%20sensitivity;;;&col_15=Line%20sensitivity%20(10%20km%2Fs);;;>
 
-%# document %#
 \documentclass[twocolumn, 12pt]{aastex63}
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{amsmath}
-%
 \received{June 6, 2020}
 \revised{Oct 26, 2020}
 \accepted{Nov 13, 2020}
 \submitjournal{APJL}
 
-%# New commands %#
-% molecules
 \newcommand{\ceo}{C$^{18}$O}
 \newcommand{\tco}{$^{13}$CO}
 \newcommand{\htco}{H$_{2}$CO}
@@ -30,13 +21,11 @@
 \newcommand{\sio}{SiO}
 \newcommand{\sot}{SO$_{2}$}
 \newcommand{\lsot}{SO$_{2}$~(J~=~13$_{2,12}\rightarrow$12$_{1,11}$)}
-\newcommand{\lco}{\co~(J~=~3$\rightarrow$2)}   % 346.~GHz
-\newcommand{\lhtcn}{\htcn~(J~=~4$\rightarrow$3)}   % 345.339756
-\newcommand{\lcso}{\cso~(J~=~3$\rightarrow$2)}   % 337.061104
-\newcommand{\lhtcop}{\htcop~(J~=~4$\rightarrow$3)}   % 346.998347
-\newcommand{\lsio}{\sio~(J~=~7$\rightarrow$6)}   % 347.000031
-%                 Continuum                     % 335.5
-% misc
+\newcommand{\lco}{\co~(J~=~3$\rightarrow$2)}  
+\newcommand{\lhtcn}{\htcn~(J~=~4$\rightarrow$3)}  
+\newcommand{\lcso}{\cso~(J~=~3$\rightarrow$2)}  
+\newcommand{\lhtcop}{\htcop~(J~=~4$\rightarrow$3)}  
+\newcommand{\lsio}{\sio~(J~=~7$\rightarrow$6)}  
 \renewcommand{\arcsec}{$^{\prime\prime}$}
 \renewcommand{\arcmin}{$^{\prime}$}
 \renewcommand{\deg}{\degr}
@@ -59,8 +48,7 @@
 \newcommand{\mdot}{$\dot{M}$}
 \newcommand{\x}{$\times$}
 
-% beam sizes
-\newcommand{\csobeam}{0\farcs21$\times$0\farcs13} % check this !!!!!!
+\newcommand{\csobeam}{0\farcs21$\times$0\farcs13}
 \newcommand{\siobeam}{0\farcs85$\times$0\farcs52}
 \newcommand{\cobeam}{0\farcs19$\times$0\farcs11}
 \newcommand{\htcopbeam}{0\farcs85$\times$0\farcs52}
@@ -70,15 +58,9 @@
 \newcommand{\contbeamhigh}{0\farcs08$\times$0\farcs05}
 
 
-%-----------
 
-%--------------------------------------------------------------------------------------%
-%# beginning document %#
-%--------------------------------------------------------------------------------------%
 \begin{document}
 \nocite{*}
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
-% author
 \title{Kinematic Analysis of a Protostellar Multiple System: Measuring the Protostar Masses and Assessing Gravitational Instability in the Disks of L1448 IRS3B and L1448 IRS3A}
 \shorttitle{L1448 IRS3B}
 \shortauthors{Reynolds et al.}
@@ -105,20 +87,12 @@
 \author{Michael M. Dunham}
 \affiliation{Department of Physics, State University of New York Fredonia, Fredonia, New York 14063, USA}
 \affiliation{Harvard-Smithsonian Center for Astrophysics, 60 Garden St, MS 78, Cambridge, MA 02138}
-% \author{Carl Melis}
-% \affiliation{Center for Astrophysics and Space Sciences, University of California, San Diego, CA 92093}
-% \author{Robert J. Harris}
-% \affiliation{Department of Astronomy, University of Illinois, Urbana, IL 61801}
-% \author{Laura P\'erez}
-% \affiliation{Departamento de Astronom\'ia, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile}
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \begin{abstract}
 We present new Atacama Large Millimeter/submillimeter Array (ALMA) observations towards a compact (\ab230~au separation) triple protostar system, L1448 IRS3B, at 879~\micron\space with \contbeam~resolution. Spiral arm structure within the circum-multiple disk is well resolved in dust continuum toward IRS3B, and we detect the known wide (\ab2300~au) companion, IRS3A, also resolving possible spiral substructure. Using dense gas tracers, \lcso, \lhtcop, and \lhtcn, we resolve the Keplerian rotation for both the circum-triple disk in IRS3B and the disk around IRS3A. Furthermore, we use the molecular line kinematic data and radiative transfer modeling of the molecular line emission to confirm that the disks are in Keplerian rotation with fitted masses of \added{$1.19^{+0.13}_{-0.07}$\solm\space for IRS3B-ab, $1.51^{+0.06}_{-0.07}$~\solm\space for IRS3A}, and place an upper limit on the central protostar mass for the tertiary IRS3B-c of 0.2~\solm. We measure the mass of the fragmenting disk of IRS3B to be \ab0.29~\solm\space from the dust continuum emission of the circum-multiple disk and estimate the mass of the clump surrounding IRS3B-c to be 0.07~\solm. We also find that the disk around IRS3A has a mass of \ab0.04~\solm. By analyzing the Toomre~Q parameter, we find the IRS3A circumstellar disk is gravitationally stable (Q$>$5), while the IRS3B disk is consistent with a gravitationally unstable disk (Q$<$1) between the radii \ab200-500~au. This coincides with the location of the spiral arms and the tertiary companion IRS3B-c, supporting the hypothesis that IRS3B-c was formed in situ via fragmentation of a gravitationally unstable disk.
 \end{abstract}
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \section{Introduction}\label{sec:intro}
 Star formation takes place in dense cores within molecular clouds \citep{1987ARAA..25...23S}, that are generally found within filamentary structures \citep{2014prpl.conf...27A}. The Perseus Molecular Cloud, in particular, hosts a plethora of young stellar objects \citep[YSOs;][]{2014ApJ...787L..18S,2009ApJ...692..973E} and is nearby \citep[d\ab288$\pm$22~pc; e.g.,][]{2018arXiv180803499O, 2019ApJ...879..125Z}, making its protostellar population ideal for high-spatial resolution studies. By observing these YSOs during the early stages of star formation, we can learn about how cores collapse and evolve into protostellar and/or proto-multiple systems, and how their disks may form into proto-planetary systems.
 
@@ -138,7 +112,6 @@ L1448 IRS3B has a hierarchical configuration, which features an inner binary (se
 
 The wide and compact proto-multiple configurations of IRS3A and IRS3B contained within a single system provides a test bed for multiple star formation pathways to determine which theories best describe this system. Here we detail \added{our follow-up observations to \citet{2016Natur.538..483T} of L1448 IRS3B with the Atacama Large Millimeter/submillimeter Array (ALMA) in Band 7, with $2\times$~higher resolution and $6\times$~higher sensitivity. We resolve the kinematics toward both IRS3B and IRS3A with much higher fidelity that the previous observations, enabling us to characterize the nature of the rotation in the disks, measure the protostar masses, and characterize the stability of both disks.} We show our observations of this system and describe the data reduction techniques in Section~\ref{sec:obs}, we discuss our empirical results and our use of molecular lines in Section~\ref{sec:results}, we \deleted{then refine}\added{ further analyze} the molecular line \deleted{s used to trace disk kinematics}\added{kinematics} in Section~\ref{sec:keprotation}, we further detail our models and the results in Section~\ref{sec:kmodelresults}, and we interpret our findings in Section~\ref{sec:discussion}, where we discuss the implications of our empirical and model results and future endeavors. 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \section{Observations}\label{sec:obs}
 \explain{Bulk of observation explanations was moved to appendix. Particularly the content surrounding self calibration.}
 We observed L1448 IRS3B with ALMA in Band 7 (879~\micron) during Cycle 4 in two configurations, an extended (C40-6) and a compact (C40-3) configuration in order to fully recover the total flux out to \ab5\arcsec\space angular scales in addition to resolving the structure in the disk. C40-6, was used on 2016 October 1~and~4 with 45 antennas. The baselines ranged from 15 to 3200~meters, for a total of 4495 seconds on source (8052 seconds total) for both executions. C40-3, was used on 19 December 2016 with 41 antennas. The baselines covered 15 to 490 meters for a total of 1335 seconds on source (3098 seconds total).
@@ -148,7 +121,6 @@ The complex gain calibrator was J0336$+$3218, the bandpass calibrator was J0237$
 It should also be noted there is possible line blending of \lhtcn\space and \lsot\space\citep{1997Icar..130..355L} (Table~\ref{table:obssummary2}). The \sot\space line has an Einstein A coefficient of 2.4$\times10^{-4}$~s$^{-1}$ with an upper level energy of 93~K, demonstrating the transition line strength could be strong. \sot\space provides another shock tracer which could be present toward the protostars. We label \htcn\space and \sot\space together for the rest of this analysis to emphasize the possible line blending of these molecular lines. Additionally, the \co\space and \sio\space emission primarily trace outflowing material and analysis of these data is beyond the scope of this paper, but the integrated intensity maps of select velocity ranges are shown in \deleted{in} Appendix~\ref{sec:coemission}~and~\ref{sec:sioemission}. The results of this analysis are summarized for each of the sources in Table~\ref{table:obssummary3}.
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \section{Results}\label{sec:results}
 \subsection{879~\micron~Dust Continuum}\label{sec:dcont}
 The observations contain the known wide-binary system L1448 IRS3A and L1448 IRS3B and strongly detect continuum disks towards each protostellar system (Figures~\ref{fig:contimage}~and~\ref{fig:zoomincont}). We resolve the extended disk surrounding IRS3A (Briggs robust weight $=0.5$: Figure~\ref{fig:contimage}, superuniform: Figure~\ref{fig:widesuperuniform})\deleted{ and marginally resolve possible spiral arm substructure}. 
@@ -160,15 +132,12 @@ We resolve the extended circum-multiple disk of IRS3B and the spiral arm structu
 To best determine the position angle and inclination of the circum-multiple disk, we first have to remove the tertiary source that is embedded within the disk using the \textit{imfit} task in CASA by fitting two 2-D Gaussians with a constant emission offset (detailed fully in Appendix~\ref{sec:tertsub}). We fit the semi-major and semi-minor axis of the IRS3B-ab disk with a 2-D Gaussian using the task \textit{imfit} in CASA. To fit the general shape of the disk and not fit the shape of the spiral arms, we smooth the underlying disk structure (taper the uv visibilities at 500~k$\lambda$ during deconvolution using the CASA \textit{clean} task), yielding more appropriate image for single 2D Gaussian fitting. 
 
 From this fit, we recovered the disk size, inclination, and position angle, which are summarized in Table~\ref{table:obssummary3}. The protostellar disk of IRS3B has a deconvolved major axis and minor axis FWHM of \added{1\farcs73$\pm$0\farcs05\space and 1\farcs22$\pm$0\farcs04\space} (497$\pm$17~au\space $\times$\space 351$\pm$12~au), respectively\deleted{, corresponding to an average continuum disk radius of \ab248.5~au (assuming the disk is symmetric)}. This corresponds to an inclination angle of 45.0\deg$^{+2.2}_{-2.2}$\space assuming the disk is symmetric and geometrically thin, where an inclination angle of 0\deg\space corresponds to a face-on disk. We estimate the inclination angle uncertainty to be as much as 25\% \space by considering the south-east side of the disk as asymmetric and more extended. The position angle of the disk corresponds to 28$\pm$4\deg\space East-of-North. 
-% ((1 / (y * (1 - (x^2 / y^2)) ^ 0.5) * g ) ^ 2 + (x / (y^2 * (1 - (x^2 / y^2)) ^ 0.5) *  h) ^ 2) ^0.5 * acos(x/y), where x=351, y = 497, g=12, h=17
 
 \subsubsection{IRS3B-c}
 In the process of removing the clump around the tertiary companion IRS3B-c, we construct a model image of this clump that can be analyzed through the same methods. We recover a deconvolved major axis and minor axis FWHM of 0\farcs28$\pm$0\farcs05\space and 0\farcs25$\pm$0\farcs04\space (80$\pm$17~au\space $\times$\space 71$\pm$12~au), respectively, corresponding to a radius \added{\ab40~au (assuming the disk is symmetric)}. This corresponds to an inclination angle of 27.0\deg$^{+19}_{-19}$\space and we fit a position angle of 21$\pm$1\deg\space East-of-North. We note the inclination estimates for IRS3B-c may not be realistic since the internal structure of the source (oblate, spherical, etc.) cannot be constrained from these observations, thus the reported angles are assuming a flat, circular internal structure, similar to a disk.
-% ((1 / (y * (1 - (x^2 / y^2)) ^ 0.5) * g ) ^ 2 + (x / (y^2 * (1 - (x^2 / y^2)) ^ 0.5) *  h) ^ 2) ^0.5 * acos(x/y), where x=71, y = 80, g=12, h=17
 
 \subsubsection{IRS3A}
 The protostellar disk of IRS3A has a FWHM radius of \ab100~au and has a deconvolved major axis and minor axis of \added{0\farcs69$^{+0.01}_{-0.01}$\space and 0\farcs25$^{+0.1}_{-0.1}$}\space(197$\pm$3~au $\times$\space 72$\pm$3~au), respectively. This corresponds to an inclination angle of 68.6\added{$\pm$1.2}\deg\space assuming the disk is axially symmetric. The position angle of the disk corresponds to 133$\pm$1\deg\space East-of-North. \added{We marginally resolve two emission deficits one beamwidth off IRS3A, along the major axis of the disk. The potential spirals appear to originate along the minor axis of the disk; however, due to the reconstructed beam elongation along the minor axis of the disk, we cannot fully resolve the substructure of the disk around IRS3A}\added{, limiting the characterization that we can perform on it}.
-% ((1 / (y * (1 - (x^2 / y^2)) ^ 0.5) * g ) ^ 2 + (x / (y^2 * (1 - (x^2 / y^2)) ^ 0.5) *  h) ^ 2) ^0.5 * acos(x/y), where x=72,  y = 197, g=3, h=5
 
 \subsection{Disk Masses}\label{sec:diskmass}
 The traditional way to estimate the disk mass is via the dust component which dominates the disk continuum emission at millimeter wavelengths. If we make the assumption that the disk is isothermal, optically thin, \added{without scattering}, and the dust and gas are well mixed, then we can derive the disk mass from the equation:
@@ -183,24 +152,9 @@ where $D$ is the distance to the region (288~pc), $F_{\lambda}$\space is the flu
 \end{equation}
 assuming $\beta$=1.78. We note that $\beta$\space values typical for protostars range from 1-1.8 \citep{2009ApJ...696..841K, 2013PhDT.......434S}\deleted{, we adopt the upper bound for the opacity which, in turn, represents a lower bound for the derived mass. We also note that the choice of $\kappa$\space significantly affects the derived mass}. \deleted{We adopt a $\kappa_{1.3mm}$\space value more typical of dense cores (0.899~cm$^{2}$~g$^{-1}$). However,} If we assume significant grain growth has occurred, typical of more evolved protoplanetary disks like that of \citet{2009ApJ...700.1502A}, we would then adopt a $\kappa_{0.899\mu m}\approx3.5$~cm$^{2}$~g$^{-1}$\space and $\beta$=1, which would lower our reported masses by a factor of 2.
 
-% nkrpy.astro.dustmass
-% from nkrpy.astro import dustmass
-% dense cores
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=50.9, flux=2.21E-1, model_name='oh1994', opacity=0.899*(1.3/0.879)**1.78, gas_density=1e6)[-1][-1][-1]*100 # = 0.03533 irs3a
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=40.1, flux=1.509, model_name='oh1994', opacity=0.899*(1.3/0.879)**1.78,, gas_density=1e6)[-1][-1][-1]*100 # = 0.2863 irs3b-ab 
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=54.6, flux=4.228954E-1, model_name='oh1994', opacity=0.899*(1.3/0.879)**1.78, gas_density=1e6)[-1][-1][-1]*100 # = 0.0556513 irs3b-c, embedded
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=38.7, flux=3.7E-1, model_name='oh1994', opacity=0.899*(1.3/0.879)**1.78, gas_density=1e6) * 100 # = 7.33213e-02 irs3b-c, alone
-% disks
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=50.9, flux=2.21E-1, model_name='oh1994', opacity=2.4*(1.3/0.879)**1., gas_density=1e6)[-1][-1][-1]*100 # = 0.016038 irs3a
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=40.1, flux=1.509, model_name='oh1994', opacity=2.4*(1.3/0.879)**1., gas_density=1e6)[-1][-1][-1]*100 # = 0.14553642 irs3b-ab 
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=54.6, flux=4.228954E-1, model_name='oh1994', opacity=2.4*(1.3/0.879)**1., gas_density=1e6)[-1][-1][-1]*100 # = 0.028284 irs3b-c, embedded
-% dustmass(dist=288, dist_unit='pc', val=341, val_unit='GHz', temp=38.7, flux=3.7E-1, model_name='oh1994', opacity=2.4*(1.3/0.879)**1., gas_density=1e6)[-1][-1][-1] * 100 # = 0.037268 irs3b-c, alone
 \added{The assumed luminosities} of the sources are  13.0~\lsun\space and 14.4~\lsun\space for IRS3B and IRS3A at a distance of 300~pc, respectively \citep[8.3~\lsun\space and 9.2~\lsun\space for IRS3B and IRS3A, respectively at 230~pc; ][]{2016ApJ...818...73T}. We note \deleted{found}\added{that} in the literature there are several luminosity values for IRS3B, differing from our adopted value by a factor of a few. Reconciling this is outside of the scope of this paper, but the difference could arise from source confusion in the crowded field and differences in SED modeling.
 
 We adopt a $T_{dust}\approx\added{40}~K$~for the IRS3B \deleted{source}\added{disk dust temperatures} from the equation $T_{dust}=30~K\times\left(L_{*} / L_{\odot}\right)^{1/4}$, which is comparable to temperatures derived from protostellar models \citep[43~K:][]{2013ApJ...771...48T} and larger than temperatures assumed for the more evolved protoplanetary disks \citep[25~K:][]{2013ApJ...771..129A}. The compact clump around IRS3B-c has a peak brightness temperature of 55~K. Thus we adopt a T$_{dust}$ = 55~K since the emission may be optically thick ($T_{dust}$\ab $T_{B}$). We determine the peak brightness temperature of this clump by first converting the dust continuum image from Jy into K via the Rayleigh-Jean's Law\footnote{\citep[T = 1.222$\times10^3\frac{I~mJy~beam^{-1}}{(\nu~GHz)^2(\theta_{major}~arcsec)(\theta_{minor}~arcsec)}$~K, ][]{2009tra..book.....W}}. \deleted{Similarly, }We adopt a $T_{dust}$ = 51~K~ for the IRS3A source.
-% converting from Jy/beam -> W/m^2/sr * micron 
-% 0.2 / (0.69*0.25 / (3600 * 180 / pi)**2) * 1e-26 * (speed of light in micron/s)
-% https://ncc.nesdis.noaa.gov/data/planck.html
 
 If we assume the canonical ISM gas-to-dust mass ratio of 100:1 \citep{1978ApJ...224..132B}, we estimate the total mass of the IRS3B-ab disk (IRS3B-c subtracted) to be 0.29~\solm\space for $\kappa_{0.879~mm}=$1.80~cm$^2$~g$^{-1}$, $T_{dust}\approx\added{40}~K$~\citep{2019ApJ...886....6T}, and $F_{\lambda}\approx1.51~Jy$. We note that the dust to gas ratio \deleted{may} is expected to decrease as disks evolved from Class 0 to Class II \citep{2014ApJ...788...59W}, but for such a young disk, we expect it to still be gas rich and therefore have a gas to dust ratio more comparable with the ISM. We estimate 0.07~\solm\space to be associated with the circumstellar dust around IRS3B-c, from this analysis, for a T$_{dust}$ = 55~K. We perform the same analysis towards IRS3A and arrive at a disk mass estimate of 0.04~\solm, for a $T_{dust}$ = \added{51}~K and $F_{\lambda}\approx0.19~Jy$.
 
@@ -214,25 +168,7 @@ from \citep{2016Natur.538..483T}. The dust surrounding the tertiary source has a
 \added{
 An effect that could impact our measurements of disk masses and surface densities is scattering. Scattering reduces the emission of optically thick regions of the disk to appear optically thin, thus underestimating the optical depth. \citet{2019ApJ...877L..18Z}, showed that in the lower limit of extended ($>100$~au) disks, this effect underestimates the disk masses by a factor of 2. However, towards the inner regions, this effect might be enhanced to factors $>10$. \citet{2020ApJ...892..136S} show that for wavelengths \ab870~\micron\space and 100~\micron \space size particles, only a $\Sigma\approx3.2$~(g~cm$^{-2}$) is needed for the particles to be optically thick. Thus our masses could be several factors higher.
 }
-% \footnote{The dependence of the chosen $\kappa$\space cancels and thus is independent of the value chosen. This method is similar to solving the first Taylor Term of the equation of radiative transfer $I_{\nu}=I_{0}e^{-\tau_{\nu}} + S_{\nu}\left(1 - e^{-\tau_{\nu}}\right)$.}
-% optical depth
-% from nkrpy import constants, unit ; import numpy as np
-% def sigma_fwhm_radius(val): return val * 2. * np.sqrt(2 * np.log(2)) * 288 * unit('au', 'cm', 1) / 2. # from arcsec to cm
-% (7.33216033e-04 * constants.msun) / (sigma_fwhm_radius(0.118124) * sigma_fwhm_radius(0.105183) * constants.pi) * 0.899 * (1.3/0.879) ** 1.78  # = 2.6194385 irs3b-c
-% (0.0029 * constants.msun) / (sigma_fwhm_radius(0.732674) * sigma_fwhm_radius(0.517271) * constants.pi) * 0.899 * (1.3/0.879) ** 1.78  # = 0.33964798 irs3b-ab
-% (0.0004 * constants.msun) / (sigma_fwhm_radius(0.291733) * sigma_fwhm_radius(0.106463) * constants.pi) * 0.899 * (1.3/0.879) ** 1.78  # = 0.57165721 irs3a
-% def tau(flux, abprod, dusttemp, freq, sourcetmp):
-%     s = (planck_nu(dusttemp, freq, 'ghz') - planck_nu(2.725, freq, 'ghz')) * 1E-3
-%     iobs = (flux * c.jy * 1E-3) / (np.pi * (abprod) / 4. * (np.pi / 180. / 3600.) ** 2)
-%     isource = (planck_nu(sourcetmp, freq, 'ghz')) * 1E-3
-%     return -np.log((iobs - s) / (isource - s))
-% tau(1.51, 0.732674*0.517271*4, 40.1, 341.0434, 0)    # = 0.62657839 IRS3B-ab
-% tau(3.7E-1, 0.118124*0.118124 * 4, 54.6, 341.0434, 244)  # =  IRS3B-c
-% tau(2.21E-1, 0.291733 *0.106463 * 4, 50.9, 341.0434, 0) # = 0.98206753 IRS3A
 
-% 90 - np.arcsin(0.25070120645412997/0.686978716197014) * 180. / np.pi  # = 68.59654029709603 IRS3a Fin
-% 90 - np.arcsin(0.24768703679649035/0.27816076299923587) * 180. / np.pi  # = 27.070701513727833 IRS3b-c in
-% 90 - np.arcsin(1.2180801195132043/1.7253154216730058) * 180. / np.pi  # = 45.089262257966524 IRS3b-ab in
 
 
 \subsection{Molecular Line Kinematics}\label{sec:kinematics}
@@ -268,7 +204,6 @@ The PV diagrams for IRS3A are generated with a 31 pixel (0\farcs62) width strip 
 
 Similar\deleted{ly} to IRS3B, the \htcop\space emission likely traces the inner envelope, indicated in Figure~\ref{fig:irs3ah13copmoment}, as it extends well beyond the continuum emission but still traces a velocity gradient consistent with rotation (Figure~\ref{fig:l1448irs3a_h13cop_pv}). The circumstellar disk emission is less resolved, however, due to the compact nature of the source and has lower sensitivity to emission because it is located \ab8~arcsec (beam efficiency\ab60\%) from the primary beam center. 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsection{Protostar Masses: Modeling Keplerian Rotation}
 The kinematic structure, as evidenced by the blue- and red-shifted integrated intensity maps (e.g., Figures~\ref{fig:irs3bc17omoment}~and~\ref{fig:irs3ac17omoment}) indicate rotation on the scale of the continuum disk.\added{ The disk red- and blue-emission emission are oriented along the disk major axis and and not along the disk minor axis, which would be expected if the emission was contaminated by outflow kinematics.} We first determined the protostellar mass by analyzing the PV diagram to determine regions indicative of Keplerian rotation. We summarize the results of our PV mass fitting in Table~\ref{table:pvtable}. PV diagram fitting provides a reasonable measurement of protostellar masses in the absence of a more rigorous modeling approach. The Keplerian rotation-velocity formula, $V(R) = (GM/R)^{0.5}$ allows several system parameters to be constrained: system velocity, kinematic center position, and protostellar mass (There is a degeneracy between mass determination and the inclination angle of the Keplerian disk. \added{We account for inclination in fitting the mass using the constraint from the major and minor axis ratio of the continuum emission.}
 
@@ -290,8 +225,6 @@ For the IRS3A circumstellar disk, the dense gas tracers \htcn\space and \cso\spa
 The spatial compactness of IRS3A limits the utility of the \htcn\space PV-diagram with the previous MCMC fitting routine. We found evidence of rotation in this line tracer from the velocity selected moment 0 map series and PV-diagram. However, from the PV diagram alone, strong constraints cannot be determined due to the compactness of the \htcn\space emission and the low S/N of \cso.
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
-%and \citet{2017ApJ...851...45S} for the continuum modeling
 \section{Application of Radiative Transfer Models}\label{sec:kmodelresults}
 \explain{Explanations about MCMC and the specifics of the code was moved to appendix.}
 To further analyze the disk kinematics, we utilize the methods described in \citet{2019ApJ...874..136S} and further described in Appendix~\ref{sec:apppdspy} for modeling the molecular line emission presented thus far. The modeling framework uses RADMC-3D \citep{2012ascl.soft02015D} to calculate the synthetic channel maps using 2D axisymmetric radiative transfer models in  the \added{limit of local} local thermodynamic equilibrium (LTE)  and GALARIO \citep{2018MNRAS.476.4527T} to generate the model visibilities from those synthetic channel maps. We sample the posterior distributions of the parameters to provide fits to the visibilities by utilizing a MCMC approach 
@@ -308,15 +241,12 @@ The \pdspy\space kinematic flared disk model results for IRS3B are shown in Figu
 The \pdspy\space kinematic flared disk model results for IRS3A are shown in Figure~\ref{fig:h13cn_res}, primarily fitting the inner disk. The models demonstrate the gas disk is well represented by a truncated disk with a maximum radius of the disk of \ab40~au (most likely due to the compact nature of the emission). This disk size of 40~au is smaller than the continuum disk and results from the compact emission of \htcn. The models find a system velocity near 5.3~km~s$^{-1}$\space in agreement with the PV-diagram. The system velocity of numerous molecules (\htcop, \cso, and \htcn) are in agreement and thus likely tracing the same structure in the system. The models yielded a similar stellar mass ($1.51^{+0.06}_{-0.07}$~\solm, 3-$\sigma$~uncertainties~listed) to the estimate from the PV-diagram. Also the disk orientation of inclination (69\deg) and position angle (\ab122\deg) agree with the estimate from the continuum Gaussian fit.
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \section{Discussion}\label{sec:discussion}
 \explain{Determining ideal kinematic line tracer for disk was moved to appendix. Also the mass accretion was combined with discussion of FUOrs.}
 
 \subsection{Origin of Triple System and Wide Companion}\label{sec:origin}
 Protomultiple systems like that of IRS3B and IRS3A can form via several possible pathways pathways: thermal fragmentation (on scales \ab1000s of au), turbulent fragmentation (on scales \ab1000s of au), gravitational instabilities within disks (on scales \ab100s of au), and/or loose dynamical capture of cores (on scales \ab10$^{4-5}$~au). To constrain the main pathways for forming multiple systems, we must first constrain the protostellar geometrical parameters and then the (in)stability of the circum-multiple disk. Previous studies towards L1448 IRS3B \citep[see ][]{2016Natur.538..483T} achieved \ab0\farcs4\space molecular line resolution, roughly constraining the protostellar mass. The high resolution and high sensitivity data we present allows constraints on the stability of the circumstellar disk of IRS3B and sheds light on the formation pathways of the compact triple system and the wide companion. The circumstellar disk around the wide companion, IRS3A, has an orthogonal major axis orientation to the circumstellar disk of IRS3B, favoring formation mechanisms that result in wider companions forming with independent angular momentum vectors. The circumstellar disk around IRS3B is massive, has an embedded companion (IRS3B-c), and has spiral arms, which are indicative of gravitational instability, and we will more quantitatively examine the (in)stability of the disk in Section~\ref{sec:struct}.
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \explain{Moved to a subsection instead of subsubsection since the content holds its own independent of the origin of the triple\&wide companion}
 \subsection{Signatures of an Embedded Companion in Disk Kinematics}\label{sec:embeddedkinematics}
 \added{
@@ -326,7 +256,6 @@ Protomultiple systems like that of IRS3B and IRS3A can form via several possible
     
     \deleted{The disks presented in this work are not in quiescent states, like that of \citet{2018ApJ...860L..13P}, where the disk self-gravity is negligible. We would expect similar signatures to be readily apparent given a longer evolution or a more massive companion source.}
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsection{Disk Structure}\label{sec:struct}
 With the high resolutions observations, we can construct a radial profile of the continuum emission to analyze disk structure. The circumstellar disk of IRS3B has prominent spiral arms but the radial profile will azimuthally average this emission. In order to construct the radial profile, we have to define: an image center to begin the extraction, the geometry (position angle and inclination) of the source, and the size of each annuli. The system geometry and image center were all adapted from the PV diagram fit parameters and the radius of the annuli is defined as half the average synthesized beamsize \citep[Nyquist Sampling;][]{1928TAIEE..47..617N}. We then convert from flux density to mass via Equation~\ref{eq:dustmasseq}\space and further construct a disk mass surface density profile. To convert from flux density into dust mass, we adopt a radial temperature power law with a slope of -0.5, assuming the disk at 100~au can be described with a temperature of (30~K)$\times(L_{*}$/\lsun)$^{0.25}$\deleted{, similar to the temperature law used in other YSO regions \citep{2020ApJ...890..130T}}. The temperature profile has a minimum value of 20~K, based on models of disks embedded within envelopes \citep[][]{2003ApJ...591.1049W}. While we adopt a temperature law profile \deleted{that is similar to protostellar surveys}, protostellar multiples are expected to complicate simple radial temperature profiles.
 
@@ -335,7 +264,6 @@ Towards IRS3B, in order to mitigate the effects of the tertiary source in the su
 Towards IRS3A, the system geometry parameters used for the annuli correspond to an inclination of 69\deg\space and a position angle of 133\deg. With this method, we construct a radial surface density profile to analyze the stability of the disk (Figure~\ref{fig:irs3asurfacedensity}). The temperature at 100~au for IRS3A is taken to be $\approx$50.9~K. The circumstellar disk of IRS3A is much more compact than the circumstellar disk of IRS3B, with the IRS3A disk radius \ab150~au, and thus the assumed temperature at 100~au is a good approximation for the median disk temperature.
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsubsection{Disk Stability}\label{sec:stability}
 The radial surface density profiles allow us to characterize the stability of the disk to its self-gravity as a function of radius. The Toomre~Q parameter (herein Q) can be used as a metric for analyzing the stability of a disk. It is defined as the ratio of the rotational shear and thermal pressure of the disk versus the self-gravity of the disk, susceptible to fragmentation. When the Q parameter is $<$1, it indicates a gravitationally unstable region of the disk. 
 
@@ -360,13 +288,10 @@ Simulations have shown that values of Q$<$1.7 (calculated in 1D) can be sufficie
 
 Figure~\ref{fig:irs3atoomreq} shows the Toomre~Q radial profile for the circumstellar disk of L1448 IRS3A. The IRS3A dust continuum emission, while having possible spiral arm detection (Figure~\ref{fig:contimage}), is more indicative of a gravitationally stable disk through the analysis of the Toomre~Q radial profile (Q$>$5 for the entire disk). This is due to the higher mass central protostar and lower disk surface density, as compared to the circumstellar disk of IRS3B. Thus substructures in IRS3A may not be gravitationally driven spiral arms and could reflect other substructure. The circumstellar disk around IRS3A has a mass of 0.04~\solm\space and the protostar has a mass of 1.4~\solm.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Interpretation of the Formation Pathway}
-%\subsubsubsection{Wide Companion: IRS3A and IRS3B systems}
 The formation mechanism for the IRS3A source, IRS3B system as a whole, \added{and the more widely separated L1448 NW source \cite{2016ApJ...818...73T}}, is most likely turbulent fragmentation, which works on the 100s-1000s~au scales \citep[][]{2010ApJ...725.1485O, 2019ApJ...887..232L}. Companions formed via turbulent fragmentation are not expected to have similar orbital configurations and thus are expected to have different V$_{sys}$, position angle, inclination, and outflow orientations. For the wide companion, IRS3A, the disk and outflows are nearly orthogonal to IRS3B and have different system velocities (e.g., 5.3~km~s$^{-1}$\space and 4.9~km~s$^{-1}$, respectively; Tables~\ref{table:pvtable}~and~\ref{table:pdspykinematic}). \citet{2019ApJ...884....6M} has shown protostellar systems dynamically ejected from multi-body interactions are less likely to be disk bearing. Considering the low systemic velocity offset (IRS3A: 5.3~km~s$^{-1}$, IRS3B: 4.9~km~s$^{-1}$), the well ordered Keplerian disk of IRS3A, and relative alignment along the long axis of the natal core \citep{2017MNRAS.469.3881S}, the systems would not likely have formed via the dynamical ejection scenario from the IRS3B system \citep[][]{2012Natur.492..221R}.
 
-%\subsubsubsection{Triple System: IRS3B-abc}
 \added{In contrast, the triple system IRS3B appears to have originated via disk fragmentation. The well organized \cso\space emission, which traces the disk continuum emission, indicates that the circum-multiple disk in IRS3B is in Keplerian rotation at both compact and extended spatial scales (0\farcs2 to $>$2\farcs0; 50~au to $>$600~au) (see Figure~\ref{fig:irs3bc17omoment}). The derived disk mass (M$_{d}$/M$_{s}\sim25$\%) is high, such that the effects of self-gravity are important \citep[][]{1990ApJ...358..515L}. The low-m (azimuthal wavenumber) spiral arms observed in the disk are consistent with the high mass \citep{2016ARAA..54..271K}. The protostellar disk is provided stability on scales near the central potential due to the shear effects of Keplerian rotation and higher temperatures, while, at larger radii, the rotation velocity falls off and the local temperature is lower, allowing for local gravitational instability.  Moreover, as seen in Figure~\ref{fig:irs3btoomreq}, Toomre's~Q falls below unity at radii $>120$~au, coincident with the spatial location  of the tertiary IRS3B-c, as expected if recently formed via gravitational instability in the disk. Additionally the inner binary, IRS3B-ab, could have formed via disk fragmentation prior to the IRS3B-c, resulting in the well-ordered kinematics surrounding IRS3B-ab.
 
 The PV analysis of IRS3B-c also suggests that the central mass of the tertiary continuum source is low enough ($\sim0.02$~\solm) to not significantly alter the kinematics of the disk (Figures~\ref{fig:irs3bc17omoment}~and~\ref{fig:irs3abc17omoment1})
@@ -382,7 +307,6 @@ The apparent co-planarity of IRS3B-abc and the well-organized kinematics of both
 }
 \explain{Moved paragraph explaining various kinematic centers to section 6.2}
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsection{Protostar Masses}
 Comparing the masses of IRS3A (1.51~\solm) and IRS3B (1.15~\solm) to the initial mass function (IMF) \citep[young cluster IMF towards binaries;][]{2005ASSL..327...41C} shows these protostars will probably enter the main sequence as typical, stars once mass accretion from the infalling envelope and massive disks completes. IRS3B-a and -b are likely to continue accreting matter from the disk and envelope and grow substantially in size. 
 
@@ -399,17 +323,11 @@ More recently, \citet{2020AA...635A..15M}\space targeted several (7) Class 0 pro
 
 \explain{Cut section on Hierarchical Comparisons between class 0/field stars and this system as to not detract from main takeaway of the paper.}
 
-% ranges from 43\% \citep{2019AA...621A..76M}\space to
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsection{Gravitational Potential Energy of IRS3B-c}\label{sec:gpe}
 In analyzing the gravitational stability of the IRS3B circumstellar disk, we can also analyze the stability of the clump surrounding IRS3B-c. If the clump around IRS3B-c is sub-virial (i.e., not supported by thermal gas pressure) it would be likely unstable to gravitational collapse, undergoing rapid (dynamical timescale, $\tau_{dyn}$) collapse resulting in elevated accretion rates compared to the collapse of virialized clumps Additionally, it would be unlikely to observe this short-lived state during the first orbit of the clump. Dust clumps embedded within protostellar disks are expected to quickly (t$<10^{5}-yr$) migrate from their initial position to a quasi-stable orbit much closer to the parent star \citep{2019AA...631A...1V}. Thus observing the IRS3B-c clump at the wide separation within the disk is likely due to it recently forming in-situ. The virial theorem states $2E_{kin} + E_{pot}=0$, or in other words we can define an $\mathcal{R}$\space such that $\mathcal{R} := \frac{2E_{kin}}{|E_{pot}|}$\space will be $<1$\space for a gravitationally collapsing clump and $>1$\space for a clump to undergo expansion. Assuming the ideal gas scenario of N particles, we arrive at $E_{kin} = 1.5Nk_{b}T_{clump}$\space where k is the Planck constant and T$_{clump}$ is the average temperature of the particles. The potential energy takes the classic form $E_{pot} = \frac{-3}{5}\frac{GM^{2}_{clump}}{R_{clump}}$. We can define $N=\frac{M_{clump}}{\mu m_{H}}$\space where $\mu$\space is the mean molecular weight (2.37) and m$_{H}$\space is the mass of hydrogen. Assuming the clump is thermalized to the T$_{peak}=54.6$~K, the mass of the clump is $0.07$~\solm, the upper bound for the IRS3B-c protostar is $0.2$~\solm, and the diameter is 78.5~au (Table~\ref{table:obssummary3}), we calculate $\mathcal{R} \approx1.4$\space for the dust clump alone (this $\mathcal{R}$\space is likely an upper bound since our mass estimate for the dust is likely a lower limit due to the high optical depths) and $\approx0.3$\space for the combined dust clump and protostar (This $\mathcal{R}$\space is likely an lower bound since our mass estimate for the protostar an upper limit due to be consistent with the kinematic observations.). This is indicative that the core could be virialized but could also reflect a circumstellar accretion disk around IRS3B-c, or in the upper limit of the protostellar mass, could undergo contraction.
-% from nkrpy import constants as c
-% (3. / 2. * ((7.33216033e-02 + 0.2) * c.msun) / (2.37 * c.mh) * c.kb * 54.6)         # = 1.5498615001028157e+42 ergs
-% (3. / 5. * c.g * ((7.33216033e-02 + 0.2) * c.msun) ** 2 / (78.5 * c.au))  # = 1.0075534802341464e+43 ergs
 
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \subsection{Mass Accretion}\label{sec:massacc}
 The mass in the circumstellar disks and envelopes provide a reservoir for additional mass transfer onto the protostars. However, this mass accretion can be reduced by mass outflow due to protostellar winds, thus we need to determine the maximal mass transport rate of the system to determine if winds are needed to carry away momentum \citep{1998ApJ...502..661W}. While these observations do not place a direct constraint on \mdot, from our constraints on M$_{*}$\space and the observed total luminosity we can estimate the mass accretion rate. In a viscous, accreting disk, the total luminosity is the sum of the stellar and accretion luminosity:
 \begin{equation}
@@ -427,55 +345,16 @@ We further compare the accretion rates derived here with a similar survey toward
 
 \deleted{Furthermore, these rates are lower than the rate derived from maximal mass transport rate from the gravitational collapse of an isothermal sphere. \citet{1994ApJ...431..341S}\space describes the net mass accretion rate for a collapsing cloud via $\dot{M} \approx \frac{c_{s}^{3}}{G}$. Using Equation~\ref{eq:cs}\space and the average disk temperatures of IRS3A (50.9~K) and IRS3B (40.1~K), we arrive at $\dot{M} = 9.27(6.48)\times10^{-5}$~\solm~year$^{-1}$\space for IRS3A(IRS3B-ab), respectively.}
 
-%Thus, the mass accretion estimates from the bolometric luminosity are able to efficiently transport momentum from the disk onto the stellar surface without inducing protostellar winds.
 
-% disk transport
-% IRS3B 40.1    IRS3A 50.9
-% def tmp(temp): cs = (1.5 * nconstants.kb * temp * 2.0/(nconstants.mh * 2.36)) ** 0.5; return cs ** 3 / nconstants.g / nconstants.msun * nconstants.year # output in Msun/yr
-% tmp(40.1)
-% tmp(50.9)
 
-% mass accretion
-% Hartmann et al 1997 (1997ApJ...475..770H)
-% D'Antona and Mazzitelli 1994 (1994ApJS...90..467D)
-% Class 0 stage 10**6 years, compared to Yen 2017 (2017ApJ...834..178Y)
-% Lstar = 1 Lsun (Mstar / 0.5msun)^0.9(Rstar/2Rsun)^2.34
-% rstar * c.rsun / (c.g * mstar * c.msun) * (lacc * c.lsun) / c.msun * c.yr
 
-% def tmp(mass, radius, lum):
-%    lstar = (mass / 0.5 ) ** 0.9 * (radius/ 2.) ** 2.34
-%    mdot = radius * c.rsun / (c.g * mass * c.msun) * ((lum - lstar) * c.lsun) / c.msun * c.yr
-%    print(f'Radius: {radius:0.2e}')
-%    print(f'Lbol: {lum:0.2e}: Lstar: {lstar:0.2e}')
-%    print(f'Mdot: {mdot:0.2e}')
-%    print(f'Macc in 160kyr: {mdot * 160e3:0.2e}')
-%    lum /= 2
-%    mdot = radius * c.rsun / (c.g * mass * c.msun) * ((lum - lstar) * c.lsun) / c.msun * c.yr
-%    print(f'Lbol: {lum:0.2e}: Lstar: {lstar:0.2e}')
-%    print(f'Mdot: {mdot:0.2e}')
-%    print(f'Macc in 160kyr: {mdot * 160e3:0.2e}')
-%    lum *= 4
-%    mdot = radius * c.rsun / (c.g * mass * c.msun) * ((lum - lstar) * c.lsun) / c.msun * c.yr
-%    print(f'Lbol: {lum:0.2e}: Lstar: {lstar:0.2e}')
-%    print(f'Mdot: {mdot:0.2e}')
-%    print(f'Macc in 160kyr: {mdot * 160e3:0.2e}')
-% 
-% 
-% print(f'IRS3A')
-% print(f'{tmp(1.513, 2., 9.2 * (288. / 230.) ** 2)}')
-% print(f'IRS3B-single')
-% print(f'{tmp(1.15, 2.5, 8.3 * (288. / 230.) ** 2)}')
-% print(f'IRS3A-binary')
-% print(f'{tmp(1.15 / 2, 2.5, 8.3 * (288. / 230.) ** 2)}')
 
 \added{
 While the currently estimated accretion rates for IRS3B and IRS3A would not be able to assemble the observed protostar masses in the lifetime of a Class 0 protostar, accretion rates are not necessarily constant through the protostellar phase. The well-known FU Orionis phenomenon are exemplary examples of non-steady accretion in protostars \citep[e.g. ][]{1996ARAA..34..207H,2014prpl.conf..387A}. Accretion bursts have also been observed in both Class I and Class 0 protostars in recent years \citep{2015ApJ...800L...5S, 2013prpl.conf1H023F}. Gravitational instability in disks has been proposed as a mechanism to drive outburts with the accretion of clumps of material from the disks \citep{2011ASPC..451..213S, 2017MNRAS.465....2M, 2014ARep...58..522V,2014MNRAS.444..887D,2020arXiv201005939S}. In this scenario, the accretion luminosity increases quickly, stabilizing the disks. After the accretion event has finished, the protostars undergo a ``quiescent'' stage while the disk can re-develop gravitational instabilities and fragment. Two possible signatures for this mechanism would be in the outflow configuration: bi-polar jets with periodically spaced knots and gravitational instabilities of the disk. IRS3B does exhibit a gravitationally unstable disk (Section~\ref{sec:stability}), but the outflow, while having many bright features Appendix~\ref{sec:outflow}, does not show periodically spaced knows like the example from \citet{2015Natur.527...70P}. Thus, it is possible that both IRS3B and IRS3A have undergone past accretion burst, helping to explain their current masses and relatively low inferred accretion rates, but they do not currently exhibit features of outbursting protostars and we cannot unequivocally state that they have undergone past outbursts.
 }
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \section{Summary}
 We present the highest sensitivity and resolution observations tracing the disk kinematics toward L1448 IRS3B and IRS3A to date, \added{\cso/\ceo\space comparison: \ab5$\times$\space higher S/N at 4.0~\kms, \ab3$\times$\space higher resolution, and \ab2$\times$\space better velocity resolution as compared to \citet{2016Natur.538..483T})}. Our observations resolve three dust continuum sources within the circum-multiple disk with spiral structure and trace the kinematic structures using \cso, \htcn/\sot, and \htcop\space surrounding the proto-multiple sources. The central gravitating mass in IRS3B, near -a and -b, dominates the potential as shown by the organized rotation in \cso\space emission. We compare the high fidelity observations with radiative transfer models of the line emission components of the disk. The presence of the tertiary source within the circum-multiple disk, detection of dust continuum spiral arms, and the Toomre~Q analysis are indicative of the disk around IRS3B being gravitationally unstable.
 
-% SN calculation: RMS tobin 1.28E-2, peak 5.8E-2, Nick rms 2.21e-3, peak 4.61e-2, 20 vs 4.5
 
 We summarize our empirical and modeled results:
 
@@ -489,7 +368,6 @@ We summarize our empirical and modeled results:
 
 Through the presented analysis, we determine the most probable formation pathway for the IRS3B and its spiral structure, is through the self-gravity \added{and fragmentation of its} \deleted{ of the} massive disk. The larger IRS3A/B system (including the even wider companion L1448 NW) likely formed via turbulent fragmentation of the core during the early core collapse, as evidenced by the nearly orthogonal disk orientation and different system velocity for IRS3A and IRS3B.
 
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \acknowledgments{
 We thank the anonymous reviewer for helpful comments. \added{N.R. and J.T. acknowledge funding from NSF grant AST-1814762. This work is supported in part by NSF AST-1910364. Z.L. is supported in part by NSF AST-1716259 and NASA 80NSSC20K0533. KMK acknowledges support from NASA Grant 80NSSC18K0726. P.D.S acknowledges support from NSF AST-2001830.} This paper makes use of the following ALMA data: 2016.1.01520.S. ALMA is a partnership of ESO (representing its member states), NSF (USA) and NINS (Japan), together with NRC (Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation with the Republic of Chile. The Joint ALMA Observatory is operated by ESO, AUI/NRAO and NAOJ. The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc. The computing for this project was performed at the OU Supercomputing Center for Education \& Research (OSCER) at the University of Oklahoma (OU). This research has made use of NASA's Astrophysics Data System. This research made use of APLpy, an open-source plotting package for Python.}
 
@@ -506,31 +384,1362 @@ pdspy~\citep[][]{2019ApJ...874..136S},
 CASA~\citep[][]{2007ASPC..376..127M}
 }
 \clearpage
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 \begin{small}
 \bibliographystyle{apj}
-\bibliography{ms}
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\href{#1}{#1}}
+\providecommand{\dodoi}[1]{doi:~\href{http://doi.org/#1}{\nolinkurl{#1}}}
+\providecommand{\doeprint}[1]{\href{http://ascl.net/#1}{\nolinkurl{http://ascl.net/#1}}}
+\providecommand{\doarXiv}[1]{\href{https://arxiv.org/abs/#1}{\nolinkurl{https://arxiv.org/abs/#1}}}
+
+\bibitem[{{Abt}(1983)}]{1983ARAA..21..343A}
+{Abt}, H.~A. 1983, \araa, 21, 343, \dodoi{10.1146/annurev.aa.21.090183.002015}
+
+\bibitem[{{Adams} {et~al.}(1989){Adams}, {Ruden}, \&
+  {Shu}}]{1989ApJ...347..959A}
+{Adams}, F.~C., {Ruden}, S.~P., \& {Shu}, F.~H. 1989, \apj, 347, 959,
+  \dodoi{10.1086/168187}
+
+\bibitem[{{Andr{\'e}} {et~al.}(2014){Andr{\'e}}, {Di Francesco},
+  {Ward-Thompson}, {Inutsuka}, {Pudritz}, \& {Pineda}}]{2014prpl.conf...27A}
+{Andr{\'e}}, P., {Di Francesco}, J., {Ward-Thompson}, D., {et~al.} 2014,
+  Protostars and Planets VI, 27,
+  \dodoi{10.2458/azu_uapress_9780816531240-ch002}
+
+\bibitem[{{Andre} {et~al.}(1993){Andre}, {Ward-Thompson}, \&
+  {Barsony}}]{1993ApJ...406..122A}
+{Andre}, P., {Ward-Thompson}, D., \& {Barsony}, M. 1993, \apj, 406, 122,
+  \dodoi{10.1086/172425}
+
+\bibitem[{{Andrews} {et~al.}(2013){Andrews}, {Rosenfeld}, {Kraus}, \&
+  {Wilner}}]{2013ApJ...771..129A}
+{Andrews}, S.~M., {Rosenfeld}, K.~A., {Kraus}, A.~L., \& {Wilner}, D.~J. 2013,
+  \apj, 771, 129, \dodoi{10.1088/0004-637X/771/2/129}
+
+\bibitem[{{Andrews} {et~al.}(2009){Andrews}, {Wilner}, {Hughes}, {Qi}, \&
+  {Dullemond}}]{2009ApJ...700.1502A}
+{Andrews}, S.~M., {Wilner}, D.~J., {Hughes}, A.~M., {Qi}, C., \& {Dullemond},
+  C.~P. 2009, \apj, 700, 1502, \dodoi{10.1088/0004-637X/700/2/1502}
+
+\bibitem[{{Ansdell} {et~al.}(2016){Ansdell}, {Williams}, {van der Marel},
+  {Carpenter}, {Guidi}, {Hogerheijde}, {Mathews}, {Manara}, {Miotello},
+  {Natta}, {Oliveira}, {Tazzari}, {Testi}, {van Dishoeck}, \& {van
+  Terwisga}}]{2016ApJ...828...46A}
+{Ansdell}, M., {Williams}, J.~P., {van der Marel}, N., {et~al.} 2016, \apj,
+  828, 46, \dodoi{10.3847/0004-637X/828/1/46}
+
+\bibitem[{{Arce} \& {Sargent}(2006)}]{2006ApJ...646.1070A}
+{Arce}, H.~G., \& {Sargent}, A.~I. 2006, \apj, 646, 1070,
+  \dodoi{10.1086/505104}
+
+\bibitem[{{Artymowicz} \& {Lubow}(1996)}]{1996LNP...465..115A}
+{Artymowicz}, P., \& {Lubow}, S.~H. 1996, Lecture Notes in Physics, Berlin
+  Springer Verlag, Vol. 465, {Interaction of Young Binaries with Protostellar
+  Disks}, ed. S.~{Beckwith}, J.~{Staude}, A.~{Quetz}, \& A.~{Natta}, 115,
+  \dodoi{10.1007/BFb0102630}
+
+\bibitem[{{Astropy Collaboration} {et~al.}(2013){Astropy Collaboration},
+  {Robitaille}, {Tollerud}, {Greenfield}, {Droettboom}, {Bray}, {Aldcroft},
+  {Davis}, {Ginsburg}, {Price-Whelan}, {Kerzendorf}, {Conley}, {Crighton},
+  {Barbary}, {Muna}, {Ferguson}, {Grollier}, {Parikh}, {Nair}, {Unther},
+  {Deil}, {Woillez}, {Conseil}, {Kramer}, {Turner}, {Singer}, {Fox}, {Weaver},
+  {Zabalza}, {Edwards}, {Azalee Bostroem}, {Burke}, {Casey}, {Crawford},
+  {Dencheva}, {Ely}, {Jenness}, {Labrie}, {Lim}, {Pierfederici}, {Pontzen},
+  {Ptak}, {Refsdal}, {Servillat}, \& {Streicher}}]{astropy2013}
+{Astropy Collaboration}, {Robitaille}, T.~P., {Tollerud}, E.~J., {et~al.} 2013,
+  \aap, 558, A33, \dodoi{10.1051/0004-6361/201322068}
+
+\bibitem[{{Audard} {et~al.}(2014){Audard}, {{\'A}brah{\'a}m}, {Dunham},
+  {Green}, {Grosso}, {Hamaguchi}, {Kastner}, {K{\'o}sp{\'a}l}, {Lodato},
+  {Romanova}, {Skinner}, {Vorobyov}, \& {Zhu}}]{2014prpl.conf..387A}
+{Audard}, M., {{\'A}brah{\'a}m}, P., {Dunham}, M.~M., {et~al.} 2014, in
+  Protostars and Planets VI, ed. H.~{Beuther}, R.~S. {Klessen}, C.~P.
+  {Dullemond}, \& T.~{Henning}, 387,
+  \dodoi{10.2458/azu_uapress_9780816531240-ch017}
+
+\bibitem[{{Bate}(2012)}]{2012MNRAS.419.3115B}
+{Bate}, M.~R. 2012, \mnras, 419, 3115, \dodoi{10.1111/j.1365-2966.2011.19955.x}
+
+\bibitem[{{Bate} {et~al.}(2002){Bate}, {Bonnell}, \&
+  {Bromm}}]{2002MNRAS.336..705B}
+{Bate}, M.~R., {Bonnell}, I.~A., \& {Bromm}, V. 2002, \mnras, 336, 705,
+  \dodoi{10.1046/j.1365-8711.2002.05775.x}
+
+\bibitem[{{Behrendt} {et~al.}(2015){Behrendt}, {Burkert}, \&
+  {Schartmann}}]{2015MNRAS.448.1007B}
+{Behrendt}, M., {Burkert}, A., \& {Schartmann}, M. 2015, \mnras, 448, 1007,
+  \dodoi{10.1093/mnras/stv027}
+
+\bibitem[{{Binney} \& {Tremaine}(2008)}]{2008gady.book.....B}
+{Binney}, J., \& {Tremaine}, S. 2008, {Galactic Dynamics: Second Edition}
+  (Princeton University Press)
+
+\bibitem[{{Bohlin} {et~al.}(1978){Bohlin}, {Savage}, \&
+  {Drake}}]{1978ApJ...224..132B}
+{Bohlin}, R.~C., {Savage}, B.~D., \& {Drake}, J.~F. 1978, \apj, 224, 132,
+  \dodoi{10.1086/156357}
+
+\bibitem[{{Booth} \& {Ilee}(2020)}]{2020MNRAS.493L.108B}
+{Booth}, A.~S., \& {Ilee}, J.~D. 2020, \mnras, 493, L108,
+  \dodoi{10.1093/mnrasl/slaa014}
+
+\bibitem[{{Boss} \& {Keiser}(2013)}]{2013ApJ...764..136B}
+{Boss}, A.~P., \& {Keiser}, S.~A. 2013, \apj, 764, 136,
+  \dodoi{10.1088/0004-637X/764/2/136}
+
+\bibitem[{{Caselli} {et~al.}(1997){Caselli}, {Hartquist}, \&
+  {Havnes}}]{1997AA...322..296C}
+{Caselli}, P., {Hartquist}, T.~W., \& {Havnes}, O. 1997, \aap, 322, 296
+
+\bibitem[{{Cesaroni} {et~al.}(2011){Cesaroni}, {Beltr{\'a}n}, {Zhang},
+  {Beuther}, \& {Fallscheer}}]{2011AA...533A..73C}
+{Cesaroni}, R., {Beltr{\'a}n}, M.~T., {Zhang}, Q., {Beuther}, H., \&
+  {Fallscheer}, C. 2011, \aap, 533, A73, \dodoi{10.1051/0004-6361/201117206}
+
+\bibitem[{{Chabrier}(2005)}]{2005ASSL..327...41C}
+{Chabrier}, G. 2005, in Astrophysics and Space Science Library, Vol. 327, The
+  Initial Mass Function 50 Years Later, ed. E.~{Corbelli}, F.~{Palla}, \&
+  H.~{Zinnecker}, 41, \dodoi{10.1007/978-1-4020-3407-7_5}
+
+\bibitem[{{Chen} {et~al.}(2013){Chen}, {Arce}, {Zhang}, {Bourke}, {Launhardt},
+  {J{\o}rgensen}, {Lee}, {Foster}, {Dunham}, {Pineda}, \&
+  {Henning}}]{2013ApJ...768..110C}
+{Chen}, X., {Arce}, H.~G., {Zhang}, Q., {et~al.} 2013, \apj, 768, 110,
+  \dodoi{10.1088/0004-637X/768/2/110}
+
+\bibitem[{{Connelley} {et~al.}(2008){Connelley}, {Reipurth}, \&
+  {Tokunaga}}]{2008AJ....135.2526C}
+{Connelley}, M.~S., {Reipurth}, B., \& {Tokunaga}, A.~T. 2008, \aj, 135, 2526,
+  \dodoi{10.1088/0004-6256/135/6/2526}
+
+\bibitem[{{D'Antona} \& {Mazzitelli}(1994)}]{1994ApJS...90..467D}
+{D'Antona}, F., \& {Mazzitelli}, I. 1994, \apjs, 90, 467,
+  \dodoi{10.1086/191867}
+
+\bibitem[{{Dipierro} {et~al.}(2015){Dipierro}, {Pinilla}, {Lodato}, \&
+  {Testi}}]{2015MNRAS.451..974D}
+{Dipierro}, G., {Pinilla}, P., {Lodato}, G., \& {Testi}, L. 2015, \mnras, 451,
+  974, \dodoi{10.1093/mnras/stv970}
+
+\bibitem[{{Duch{\^e}ne} \& {Kraus}(2013)}]{2013ARAA..51..269D}
+{Duch{\^e}ne}, G., \& {Kraus}, A. 2013, \araa, 51, 269,
+  \dodoi{10.1146/annurev-astro-081710-102602}
+
+\bibitem[{{Dullemond} {et~al.}(2012){Dullemond}, {Juhasz}, {Pohl}, {Sereshti},
+  {Shetty}, {Peters}, {Commercon}, \& {Flock}}]{2012ascl.soft02015D}
+{Dullemond}, C.~P., {Juhasz}, A., {Pohl}, A., {et~al.} 2012, {RADMC-3D: A
+  multi-purpose radiative transfer tool}, Astrophysics Source Code Library.
+\newblock \doeprint{1202.015}
+
+\bibitem[{{Dunham} {et~al.}(2014{\natexlab{a}}){Dunham}, {Arce}, {Mardones},
+  {Lee}, {Matthews}, {Stutz}, \& {Williams}}]{2014ApJ...783...29D}
+{Dunham}, M.~M., {Arce}, H.~G., {Mardones}, D., {et~al.} 2014{\natexlab{a}},
+  \apj, 783, 29, \dodoi{10.1088/0004-637X/783/1/29}
+
+\bibitem[{{Dunham} {et~al.}(2014{\natexlab{b}}){Dunham}, {Vorobyov}, \&
+  {Arce}}]{2014MNRAS.444..887D}
+{Dunham}, M.~M., {Vorobyov}, E.~I., \& {Arce}, H.~G. 2014{\natexlab{b}},
+  \mnras, 444, 887, \dodoi{10.1093/mnras/stu1511}
+
+\bibitem[{{Duquennoy} \& {Mayor}(1991)}]{1991AA...248..485D}
+{Duquennoy}, A., \& {Mayor}, M. 1991, \aap, 248, 485
+
+\bibitem[{{Durisen} {et~al.}(2007){Durisen}, {Boss}, {Mayer}, {Nelson},
+  {Quinn}, \& {Rice}}]{2007prpl.conf..607D}
+{Durisen}, R.~H., {Boss}, A.~P., {Mayer}, L., {et~al.} 2007, in Protostars and
+  Planets V, ed. B.~{Reipurth}, D.~{Jewitt}, \& K.~{Keil}, 607.
+\newblock \doarXiv{astro-ph/0603179}
+
+\bibitem[{{Enoch} {et~al.}(2009){Enoch}, {Evans}, {Sargent}, \&
+  {Glenn}}]{2009ApJ...692..973E}
+{Enoch}, M.~L., {Evans}, II, N.~J., {Sargent}, A.~I., \& {Glenn}, J. 2009,
+  \apj, 692, 973, \dodoi{10.1088/0004-637X/692/2/973}
+
+\bibitem[{{Enoch} {et~al.}(2006){Enoch}, {Young}, {Glenn}, {Evans}, {Golwala},
+  {Sargent}, {Harvey}, {Aguirre}, {Goldin}, {Haig}, {Huard}, {Lange},
+  {Laurent}, {Maloney}, {Mauskopf}, {Rossinot}, \&
+  {Sayers}}]{2006ApJ...638..293E}
+{Enoch}, M.~L., {Young}, K.~E., {Glenn}, J., {et~al.} 2006, \apj, 638, 293,
+  \dodoi{10.1086/498678}
+
+\bibitem[{{Evans}(1999)}]{1999ARAA..37..311E}
+{Evans}, Neal~J., I. 1999, \araa, 37, 311,
+  \dodoi{10.1146/annurev.astro.37.1.311}
+
+\bibitem[{{Fischer} \& {Marcy}(1992)}]{1992ApJ...396..178F}
+{Fischer}, D.~A., \& {Marcy}, G.~W. 1992, \apj, 396, 178,
+  \dodoi{10.1086/171708}
+
+\bibitem[{{Fischer} {et~al.}(2013){Fischer}, {Megeath}, {Furlan}, {Ali},
+  {Stutz}, {Booker}, {Tobin}, {Stanke}, \& {Osorio}}]{2013prpl.conf1H023F}
+{Fischer}, W., {Megeath}, T., {Furlan}, E., {et~al.} 2013, in Protostars and
+  Planets VI Posters
+
+\bibitem[{{Fischer} {et~al.}(2017){Fischer}, {Megeath}, {Furlan}, {Ali},
+  {Stutz}, {Tobin}, {Osorio}, {Stanke}, {Manoj}, {Poteet}, {Booker},
+  {Hartmann}, {Wilson}, {Myers}, \& {Watson}}]{2017ApJ...840...69F}
+{Fischer}, W.~J., {Megeath}, S.~T., {Furlan}, E., {et~al.} 2017, \apj, 840, 69,
+  \dodoi{10.3847/1538-4357/aa6d69}
+
+\bibitem[{{Fisher}(2004)}]{2004ApJ...600..769F}
+{Fisher}, R.~T. 2004, \apj, 600, 769, \dodoi{10.1086/380111}
+
+\bibitem[{{Foreman-Mackey} {et~al.}(2013){Foreman-Mackey}, {Hogg}, {Lang}, \&
+  {Goodman}}]{2013PASP..125..306F}
+{Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D., \& {Goodman}, J. 2013, \pasp,
+  125, 306, \dodoi{10.1086/670067}
+
+\bibitem[{{Ginsburg} {et~al.}(2018){Ginsburg}, {Bally}, {Goddi}, {Plambeck}, \&
+  {Wright}}]{2018ApJ...860..119G}
+{Ginsburg}, A., {Bally}, J., {Goddi}, C., {Plambeck}, R., \& {Wright}, M. 2018,
+  \apj, 860, 119, \dodoi{10.3847/1538-4357/aac205}
+
+\bibitem[{{Goldsmith} \& {Langer}(1999)}]{1999ApJ...517..209G}
+{Goldsmith}, P.~F., \& {Langer}, W.~D. 1999, \apj, 517, 209,
+  \dodoi{10.1086/307195}
+
+\bibitem[{{Green} {et~al.}(2013){Green}, {Evans}, {J{\o}rgensen}, {Herczeg},
+  {Kristensen}, {Lee}, {Dionatos}, {Yildiz}, {Salyk}, {Meeus}, {Bouwman},
+  {Visser}, {Bergin}, {van Dishoeck}, {Rascati}, {Karska}, {van Kempen},
+  {Dunham}, {Lindberg}, {Fedele}, \& {DIGIT Team}}]{2013ApJ...770..123G}
+{Green}, J.~D., {Evans}, Neal~J., I., {J{\o}rgensen}, J.~K., {et~al.} 2013,
+  \apj, 770, 123, \dodoi{10.1088/0004-637X/770/2/123}
+
+\bibitem[{{Guido van Rossum}(1995)}]{python}
+{Guido van Rossum}. 1995, Python Tutorial, Centrum voor Wiskunde en
+  Informatica, Amsterdam, Netherlands.
+\newblock \url{https://www.python.org/}
+
+\bibitem[{{Hall} {et~al.}(2020){Hall}, {Dong}, {Teague}, {Terry}, {Pinte},
+  {Paneque-Carre{\~n}o}, {Veronesi}, {Alexand er}, \&
+  {Lodato}}]{2020arXiv200715686H}
+{Hall}, C., {Dong}, R., {Teague}, R., {et~al.} 2020, arXiv e-prints,
+  arXiv:2007.15686.
+\newblock \doarXiv{2007.15686}
+
+\bibitem[{{Hartmann} {et~al.}(1997){Hartmann}, {Cassen}, \&
+  {Kenyon}}]{1997ApJ...475..770H}
+{Hartmann}, L., {Cassen}, P., \& {Kenyon}, S.~J. 1997, \apj, 475, 770,
+  \dodoi{10.1086/303547}
+
+\bibitem[{{Hartmann} \& {Kenyon}(1996)}]{1996ARAA..34..207H}
+{Hartmann}, L., \& {Kenyon}, S.~J. 1996, \araa, 34, 207,
+  \dodoi{10.1146/annurev.astro.34.1.207}
+
+\bibitem[{{Hirota} {et~al.}(2011){Hirota}, {Honma}, {Imai}, {Sunada}, {Ueno},
+  {Kobayashi}, \& {Kawaguchi}}]{2011PASJ...63....1H}
+{Hirota}, T., {Honma}, M., {Imai}, H., {et~al.} 2011, \pasj, 63, 1,
+  \dodoi{10.1093/pasj/63.1.1}
+
+\bibitem[{Hunter(2007)}]{Hunter2007}
+Hunter, J.~D. 2007, Computing in Science \& Engineering, 9, 90,
+  \dodoi{10.1109/MCSE.2007.55}
+
+\bibitem[{{J{\o}rgensen} {et~al.}(2007){J{\o}rgensen}, {Johnstone}, {Kirk}, \&
+  {Myers}}]{2007ApJ...656..293J}
+{J{\o}rgensen}, J.~K., {Johnstone}, D., {Kirk}, H., \& {Myers}, P.~C. 2007,
+  \apj, 656, 293, \dodoi{10.1086/510150}
+
+\bibitem[{{J{\o}rgensen} {et~al.}(2009){J{\o}rgensen}, {van Dishoeck},
+  {Visser}, {Bourke}, {Wilner}, {Lommen}, {Hogerheijde}, \&
+  {Myers}}]{2009AA...507..861J}
+{J{\o}rgensen}, J.~K., {van Dishoeck}, E.~F., {Visser}, R., {et~al.} 2009,
+  \aap, 507, 861, \dodoi{10.1051/0004-6361/200912325}
+
+\bibitem[{{Keppler} {et~al.}(2018){Keppler}, {Benisty}, {M{\"u}ller},
+  {Henning}, {van Boekel}, {Cantalloube}, {Ginski}, {van Holstein}, {Maire},
+  {Pohl}, {Samland}, {Avenhaus}, {Baudino}, {Boccaletti}, {de Boer},
+  {Bonnefoy}, {Chauvin}, {Desidera}, {Langlois}, {Lazzoni}, {Marleau},
+  {Mordasini}, {Pawellek}, {Stolker}, {Vigan}, {Zurlo}, {Birnstiel},
+  {Brandner}, {Feldt}, {Flock}, {Girard}, {Gratton}, {Hagelberg}, {Isella},
+  {Janson}, {Juhasz}, {Kemmer}, {Kral}, {Lagrange}, {Launhardt}, {Matter},
+  {M{\'e}nard}, {Milli}, {Molli{\`e}re}, {Olofsson}, {P{\'e}rez}, {Pinilla},
+  {Pinte}, {Quanz}, {Schmidt}, {Udry}, {Wahhaj}, {Williams}, {Buenzli},
+  {Cudel}, {Dominik}, {Galicher}, {Kasper}, {Lannier}, {Mesa}, {Mouillet},
+  {Peretti}, {Perrot}, {Salter}, {Sissa}, {Wildi}, {Abe}, {Antichi},
+  {Augereau}, {Baruffolo}, {Baudoz}, {Bazzon}, {Beuzit}, {Blanchard}, {Brems},
+  {Buey}, {De Caprio}, {Carbillet}, {Carle}, {Cascone}, {Cheetham}, {Claudi},
+  {Costille}, {Delboulb{\'e}}, {Dohlen}, {Fantinel}, {Feautrier}, {Fusco},
+  {Giro}, {Gluck}, {Gry}, {Hubin}, {Hugot}, {Jaquet}, {Le Mignant}, {Llored},
+  {Madec}, {Magnard}, {Martinez}, {Maurel}, {Meyer}, {M{\"o}ller-Nilsson},
+  {Moulin}, {Mugnier}, {Orign{\'e}}, {Pavlov}, {Perret}, {Petit}, {Pragt},
+  {Puget}, {Rabou}, {Ramos}, {Rigal}, {Rochat}, {Roelfsema}, {Rousset}, {Roux},
+  {Salasnich}, {Sauvage}, {Sevin}, {Soenke}, {Stadler}, {Suarez}, {Turatto}, \&
+  {Weber}}]{2018AA...617A..44K}
+{Keppler}, M., {Benisty}, M., {M{\"u}ller}, A., {et~al.} 2018, \aap, 617, A44,
+  \dodoi{10.1051/0004-6361/201832957}
+
+\bibitem[{{Kim} \& {Ostriker}(2007)}]{2007ApJ...660.1232K}
+{Kim}, W.-T., \& {Ostriker}, E.~C. 2007, \apj, 660, 1232,
+  \dodoi{10.1086/513176}
+
+\bibitem[{{Kirk} {et~al.}(2006){Kirk}, {Johnstone}, \& {Di
+  Francesco}}]{2006ApJ...646.1009K}
+{Kirk}, H., {Johnstone}, D., \& {Di Francesco}, J. 2006, \apj, 646, 1009,
+  \dodoi{10.1086/503193}
+
+\bibitem[{{Klessen} {et~al.}(1998){Klessen}, {Burkert}, \&
+  {Bate}}]{1998ApJ...501L.205K}
+{Klessen}, R.~S., {Burkert}, A., \& {Bate}, M.~R. 1998, \apjl, 501, L205,
+  \dodoi{10.1086/311471}
+
+\bibitem[{{Kratter} \& {Lodato}(2016)}]{2016ARAA..54..271K}
+{Kratter}, K., \& {Lodato}, G. 2016, \araa, 54, 271,
+  \dodoi{10.1146/annurev-astro-081915-023307}
+
+\bibitem[{{Kratter} \& {Matzner}(2006)}]{2006MNRAS.373.1563K}
+{Kratter}, K.~M., \& {Matzner}, C.~D. 2006, \mnras, 373, 1563,
+  \dodoi{10.1111/j.1365-2966.2006.11103.x}
+
+\bibitem[{{Kratter} {et~al.}(2010{\natexlab{a}}){Kratter}, {Matzner},
+  {Krumholz}, \& {Klein}}]{2010ApJ...708.1585K}
+{Kratter}, K.~M., {Matzner}, C.~D., {Krumholz}, M.~R., \& {Klein}, R.~I.
+  2010{\natexlab{a}}, \apj, 708, 1585, \dodoi{10.1088/0004-637X/708/2/1585}
+
+\bibitem[{{Kratter} {et~al.}(2010{\natexlab{b}}){Kratter}, {Murray-Clay}, \&
+  {Youdin}}]{2010ApJ...710.1375K}
+{Kratter}, K.~M., {Murray-Clay}, R.~A., \& {Youdin}, A.~N. 2010{\natexlab{b}},
+  \apj, 710, 1375, \dodoi{10.1088/0004-637X/710/2/1375}
+
+\bibitem[{{Kristensen} \& {Dunham}(2018)}]{2018arXiv180711262K}
+{Kristensen}, L.~E., \& {Dunham}, M.~M. 2018, ArXiv e-prints.
+\newblock \doarXiv{1807.11262}
+
+\bibitem[{{Kwon} {et~al.}(2009){Kwon}, {Looney}, {Mundy}, {Chiang}, \&
+  {Kemball}}]{2009ApJ...696..841K}
+{Kwon}, W., {Looney}, L.~W., {Mundy}, L.~G., {Chiang}, H.-F., \& {Kemball},
+  A.~J. 2009, \apj, 696, 841, \dodoi{10.1088/0004-637X/696/1/841}
+
+\bibitem[{{Lacy} {et~al.}(1994){Lacy}, {Knacke}, {Geballe}, \&
+  {Tokunaga}}]{1994ApJ...428L..69L}
+{Lacy}, J.~H., {Knacke}, R., {Geballe}, T.~R., \& {Tokunaga}, A.~T. 1994,
+  \apjl, 428, L69, \dodoi{10.1086/187395}
+
+\bibitem[{{Lada}(1987)}]{1987IAUS..115....1L}
+{Lada}, C.~J. 1987, in IAU Symposium, Vol. 115, Star Forming Regions, ed.
+  M.~{Peimbert} \& J.~{Jugaku}, 1--17
+
+\bibitem[{{Lada} \& {Lada}(2003)}]{2003ARAA..41...57L}
+{Lada}, C.~J., \& {Lada}, E.~A. 2003, \araa, 41, 57,
+  \dodoi{10.1146/annurev.astro.41.011802.094844}
+
+\bibitem[{{Lee} {et~al.}(2019){Lee}, {Offner}, {Kratter}, {Smullen}, \&
+  {Li}}]{2019ApJ...887..232L}
+{Lee}, A.~T., {Offner}, S. S.~R., {Kratter}, K.~M., {Smullen}, R.~A., \& {Li},
+  P.~S. 2019, \apj, 887, 232, \dodoi{10.3847/1538-4357/ab584b}
+
+\bibitem[{Lee {et~al.}(2015)Lee, Dunham, Myers, Tobin, Kristensen, Pineda,
+  Vorobyov, Offner, Arce, Li, Bourke, J{\o}rgensen, Goodman, Sadavoy, Chandler,
+  Harris, Kratter, Looney, Melis, Perez, \& Segura-Cox}]{Lee_2015}
+Lee, K.~I., Dunham, M.~M., Myers, P.~C., {et~al.} 2015, The Astrophysical
+  Journal, 814, 114, \dodoi{10.1088/0004-637x/814/2/114}
+
+\bibitem[{{Li} {et~al.}(2014){Li}, {Banerjee}, {Pudritz}, {J{\o}rgensen},
+  {Shang}, {Krasnopolsky}, \& {Maury}}]{2014prpl.conf..173L}
+{Li}, Z.-Y., {Banerjee}, R., {Pudritz}, R.~E., {et~al.} 2014, Protostars and
+  Planets VI, 173, \dodoi{10.2458/azu_uapress_9780816531240-ch008}
+
+\bibitem[{{Lin} \& {Pringle}(1990)}]{1990ApJ...358..515L}
+{Lin}, D.~N.~C., \& {Pringle}, J.~E. 1990, \apj, 358, 515,
+  \dodoi{10.1086/169004}
+
+\bibitem[{{Lis} {et~al.}(1997){Lis}, {Keene}, {Young}, {Phillips},
+  {Bockel{\'e}e-Morvan}, {Crovisier}, {Schilke}, {Goldsmith}, \&
+  {Bergin}}]{1997Icar..130..355L}
+{Lis}, D.~C., {Keene}, J., {Young}, K., {et~al.} 1997, \icarus, 130, 355,
+  \dodoi{10.1006/icar.1997.5833}
+
+\bibitem[{{Lodders}(2003)}]{2003ApJ...591.1220L}
+{Lodders}, K. 2003, \apj, 591, 1220, \dodoi{10.1086/375492}
+
+\bibitem[{{Lynden-Bell} \& {Pringle}(1974)}]{1974MNRAS.168..603L}
+{Lynden-Bell}, D., \& {Pringle}, J.~E. 1974, \mnras, 168, 603,
+  \dodoi{10.1093/mnras/168.3.603}
+
+\bibitem[{{Maret} {et~al.}(2020){Maret}, {Maury}, {Belloche}, {Gaudel},
+  {Andr{\'e}}, {Cabrit}, {Codella}, {Lef{\'e}vre}, {Podio}, {Anderl}, {Gueth},
+  \& {Hennebelle}}]{2020AA...635A..15M}
+{Maret}, S., {Maury}, A.~J., {Belloche}, A., {et~al.} 2020, \aap, 635, A15,
+  \dodoi{10.1051/0004-6361/201936798}
+
+\bibitem[{{Mathieu}(1994)}]{1994ARAA..32..465M}
+{Mathieu}, R.~D. 1994, \araa, 32, 465,
+  \dodoi{10.1146/annurev.aa.32.090194.002341}
+
+\bibitem[{{Maury} {et~al.}(2019){Maury}, {Andr{\'e}}, {Testi}, {Maret},
+  {Belloche}, {Hennebelle}, {Cabrit}, {Codella}, {Gueth}, {Podio}, {Anderl},
+  {Bacmann}, {Bontemps}, {Gaudel}, {Ladjelate}, {Lef{\`e}vre}, {Tabone}, \&
+  {Lefloch}}]{2019AA...621A..76M}
+{Maury}, A.~J., {Andr{\'e}}, P., {Testi}, L., {et~al.} 2019, \aap, 621, A76,
+  \dodoi{10.1051/0004-6361/201833537}
+
+\bibitem[{{McBride} \& {Kounkel}(2019)}]{2019ApJ...884....6M}
+{McBride}, A., \& {Kounkel}, M. 2019, \apj, 884, 6,
+  \dodoi{10.3847/1538-4357/ab3df9}
+
+\bibitem[{{McKee} \& {Offner}(2010)}]{2010ApJ...716..167M}
+{McKee}, C.~F., \& {Offner}, S. S.~R. 2010, \apj, 716, 167,
+  \dodoi{10.1088/0004-637X/716/1/167}
+
+\bibitem[{{McMullin} {et~al.}(2007){McMullin}, {Waters}, {Schiebel}, {Young},
+  \& {Golap}}]{2007ASPC..376..127M}
+{McMullin}, J.~P., {Waters}, B., {Schiebel}, D., {Young}, W., \& {Golap}, K.
+  2007, in Astronomical Society of the Pacific Conference Series, Vol. 376,
+  Astronomical Data Analysis Software and Systems XVI, ed. R.~A. {Shaw},
+  F.~{Hill}, \& D.~J. {Bell}, 127
+
+\bibitem[{{Mercer} \& {Stamatellos}(2017)}]{2017MNRAS.465....2M}
+{Mercer}, A., \& {Stamatellos}, D. 2017, \mnras, 465, 2,
+  \dodoi{10.1093/mnras/stw2714}
+
+\bibitem[{{Meru} \& {Bate}(2011)}]{2011MNRAS.410..559M}
+{Meru}, F., \& {Bate}, M.~R. 2011, \mnras, 410, 559,
+  \dodoi{10.1111/j.1365-2966.2010.17465.x}
+
+\bibitem[{{Moe} \& {Di Stefano}(2017)}]{2017ApJS..230...15M}
+{Moe}, M., \& {Di Stefano}, R. 2017, \apjs, 230, 15,
+  \dodoi{10.3847/1538-4365/aa6fb6}
+
+\bibitem[{{Moeckel} \& {Bate}(2010)}]{2010MNRAS.404..721M}
+{Moeckel}, N., \& {Bate}, M.~R. 2010, \mnras, 404, 721,
+  \dodoi{10.1111/j.1365-2966.2010.16347.x}
+
+\bibitem[{{Murillo} {et~al.}(2016){Murillo}, {van Dishoeck}, {Tobin}, \&
+  {Fedele}}]{2016AA...592A..56M}
+{Murillo}, N.~M., {van Dishoeck}, E.~F., {Tobin}, J.~J., \& {Fedele}, D. 2016,
+  \aap, 592, A56, \dodoi{10.1051/0004-6361/201628247}
+
+\bibitem[{{Nyquist}(1928)}]{1928TAIEE..47..617N}
+{Nyquist}, H. 1928, Transactions of the American Institute of Electrical
+  Engineers, Volume 47, Issue 2, pp.~617-624, 47, 617,
+  \dodoi{10.1109/T-AIEE.1928.5055024}
+
+\bibitem[{{Offner} \& {Arce}(2014)}]{2014ApJ...784...61O}
+{Offner}, S.~S.~R., \& {Arce}, H.~G. 2014, \apj, 784, 61,
+  \dodoi{10.1088/0004-637X/784/1/61}
+
+\bibitem[{{Offner} {et~al.}(2012){Offner}, {Capodilupo}, {Schnee}, \&
+  {Goodman}}]{2012MNRAS.420L..53O}
+{Offner}, S.~S.~R., {Capodilupo}, J., {Schnee}, S., \& {Goodman}, A.~A. 2012,
+  \mnras, 420, L53, \dodoi{10.1111/j.1745-3933.2011.01194.x}
+
+\bibitem[{Offner {et~al.}(2016)Offner, Dunham, Lee, Arce, \&
+  Fielding}]{Offner_2016}
+Offner, S. S.~R., Dunham, M.~M., Lee, K.~I., Arce, H.~G., \& Fielding, D.~B.
+  2016, The Astrophysical Journal, 827, L11,
+  \dodoi{10.3847/2041-8205/827/1/l11}
+
+\bibitem[{{Offner} {et~al.}(2010){Offner}, {Kratter}, {Matzner}, {Krumholz}, \&
+  {Klein}}]{2010ApJ...725.1485O}
+{Offner}, S.~S.~R., {Kratter}, K.~M., {Matzner}, C.~D., {Krumholz}, M.~R., \&
+  {Klein}, R.~I. 2010, \apj, 725, 1485, \dodoi{10.1088/0004-637X/725/2/1485}
+
+\bibitem[{{Ohashi} {et~al.}(2014){Ohashi}, {Saigo}, {Aso}, {Aikawa},
+  {Koyamatsu}, {Machida}, {Saito}, {Takahashi}, {Takakuwa}, {Tomida},
+  {Tomisaka}, \& {Yen}}]{2014ApJ...796..131O}
+{Ohashi}, N., {Saigo}, K., {Aso}, Y., {et~al.} 2014, \apj, 796, 131,
+  \dodoi{10.1088/0004-637X/796/2/131}
+
+\bibitem[{{Ohashi} {et~al.}(2018){Ohashi}, {Sanhueza}, {Sakai}, {Kandori},
+  {Choi}, {Hirota}, {Nguy{\#7877}n-Lu'o'ng}, \&
+  {Tatematsu}}]{2018ApJ...856..147O}
+{Ohashi}, S., {Sanhueza}, P., {Sakai}, N., {et~al.} 2018, \apj, 856, 147,
+  \dodoi{10.3847/1538-4357/aab3d0}
+
+\bibitem[{Oliphant(2006)}]{numpy}
+Oliphant, T. 2006, Guide to NumPy
+
+\bibitem[{{Ortiz-Le{\'o}n} {et~al.}(2018){Ortiz-Le{\'o}n}, {Loinard}, {Dzib},
+  {Galli}, {Kounkel}, {Mioduszewski}, {Rodr{\'{\i}}guez}, {Torres}, {Hartmann},
+  {Boden}, {Evans}, {Brice{\~n}o}, \& {Tobin}}]{2018arXiv180803499O}
+{Ortiz-Le{\'o}n}, G.~N., {Loinard}, L., {Dzib}, S.~A., {et~al.} 2018, ArXiv
+  e-prints.
+\newblock \doarXiv{1808.03499}
+
+\bibitem[{{Ossenkopf} \& {Henning}(1994)}]{1994AA...291..943O}
+{Ossenkopf}, V., \& {Henning}, T. 1994, \aap, 291, 943
+
+\bibitem[{{Padoan} \& {Nordlund}(2004)}]{2004ApJ...617..559P}
+{Padoan}, P., \& {Nordlund}, {\r{A}}. 2004, \apj, 617, 559,
+  \dodoi{10.1086/345413}
+
+\bibitem[{{P{\'e}rez} {et~al.}(2018){P{\'e}rez}, {Casassus}, \&
+  {Ben{\'\i}tez-Llambay}}]{2018MNRAS.480L..12P}
+{P{\'e}rez}, S., {Casassus}, S., \& {Ben{\'\i}tez-Llambay}, P. 2018, \mnras,
+  480, L12, \dodoi{10.1093/mnrasl/sly109}
+
+\bibitem[{{Perez} {et~al.}(2015){Perez}, {Dunhill}, {Casassus}, {Roman},
+  {Szul{\'a}gyi}, {Flores}, {Marino}, \& {Montesinos}}]{2015ApJ...811L...5P}
+{Perez}, S., {Dunhill}, A., {Casassus}, S., {et~al.} 2015, \apjl, 811, L5,
+  \dodoi{10.1088/2041-8205/811/1/L5}
+
+\bibitem[{{Pinte} {et~al.}(2018{\natexlab{a}}){Pinte}, {Price}, {M{\'e}nard},
+  {Duch{\^e}ne}, {Dent}, {Hill}, {de Gregorio-Monsalvo}, {Hales}, \&
+  {Mentiplay}}]{2018ApJ...860L..13P}
+{Pinte}, C., {Price}, D.~J., {M{\'e}nard}, F., {et~al.} 2018{\natexlab{a}},
+  \apjl, 860, L13, \dodoi{10.3847/2041-8213/aac6dc}
+
+\bibitem[{{Pinte} {et~al.}(2018{\natexlab{b}}){Pinte}, {M{\'e}nard},
+  {Duch{\^e}ne}, {Hill}, {Dent}, {Woitke}, {Maret}, {van der Plas}, {Hales},
+  {Kamp}, {Thi}, {de Gregorio-Monsalvo}, {Rab}, {Quanz}, {Avenhaus}, {Carmona},
+  \& {Casassus}}]{2018AA...609A..47P}
+{Pinte}, C., {M{\'e}nard}, F., {Duch{\^e}ne}, G., {et~al.} 2018{\natexlab{b}},
+  \aap, 609, A47, \dodoi{10.1051/0004-6361/201731377}
+
+\bibitem[{{Pinte} {et~al.}(2019){Pinte}, {van der Plas}, {M{\'e}nard}, {Price},
+  {Christiaens}, {Hill}, {Mentiplay}, {Ginski}, {Choquet}, {Boehler},
+  {Duch{\^e}ne}, {Perez}, \& {Casassus}}]{2019NatAs...3.1109P}
+{Pinte}, C., {van der Plas}, G., {M{\'e}nard}, F., {et~al.} 2019, Nature
+  Astronomy, 3, 1109, \dodoi{10.1038/s41550-019-0852-6}
+
+\bibitem[{{Plunkett} {et~al.}(2015){Plunkett}, {Arce}, {Mardones}, {van
+  Dokkum}, {Dunham}, {Fern{\'a}ndez-L{\'o}pez}, {Gallardo}, \&
+  {Corder}}]{2015Natur.527...70P}
+{Plunkett}, A.~L., {Arce}, H.~G., {Mardones}, D., {et~al.} 2015, \nat, 527, 70,
+  \dodoi{10.1038/nature15702}
+
+\bibitem[{{Price-Whelan} {et~al.}(2018){Price-Whelan}, {Sip{\H{o}}cz},
+  {G{\"u}nther}, {Lim}, {Crawford}, {Conseil}, {Shupe}, {Craig}, {Dencheva},
+  {Ginsburg}, {VanderPlas}, {Bradley}, {P{\'e}rez-Su{\'a}rez}, {de Val-Borro},
+  {Paper Contributors}, {Aldcroft}, {Cruz}, {Robitaille}, {Tollerud},
+  {Coordination Committee}, {Ardelean}, {Babej}, {Bach}, {Bachetti}, {Bakanov},
+  {Bamford}, {Barentsen}, {Barmby}, {Baumbach}, {Berry}, {Biscani}, {Boquien},
+  {Bostroem}, {Bouma}, {Brammer}, {Bray}, {Breytenbach}, {Buddelmeijer},
+  {Burke}, {Calderone}, {Cano Rodr{\'\i}guez}, {Cara}, {Cardoso}, {Cheedella},
+  {Copin}, {Corrales}, {Crichton}, {D{\textquoteright}Avella}, {Deil},
+  {Depagne}, {Dietrich}, {Donath}, {Droettboom}, {Earl}, {Erben}, {Fabbro},
+  {Ferreira}, {Finethy}, {Fox}, {Garrison}, {Gibbons}, {Goldstein}, {Gommers},
+  {Greco}, {Greenfield}, {Groener}, {Grollier}, {Hagen}, {Hirst}, {Homeier},
+  {Horton}, {Hosseinzadeh}, {Hu}, {Hunkeler}, {Ivezi{\'c}}, {Jain}, {Jenness},
+  {Kanarek}, {Kendrew}, {Kern}, {Kerzendorf}, {Khvalko}, {King}, {Kirkby},
+  {Kulkarni}, {Kumar}, {Lee}, {Lenz}, {Littlefair}, {Ma}, {Macleod},
+  {Mastropietro}, {McCully}, {Montagnac}, {Morris}, {Mueller}, {Mumford},
+  {Muna}, {Murphy}, {Nelson}, {Nguyen}, {Ninan}, {N{\"o}the}, {Ogaz}, {Oh},
+  {Parejko}, {Parley}, {Pascual}, {Patil}, {Patil}, {Plunkett}, {Prochaska},
+  {Rastogi}, {Reddy Janga}, {Sabater}, {Sakurikar}, {Seifert}, {Sherbert},
+  {Sherwood-Taylor}, {Shih}, {Sick}, {Silbiger}, {Singanamalla}, {Singer},
+  {Sladen}, {Sooley}, {Sornarajah}, {Streicher}, {Teuben}, {Thomas},
+  {Tremblay}, {Turner}, {Terr{\'o}n}, {van Kerkwijk}, {de la Vega}, {Watkins},
+  {Weaver}, {Whitmore}, {Woillez}, {Zabalza}, \& {Contributors}}]{astropy2018}
+{Price-Whelan}, A.~M., {Sip{\H{o}}cz}, B.~M., {G{\"u}nther}, H.~M., {et~al.}
+  2018, \aj, 156, 123, \dodoi{10.3847/1538-3881/aabc4f}
+
+\bibitem[{{Raghavan} {et~al.}(2010){Raghavan}, {McAlister}, {Henry}, {Latham},
+  {Marcy}, {Mason}, {Gies}, {White}, \& {ten Brummelaar}}]{2010ApJS..190....1R}
+{Raghavan}, D., {McAlister}, H.~A., {Henry}, T.~J., {et~al.} 2010, \apjs, 190,
+  1, \dodoi{10.1088/0067-0049/190/1/1}
+
+\bibitem[{{Reipurth} \& {Mikkola}(2012)}]{2012Natur.492..221R}
+{Reipurth}, B., \& {Mikkola}, S. 2012, \nat, 492, 221,
+  \dodoi{10.1038/nature11662}
+
+\bibitem[{{Robitaille} \& {Bressert}(2012)}]{2012ascl.soft08017R}
+{Robitaille}, T., \& {Bressert}, E. 2012, {APLpy: Astronomical Plotting Library
+  in Python}, Astrophysics Source Code Library.
+\newblock \doeprint{1208.017}
+
+\bibitem[{{Robitaille}(2011)}]{2011AA...536A..79R}
+{Robitaille}, T.~P. 2011, \aap, 536, A79, \dodoi{10.1051/0004-6361/201117150}
+
+\bibitem[{{Rosenfeld} {et~al.}(2013){Rosenfeld}, {Andrews}, {Hughes}, {Wilner},
+  \& {Qi}}]{2013ApJ...774...16R}
+{Rosenfeld}, K.~A., {Andrews}, S.~M., {Hughes}, A.~M., {Wilner}, D.~J., \&
+  {Qi}, C. 2013, \apj, 774, 16, \dodoi{10.1088/0004-637X/774/1/16}
+
+\bibitem[{{Sadavoy}(2013)}]{2013PhDT.......434S}
+{Sadavoy}, S.~I. 2013, PhD thesis, University of Victoria
+
+\bibitem[{{Sadavoy} \& {Stahler}(2017)}]{2017MNRAS.469.3881S}
+{Sadavoy}, S.~I., \& {Stahler}, S.~W. 2017, \mnras, 469, 3881,
+  \dodoi{10.1093/mnras/stx1061}
+
+\bibitem[{{Sadavoy} {et~al.}(2014){Sadavoy}, {Di Francesco}, {Andr{\'e}},
+  {Pezzuto}, {Bernard}, {Maury}, {Men'shchikov}, {Motte}, {Nguyen-Lu'o'ng},
+  {Schneider}, {Arzoumanian}, {Benedettini}, {Bontemps}, {Elia}, {Hennemann},
+  {Hill}, {K{\"o}nyves}, {Louvet}, {Peretto}, {Roy}, \&
+  {White}}]{2014ApJ...787L..18S}
+{Sadavoy}, S.~I., {Di Francesco}, J., {Andr{\'e}}, P., {et~al.} 2014, \apjl,
+  787, L18, \dodoi{10.1088/2041-8205/787/2/L18}
+
+\bibitem[{{Safron} {et~al.}(2015){Safron}, {Fischer}, {Megeath}, {Furlan},
+  {Stutz}, {Stanke}, {Billot}, {Rebull}, {Tobin}, {Ali}, {Allen}, {Booker},
+  {Watson}, \& {Wilson}}]{2015ApJ...800L...5S}
+{Safron}, E.~J., {Fischer}, W.~J., {Megeath}, S.~T., {et~al.} 2015, \apjl, 800,
+  L5, \dodoi{10.1088/2041-8205/800/1/L5}
+
+\bibitem[{{Salpeter}(1955)}]{1955ApJ...121..161S}
+{Salpeter}, E.~E. 1955, \apj, 121, 161, \dodoi{10.1086/145971}
+
+\bibitem[{{Segura-Cox} {et~al.}(2018){Segura-Cox}, {Looney}, {Tobin}, {Li},
+  {Harris}, {Sadavoy}, {Dunham}, {Chandler}, {Kratter}, {P{\'e}rez}, \&
+  {Melis}}]{2018ApJ...866..161S}
+{Segura-Cox}, D.~M., {Looney}, L.~W., {Tobin}, J.~J., {et~al.} 2018, \apj, 866,
+  161, \dodoi{10.3847/1538-4357/aaddf3}
+
+\bibitem[{{Seifried} {et~al.}(2016){Seifried}, {S{\'a}nchez-Monge}, {Walch}, \&
+  {Banerjee}}]{2016MNRAS.459.1892S}
+{Seifried}, D., {S{\'a}nchez-Monge}, {\'A}., {Walch}, S., \& {Banerjee}, R.
+  2016, \mnras, 459, 1892, \dodoi{10.1093/mnras/stw785}
+
+\bibitem[{{Sharma} {et~al.}(2020){Sharma}, {Tobin}, {Sheehan}, {Megeath},
+  {Fischer}, {Jorgensen}, {Safron}, \& {Nagy}}]{2020arXiv201005939S}
+{Sharma}, R., {Tobin}, J.~J., {Sheehan}, P.~D., {et~al.} 2020, arXiv e-prints,
+  arXiv:2010.05939.
+\newblock \doarXiv{2010.05939}
+
+\bibitem[{{Sheehan} \& {Eisner}(2014)}]{2014ApJ...791...19S}
+{Sheehan}, P.~D., \& {Eisner}, J.~A. 2014, \apj, 791, 19,
+  \dodoi{10.1088/0004-637X/791/1/19}
+
+\bibitem[{{Sheehan} \& {Eisner}(2017)}]{2017ApJ...851...45S}
+---. 2017, \apj, 851, 45, \dodoi{10.3847/1538-4357/aa9990}
+
+\bibitem[{{Sheehan} {et~al.}(2019){Sheehan}, {Wu}, {Eisner}, \&
+  {Tobin}}]{2019ApJ...874..136S}
+{Sheehan}, P.~D., {Wu}, Y.-L., {Eisner}, J.~A., \& {Tobin}, J.~J. 2019, \apj,
+  874, 136, \dodoi{10.3847/1538-4357/ab09f9}
+
+\bibitem[{{Shu} {et~al.}(1987){Shu}, {Adams}, \& {Lizano}}]{1987ARAA..25...23S}
+{Shu}, F.~H., {Adams}, F.~C., \& {Lizano}, S. 1987, \araa, 25, 23,
+  \dodoi{10.1146/annurev.aa.25.090187.000323}
+
+\bibitem[{{Sierra} \& {Lizano}(2020)}]{2020ApJ...892..136S}
+{Sierra}, A., \& {Lizano}, S. 2020, \apj, 892, 136,
+  \dodoi{10.3847/1538-4357/ab7d32}
+
+\bibitem[{{Stahler} {et~al.}(1994){Stahler}, {Korycansky}, {Brothers}, \&
+  {Touma}}]{1994ApJ...431..341S}
+{Stahler}, S.~W., {Korycansky}, D.~G., {Brothers}, M.~J., \& {Touma}, J. 1994,
+  \apj, 431, 341, \dodoi{10.1086/174489}
+
+\bibitem[{{Stahler} {et~al.}(1980{\natexlab{a}}){Stahler}, {Shu}, \&
+  {Taam}}]{1980ApJ...241..637S}
+{Stahler}, S.~W., {Shu}, F.~H., \& {Taam}, R.~E. 1980{\natexlab{a}}, \apj, 241,
+  637, \dodoi{10.1086/158377}
+
+\bibitem[{{Stahler} {et~al.}(1980{\natexlab{b}}){Stahler}, {Shu}, \&
+  {Taam}}]{1980ApJ...242..226S}
+---. 1980{\natexlab{b}}, \apj, 242, 226, \dodoi{10.1086/158459}
+
+\bibitem[{{Stamatellos} {et~al.}(2011){Stamatellos}, {Hubber}, \&
+  {Hubber}}]{2011ASPC..451..213S}
+{Stamatellos}, D., {Hubber}, D., \& {Hubber}, A. 2011, in Astronomical Society
+  of the Pacific Conference Series, Vol. 451, 9th Pacific Rim Conference on
+  Stellar Astrophysics, ed. S.~{Qain}, K.~{Leung}, L.~{Zhu}, \& S.~{Kwok}, 213.
+\newblock \doarXiv{1109.2100}
+
+\bibitem[{{Stamatellos} \& {Whitworth}(2009)}]{2009MNRAS.392..413S}
+{Stamatellos}, D., \& {Whitworth}, A.~P. 2009, \mnras, 392, 413,
+  \dodoi{10.1111/j.1365-2966.2008.14069.x}
+
+\bibitem[{{Tazzari} {et~al.}(2018){Tazzari}, {Beaujean}, \&
+  {Testi}}]{2018MNRAS.476.4527T}
+{Tazzari}, M., {Beaujean}, F., \& {Testi}, L. 2018, \mnras, 476, 4527,
+  \dodoi{10.1093/mnras/sty409}
+
+\bibitem[{{Terebey} {et~al.}(1984){Terebey}, {Shu}, \&
+  {Cassen}}]{1984ApJ...286..529T}
+{Terebey}, S., {Shu}, F.~H., \& {Cassen}, P. 1984, \apj, 286, 529,
+  \dodoi{10.1086/162628}
+
+\bibitem[{{Tobin} {et~al.}(2018){Tobin}, {Bos}, {Dunham}, {Bourke}, \& {van der
+  Marel}}]{2018ApJ...856..164T}
+{Tobin}, J.~J., {Bos}, S.~P., {Dunham}, M.~M., {Bourke}, T.~L., \& {van der
+  Marel}, N. 2018, \apj, 856, 164, \dodoi{10.3847/1538-4357/aaafc7}
+
+\bibitem[{{Tobin} {et~al.}(2013){Tobin}, {Hartmann}, {Chiang}, {Wilner},
+  {Looney}, {Loinard}, {Calvet}, \& {D'Alessio}}]{2013ApJ...771...48T}
+{Tobin}, J.~J., {Hartmann}, L., {Chiang}, H.-F., {et~al.} 2013, \apj, 771, 48,
+  \dodoi{10.1088/0004-637X/771/1/48}
+
+\bibitem[{{Tobin} {et~al.}(2016{\natexlab{a}}){Tobin}, {Kratter}, {Persson},
+  {Looney}, {Dunham}, {Segura-Cox}, {Li}, {Chandler}, {Sadavoy}, {Harris},
+  {Melis}, \& {P{\'e}rez}}]{2016Natur.538..483T}
+{Tobin}, J.~J., {Kratter}, K.~M., {Persson}, M.~V., {et~al.}
+  2016{\natexlab{a}}, \nat, 538, 483, \dodoi{10.1038/nature20094}
+
+\bibitem[{{Tobin} {et~al.}(2016{\natexlab{b}}){Tobin}, {Looney}, {Li},
+  {Chandler}, {Dunham}, {Segura-Cox}, {Sadavoy}, {Melis}, {Harris}, {Kratter},
+  \& {Perez}}]{2016ApJ...818...73T}
+{Tobin}, J.~J., {Looney}, L.~W., {Li}, Z.-Y., {et~al.} 2016{\natexlab{b}},
+  \apj, 818, 73, \dodoi{10.3847/0004-637X/818/1/73}
+
+\bibitem[{{Tobin} {et~al.}(2019){Tobin}, {Megeath}, {van{\textquoteright}t
+  Hoff}, {D{\'\i}az-Rodr{\'\i}guez}, {Reynolds}, {Osorio}, {Anglada}, {Furlan},
+  {Karnath}, {Offner}, {Sheehan}, {Sadavoy}, {Stutz}, {Fischer}, {Kama},
+  {Persson}, {Di Francesco}, {Looney}, {Watson}, {Li}, {Stephens}, {Chandler},
+  {Cox}, {Dunham}, {Kratter}, {Kounkel}, {Mazur}, {Murillo}, {Patel}, {Perez},
+  {Segura-Cox}, {Sharma}, {Tychoniec}, \& {Wyrowski}}]{2019ApJ...886....6T}
+{Tobin}, J.~J., {Megeath}, S.~T., {van{\textquoteright}t Hoff}, M., {et~al.}
+  2019, \apj, 886, 6, \dodoi{10.3847/1538-4357/ab498f}
+
+\bibitem[{{Tobin} {et~al.}(2020){Tobin}, {Sheehan}, {Megeath},
+  {D{\'\i}az-Rodr{\'\i}guez}, {Offner}, {Murillo}, {van 't Hoff}, {van
+  Dishoeck}, {Osorio}, {Anglada}, {Furlan}, {Stutz}, {Reynolds}, {Karnath},
+  {Fischer}, {Persson}, {Looney}, {Li}, {Stephens}, {Chand ler}, {Cox},
+  {Dunham}, {Tychoniec}, {Kama}, {Kratter}, {Kounkel}, {Mazur}, {Maud},
+  {Patel}, {Perez}, {Sadavoy}, {Segura-Cox}, {Sharma}, {Stephenson}, {Watson},
+  \& {Wyrowski}}]{2020ApJ...890..130T}
+{Tobin}, J.~J., {Sheehan}, P.~D., {Megeath}, S.~T., {et~al.} 2020, \apj, 890,
+  130, \dodoi{10.3847/1538-4357/ab6f64}
+
+\bibitem[{{Ulrich}(1976)}]{1976ApJ...210..377U}
+{Ulrich}, R.~K. 1976, \apj, 210, 377, \dodoi{10.1086/154840}
+
+\bibitem[{{van der Marel} {et~al.}(2013){van der Marel}, {van Dishoeck},
+  {Bruderer}, {Birnstiel}, {Pinilla}, {Dullemond}, {van Kempen}, {Schmalzl},
+  {Brown}, {Herczeg}, {Mathews}, \& {Geers}}]{2013Sci...340.1199V}
+{van der Marel}, N., {van Dishoeck}, E.~F., {Bruderer}, S., {et~al.} 2013,
+  Science, 340, 1199, \dodoi{10.1126/science.1236770}
+
+\bibitem[{{Virtanen} {et~al.}(2019){Virtanen}, {Gommers}, {Oliphant},
+  {Haberland}, {Reddy}, {Cournapeau}, {Burovski}, {Peterson}, {Weckesser},
+  {Bright}, {van der Walt}, {Brett}, {Wilson}, {Jarrod Millman}, {Mayorov},
+  {Nelson}, {Jones}, {Kern}, {Larson}, {Carey}, {Polat}, {Feng}, {Moore}, {Vand
+  erPlas}, {Laxalde}, {Perktold}, {Cimrman}, {Henriksen}, {Quintero}, {Harris},
+  {Archibald}, {Ribeiro}, {Pedregosa}, {van Mulbregt}, \&
+  {Contributors}}]{2019arXiv190710121V}
+{Virtanen}, P., {Gommers}, R., {Oliphant}, T.~E., {et~al.} 2019, arXiv
+  e-prints, arXiv:1907.10121.
+\newblock \doarXiv{1907.10121}
+
+\bibitem[{{Visser} {et~al.}(2009){Visser}, {van Dishoeck}, \&
+  {Black}}]{2009AA...503..323V}
+{Visser}, R., {van Dishoeck}, E.~F., \& {Black}, J.~H. 2009, \aap, 503, 323,
+  \dodoi{10.1051/0004-6361/200912129}
+
+\bibitem[{{Volgenau} {et~al.}(2006){Volgenau}, {Mundy}, {Looney}, \&
+  {Welch}}]{2006ApJ...651..301V}
+{Volgenau}, N.~H., {Mundy}, L.~G., {Looney}, L.~W., \& {Welch}, W.~J. 2006,
+  \apj, 651, 301, \dodoi{10.1086/507437}
+
+\bibitem[{{Vorobyov} \& {Basu}(2011)}]{2011IAUS..276..463V}
+{Vorobyov}, E.~I., \& {Basu}, S. 2011, in IAU Symposium, Vol. 276, The
+  Astrophysics of Planetary Systems: Formation, Structure, and Dynamical
+  Evolution, ed. A.~{Sozzetti}, M.~G. {Lattanzi}, \& A.~P. {Boss}, 463--464,
+  \dodoi{10.1017/S1743921311020813}
+
+\bibitem[{{Vorobyov} \& {Elbakyan}(2019)}]{2019AA...631A...1V}
+{Vorobyov}, E.~I., \& {Elbakyan}, V.~G. 2019, \aap, 631, A1,
+  \dodoi{10.1051/0004-6361/201936132}
+
+\bibitem[{{Vorobyov} {et~al.}(2014){Vorobyov}, {Pavlyuchenkov}, \&
+  {Trinkl}}]{2014ARep...58..522V}
+{Vorobyov}, E.~I., {Pavlyuchenkov}, Y.~N., \& {Trinkl}, P. 2014, Astronomy
+  Reports, 58, 522, \dodoi{10.1134/S1063772914080083}
+
+\bibitem[{{Whitney} {et~al.}(2003){Whitney}, {Wood}, {Bjorkman}, \&
+  {Wolff}}]{2003ApJ...591.1049W}
+{Whitney}, B.~A., {Wood}, K., {Bjorkman}, J.~E., \& {Wolff}, M.~J. 2003, \apj,
+  591, 1049, \dodoi{10.1086/375415}
+
+\bibitem[{{Wilkin} \& {Stahler}(1998)}]{1998ApJ...502..661W}
+{Wilkin}, F.~P., \& {Stahler}, S.~W. 1998, \apj, 502, 661,
+  \dodoi{10.1086/305948}
+
+\bibitem[{{Williams} \& {Best}(2014)}]{2014ApJ...788...59W}
+{Williams}, J.~P., \& {Best}, W.~M.~J. 2014, \apj, 788, 59,
+  \dodoi{10.1088/0004-637X/788/1/59}
+
+\bibitem[{{Williams} \& {Cieza}(2011)}]{2011ARAA..49...67W}
+{Williams}, J.~P., \& {Cieza}, L.~A. 2011, \araa, 49, 67,
+  \dodoi{10.1146/annurev-astro-081710-102548}
+
+\bibitem[{{Wilson} {et~al.}(2009){Wilson}, {Rohlfs}, \&
+  {H{\"u}ttemeister}}]{2009tra..book.....W}
+{Wilson}, T.~L., {Rohlfs}, K., \& {H{\"u}ttemeister}, S. 2009, {Tools of Radio
+  Astronomy}, \dodoi{10.1007/978-3-540-85122-6}
+
+\bibitem[{{Wilson} \& {Rood}(1994)}]{1994ARAA..32..191W}
+{Wilson}, T.~L., \& {Rood}, R. 1994, \araa, 32, 191,
+  \dodoi{10.1146/annurev.aa.32.090194.001203}
+
+\bibitem[{{Worley}(1962)}]{1962AJ.....67R.590W}
+{Worley}, C.~E. 1962, \aj, 67, 590, \dodoi{10.1086/108886}
+
+\bibitem[{{Wu} \& {Sheehan}(2017)}]{2017ApJ...846L..26W}
+{Wu}, Y.-L., \& {Sheehan}, P.~D. 2017, \apjl, 846, L26,
+  \dodoi{10.3847/2041-8213/aa8771}
+
+\bibitem[{{Yen} {et~al.}(2017){Yen}, {Koch}, {Takakuwa}, {Krasnopolsky},
+  {Ohashi}, \& {Aso}}]{2017ApJ...834..178Y}
+{Yen}, H.-W., {Koch}, P.~M., {Takakuwa}, S., {et~al.} 2017, \apj, 834, 178,
+  \dodoi{10.3847/1538-4357/834/2/178}
+
+\bibitem[{{Yen} {et~al.}(2013){Yen}, {Takakuwa}, {Ohashi}, \&
+  {Ho}}]{2013ApJ...772...22Y}
+{Yen}, H.-W., {Takakuwa}, S., {Ohashi}, N., \& {Ho}, P.~T.~P. 2013, \apj, 772,
+  22, \dodoi{10.1088/0004-637X/772/1/22}
+
+\bibitem[{{Yen} {et~al.}(2014){Yen}, {Takakuwa}, {Ohashi}, {Aikawa}, {Aso},
+  {Koyamatsu}, {Machida}, {Saigo}, {Saito}, {Tomida}, \&
+  {Tomisaka}}]{2014ApJ...793....1Y}
+{Yen}, H.-W., {Takakuwa}, S., {Ohashi}, N., {et~al.} 2014, \apj, 793, 1,
+  \dodoi{10.1088/0004-637X/793/1/1}
+
+\bibitem[{{Yorke} \& {Bodenheimer}(1999)}]{1999ApJ...525..330Y}
+{Yorke}, H.~W., \& {Bodenheimer}, P. 1999, \apj, 525, 330,
+  \dodoi{10.1086/307867}
+
+\bibitem[{{Zapata} {et~al.}(2019){Zapata}, {Garay}, {Palau}, {Rodr{\'\i}guez},
+  {Fern{\'a}ndez-L{\'o}pez}, {Estalella}, \&
+  {Guzm{\'a}n}}]{2019ApJ...872..176Z}
+{Zapata}, L.~A., {Garay}, G., {Palau}, A., {et~al.} 2019, \apj, 872, 176,
+  \dodoi{10.3847/1538-4357/aafedf}
+
+\bibitem[{{Zhu} {et~al.}(2019){Zhu}, {Zhang}, {Jiang}, {Kataoka}, {Birnstiel},
+  {Dullemond}, {Andrews}, {Huang}, {P{\'e}rez}, {Carpenter}, {Bai}, {Wilner},
+  \& {Ricci}}]{2019ApJ...877L..18Z}
+{Zhu}, Z., {Zhang}, S., {Jiang}, Y.-F., {et~al.} 2019, \apjl, 877, L18,
+  \dodoi{10.3847/2041-8213/ab1f8c}
+
+\bibitem[{{Zucker} {et~al.}(2019){Zucker}, {Speagle}, {Schlafly}, {Green},
+  {Finkbeiner}, {Goodman}, \& {Alves}}]{2019ApJ...879..125Z}
+{Zucker}, C., {Speagle}, J.~S., {Schlafly}, E.~F., {et~al.} 2019, \apj, 879,
+  125, \dodoi{10.3847/1538-4357/ab2388}
+
+\end{thebibliography}
 \end{small}
 \clearpage
-%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#%#
 
-\input{tables/obstable.tex}
-\input{tables/correlator.tex}
-\input{tables/source_properties.tex}
-\input{tables/pvtable.tex}
-\input{tables/kinematictable.tex}
-\input{tables/macc.tex}
-\input{tables/selfcal.tex}
+\begin{deluxetable}{cccccccc}
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Summary of Observations}
+\tablehead{
+  \colhead{Source} & \colhead{RA}      & \colhead{Dec}      &\colhead{Config.\tablenotemark{a}}  & \colhead{Resolution} &\colhead{LAS\tablenotemark{b}} & \colhead{Date} & \colhead{Calibrators}\\
+                   & \colhead{(J2000)} &  \colhead{(J2000)} &                   &                      &              & \colhead{(UT)} &   \colhead{(Gain, Bandpass, Flux)} \\
+}
+\startdata
+L1448 IRS3B        & 03:25:36.382 & 30:45:14.715 & C40-6 & 0\farcs12 & 1\farcs3  & 1 and 4 October 2016 & J0336$+$3218,J0237$+$2848,J0238$+$1636    \\
+L1448 IRS3B        & 03:25:36.382 & 30:45:14.715 & C40-3 & 0\farcs59 & 5\farcs6 & 19 December 2016     &  J0336$+$3218,J0237$+$2848,J0238$+$1636 \\
+\enddata
+\tablenotetext{a}{C40-6 - Extended and C40-3 - Compact} 
+\tablenotetext{b}{LAS- Largest Angular Scale} 
+\end{deluxetable}\label{table:obssummary1}
+
+\begin{deluxetable}{cccccccc}
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Continuum and Spectral Line Data}
+\tablehead{
+  \colhead{} & \colhead{MFS Continuum\tablenotemark{a}} & \colhead{\co} & \colhead{\sio\tablenotemark{b}} & \colhead{\htcn/\sot\tablenotemark{c}} & \colhead{\htcop} & \colhead{\cso}  & \colhead{335.5GHz Continuum} \\
+}
+\startdata
+ Rest. Freq. (GHz)   & 341.0     & 346.0             & 347.000030579  & 345.339756     & 346.998347     & 337.061104      & 335.5       \\
+ Center Freq. (GHz)  & 341.0     & 346.778059        & 347.2698586    & 345.3520738    & 347.010582     & 337.0730133     & 335.4708304 \\
+ Chan. Width (km/s)  & 2747.96   & 0.212             & \replaced{0.053}{0.210}          & 0.053          & 0.053          & 0.054           & 0.873       \\
+ Num. Chan.          & 1         & 1920              & 1920           & 1920           & 1920           & 3840            & 1920        \\
+ RMS/chan. (mJy)     & 0.069     & 4.0               & 0.5            & 4.5            & 4.5            & 3.7             & -           \\
+ Integr. (Jy) IRS3B\tablenotemark{d}  & 1.5       & 512.7,809.8\tablenotemark{e} & 7.8, 3.5\tablenotemark{e} & 0.2, 0.1\tablenotemark{e} & 2.6, 4.1\tablenotemark{e}& 2.9, 3.2\tablenotemark{e} & -           \\
+ Integr. (Jy) IRS3A\tablenotemark{d}  & 0.2       & 3.16,67.6\tablenotemark{e}   & 0,0 \tablenotemark{e}     & 2.3, 2.7\tablenotemark{e} & 0.2, 0.4\tablenotemark{e} & 0.1, 0.1\tablenotemark{e} & -           \\
+ Synth. Beam\tablenotemark{f}         & \contbeam & \cobeam           & \siobeam       & \htcnbeam      & 0\farcs21$\times$0\farcs13     & \csobeam        & \tttfbeam   \\
+ Briggs Robust       & 0.5       & 0.5               & 0.5            & 0.5            & 0.5            & 0.5             & -           \\
+ Taper (k$\lambda$)  & -         & -                 & -              & 1000           & 1500            & 1500            & -           \\
+\enddata 
+\tablecomments{The setup of the correlator for the observations}
+\tablenotetext{a}{Multi-Frequency Synthesis (MFS) utilizing the extracted emission from line free spectral channels}
+\tablenotetext{b}{\sio\space was tuned incorrectly for the C40-6 observations.}
+\tablenotetext{c}{The \htcn\space line is blended with the \sot\space line (345.3385377~GHz) and have a velocity separation of \ab1.06~km~s$^{-1}$.}
+\tablenotetext{d}{The integrated flux density for the source, measured by integrated the full emission whose origin is the source. In the case of continuum emission, this is given in \textit{Jy}; in the case of molecular line emission this is given in \textit{Jy~km~s$^{-1}$}.}
+\tablenotetext{e}{The molecular line emission is given as the total integrated flux (Jy~km~s$^{-1}$) for the blue and red-Doppler shifted emission, denote blue, red, respectively.}
+\tablenotetext{f}{The synthesized beam size is provided from the \textit{clean} task for the molecular lines (or continuum for the MFS column) using the briggs robust weighing parameter of 0.5 during image reconstruction.}
+\end{deluxetable}\label{table:obssummary2}
+
+\movetabledown=2in
+\begin{splitdeluxetable}{cccccccBccccccccc}
+\rotate
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Source Properties}
+\tablehead{
+ \colhead{Source} & \colhead{RA}      & \colhead{Dec}     & \colhead{Inc.\tablenotemark{a}} & \colhead{P.A.\tablenotemark{b}}  & \colhead{Outflow?} & \colhead{V$_{sys}$}      & \colhead{L$_{bol}$}  & \colhead{M$_{dust}$}  & \colhead{FWHM$_{Dust}$\tablenotemark{c} Major Axis} & \colhead{FWHM$_{Dust}$\tablenotemark{c} Minor Axis} & \colhead{FWHM$_{Gas}$\tablenotemark{c} Major Axis} & \colhead{FWHM$_{Gas}$\tablenotemark{c} Minor Axis}  & \colhead{$<$T$_{0}>$} & \colhead{$<$Optical Depth$>$} \\
+                  & \colhead{(J2000)} & \colhead{(J2000)} & \colhead{(\deg)}                & \colhead{(\deg)}                 &                    & \colhead{(km~s$^{-1}$)}  & \colhead{(\lsun)}    & \colhead{(\solm)}                             & \colhead{(\arcsec, au)}                 & \colhead{(\arcsec, au)} & \colhead{(\arcsec, au)}                 & \colhead{(\arcsec, au)}   & \colhead{(K)} & & \\
+}
+\startdata
+ IRS3B-ab & 03:25:36.317 & 30:45:15.005 & 45 & 28  & Joint & 4.75 & 13.0\tablenotemark{e}  & 0.29 & 1.73$\pm$0.05, 498$\pm$14 & 1.22$\pm$0.04, 351$\pm$12 & 2.38$\pm$0.09, 685$\pm$26 & 2.25$\pm$0.08, 648$\pm$23 & 40 & 0.34 \\
+ IRS3B-c  & 03:25:36.382 & 30:45:14.715 & 27 & 21  & Yes   & 4.75 & -\tablenotemark{d}     & 0.07 & 0.28$\pm$0.05, 81$\pm$14  & 0.25$\pm$0.04, 72$\pm$12  & -                         & -                         & 55 & 2.14 \\
+ IRS3A    & 03:25:36.502 & 30:45:21.859 & 69 & 133 & No    & 5.2  & 14.4\tablenotemark{e}  & 0.04 & 0.70$\pm$0.02, 202$\pm$6  & 0.25$\pm$0.01, 72$\pm$3   & 0.52$\pm$0.08, 150$\pm$23 & 0.42$\pm$0.07, 121$\pm$20 & 51 & 0.57 \\
+\enddata
+\tablecomments{Summary of the empirical parameters based from the observations of the system. The sizes were derived from a 2-D Gaussian fit to the continuum and moment 0 emission maps, directly to the visibilities. IRS3B-c is blended with the underlying disk continuum and estimates here are extracted from a 2-D gaussian fit with a zero-level offset to preserve the underlying disk flux and is discussed in Appendix~\ref{sec:tertsub}.}
+\tablenotetext{a}{Inclination is defined such that 0\deg\space is a face-on disk.}
+\tablenotetext{b}{Position angle is defined such that at 0\deg, the major axis of the disk is aligned North and the angle corresponds to East-of-North.}
+\tablenotetext{c}{The circumstellar disks surround IRS3B and IRS3A are ellipsoidal in the dust continuum and molecular line emission.}
+\tablenotetext{d}{The bolometric luminosity is not known at this time.}
+\tablenotetext{e}{The bolometric luminosity is scaled to a distance of 288~pc\space from \citet{2016ApJ...818...73T}.}
+\end{splitdeluxetable}\label{table:obssummary3}
+
+\explain{Cut IRS33B-ab and merged with IRS3B for clarity.}
+\begin{deluxetable}{ccccccc}
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{PV Diagram Fitting}
+\tablehead{
+  \colhead{Source} & \colhead{Center RA} & \colhead{Center Dec} & \colhead{Inclination} & \colhead{Position Angle} & \colhead{Stellar Mass} & \colhead{Velocity} \\
+  & \colhead{(\arcsec)} & \colhead{(\arcsec)} & \colhead{(\deg)} & \colhead{(\deg)} & \colhead{(\solm)} & \colhead{(km~s$^{-1}$)}\\
+}
+\startdata
+IRS3B    & 03$^{h}$25$^{m}$36.317$^{s}$ & 30\deg45\arcmin15\farcs005 & 45 & 29 & 1.15$^{+0.09}_{-0.09}$ & 4.8\\
+IRS3B-c  & 03$^{h}$25$^{m}$36.382$^{s}$ & 30\deg45\arcmin14\farcs715 & - & - & $<$0.2\tablenotemark{a} & - \\%& -\\
+IRS3A    & 03$^{h}$25$^{m}$36.502$^{s}$ & 30\deg45\arcmin21\farcs859 & 69 & 125 & 1.4\tablenotemark{b}& 5.4\\
+\enddata
+\tablecomments{Summary of PV diagram stellar parameter estimates with 3-$\sigma$\space confidence interval of the best fit walkers generated from emcee. The inclination and position angle estimates are provided by 2-D Gaussian fitting of the uv-truncated data and is further confirmed with the PV diagram analysis.}
+\tablenotetext{a}{\replaced{IRS3B-c, was only marginally constrained through the PV diagram analysis. The source dust component, while optically thick, is estimated to be no more than 0.2~\solm\space to be consistent with the data.}{The upper limit for IRS3B-c of $<$0.2~\msun\space is derived from its apparent lack of significant influence on the disk kinematics within its immediate proximity. Furthermore, we estimate from the dust emission that the mass of the gas and dust clum surrounding the protostar is \ab0.07~\msun. So the combined mass of the clump and protostar must be $<$0.2~\msun.} \deleted{Through analyzing the \cso\space PV diagram emission and considering the gravitational potential of IRS3B-ab, we estimate the upper mass limit of the tertiary source. }Figure~\ref{fig:l1448irs3b_c17o_pv_tert} shows the mass limit estimates of the tertiary of the source, with emission outside of the dotted lines indicating additional mass if perturbing the disk.}
+\tablenotetext{b}{IRS3A, was marginally resolved and no sufficient numeric fits could be achieved with simple PV-diagram fitting. These estimates are provided by fitting the curve by eye and are not designated to be the final results and simply provide further constraints for the priors for the more rigorous kinematic modeling.}
+\end{deluxetable}\label{table:pvtable}
+
+\begin{deluxetable}{cccccccccccc}
+\rotate
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Kinematic \pdspy Modeling}
+\tablehead{
+  \colhead{Source} & \colhead{RA Offset} & \colhead{Dec Offset} & \colhead{Inc.} & \colhead{P.A.} & \colhead{M$_{*}$} & \colhead{M$_{gas}$\tablenotemark{a}} &\colhead{R$_{disk}$} & \colhead{V$_{sys}$}& \colhead{Turbulence}& \colhead{Surface Density Index $\gamma$} & \colhead{T$_{0}$}\\
+  & \colhead{(\arcsec)} & \colhead{(\arcsec)} & \colhead{(\deg)} & \colhead{(\deg)} & \colhead{(\solm)} & \colhead{(\solm)}& \colhead{(au)} & \colhead{(km~s$^{-1}$)}& \colhead{(km~s$^{-1}$)}& & \colhead{(K)}  \\
+}
+\startdata
+IRS3B  & $0.031^{+0.019}_{-0.011}$ & $0.025^{+0.020}_{-0.015}$ & $66.0^{+ 3.0}_{- 4.6} $ & $26.7^{+  1.8}_{-  2.9} $ & $1.19^{+0.13}_{-0.07}$ & $0.079^{+0.021}_{-0.016}$ & $299.0^{+ 24.9}_{- 47.6}$ & $4.880^{+0.110}_{-0.090}$ & $0.012^{+ 0.005}_{- 0.003}$ & $  1.2^{+  0.1}_{-  0.1}$&$   50^{+    3}_{-    5}$\\
+IRS3A  & $0.034^{+0.003}_{-0.003}$ & $0.015^{+0.003}_{-0.003}$ & $69.5^{0.38}_{0.37} $  & $122.4^{1.4}_{1.4}$ & $1.51^{+0.06}_{-0.07}$ & $6.3^{+1.6}_{-1.3}x10^{-6}$ & $ 39.9^{+  2.4}_{-  1.4}$ & $5.288^{+0.090}_{-0.084}$ & $0.015^{+ 0.06}_{-0.009}$ & $0.4^{+0.2}_{-0.1}$ & $163^{+9}_{-8}$ \\
+\enddata
+\tablecomments{Summary of kinematic model parameters. The RA and DEC offsets of the \pdspy modeling are defined from the central positions given in PV Analysis, Table~\ref{table:pvtable}. The errors presented are the 3-$\sigma$\space confidence intervals of the best fit walkers generated from \textit{emcee}.}
+\tablenotetext{a}{\added{The reported values of M$_{gas}$\space depend on the assumed abundance for each of the molecules. For the IRS3B source, we used the \cso\space emission, which has an assumed abundance of $2\times10^{-7}$ relative to H$_{2}$, while for the IRS3A source we used the \htcn\space emission which has an assumed abundance of $2.9\times10^{-11}$ relative to H$_{2}$.}}
+\end{deluxetable}\label{table:pdspykinematic}
+
+
+\movetabledown=2in
+\begin{deluxetable}{cccccc}
+\rotate
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Mass Accretion}
+\tablehead{
+ \colhead{Source} & \colhead{L$_{bol}$} & \colhead{M$_{*}$} & \colhead{R$_{*}$} & \colhead{L$_{*}$} & \colhead{$\dot{M}_{acc}$} \\%& M$_{accreted}$\   \\
+                  & \colhead{(\lsun)}   & \colhead{(\solm)} & \colhead{(R$_{\odot}$)} & \colhead{(L$_{\odot}$)}& \colhead{(10$^{-7}$~M$_{\odot}$~yr$^{-1}$)} \\%& \colhead{M$_{\odot}$} \\
+}
+\startdata
+ IRS3B-ab\tablenotemark{a} & 13.0\tablenotemark{b}  & (0.575, 1.2) & (2.5, 2.5) & (1.91, 3.57) & (15.3, 6.56) \\%& 0.18(0.03)\\
+ IRS3A                     & 14.4\tablenotemark{b}  & 1.5 & 2 & 2.53 & 5.43 \\%& 0.26\\
+\enddata
+\tablecomments{Summary of the derived parameters from \citet{1997ApJ...475..770H}\space to estimate the amount of mass accretion that is consistent with protostellar models and the observations. The methodology for estimating R$_{*}$, L$_{*}$, $\dot{M}$, and M$_{accreted}$\space are provided in Section~\ref{sec:massacc}.}
+\tablenotetext{a}{When constraining R$_{*}$, L$_{*}$, $\dot{M}$, and M$_{accreted}$\space, IRS3B can be analyzed at two scenarios, 1.) equally mass binary and 2.) one protostar with most of the mass; we reference these delineations as (equal mass, single massive protostar), respectively.}
+\tablenotetext{b}{The bolometric luminosity is scaled to a distance of 288~pc\space from \citet{2016ApJ...818...73T}.}
+\end{deluxetable}\label{table:massacc}
+ 
+\movetabledown=2in
+\begin{deluxetable}{lcrrcc}
+\rotate
+\tablewidth{0pt}
+\tabletypesize{\scriptsize}
+\tablecaption{Self-Calibration}
+\tablehead{
+ \colhead{Step} & \colhead{RMS} & \colhead{IRS3B S/N} & \colhead{IRS3A S/N} & \colhead{Iterations} & \colhead{Solution Integration} \\%& M$_{accreted}$\   \\
+                  & \colhead{(mJy~beam$^{-1}$)}   & \colhead{} & \colhead{} & \colhead{}& \colhead{(s)} \\%& \colhead{M$_{\odot}$} \\
+}
+\startdata
+No-selfcal.  & 6.5 | 74  & 82   | 43  & 26  | 13  & 100  | 100 & \\
+phase-cal. 1 & 4.2 | 25  & 140  | 140 & 48  | 40  & 100  | 110 & ``inf'' \\
+phase-cal. 2 & 1.7 | 11  & 310  | 330 & 120 | 100 & 300  | 500 & 30.25 \\
+phase-cal. 3 & 1.3 | 5.8 & 540  | 620 & 200 | 190 & 3000 | 1500& 12.1 \\
+ampl.-cal.   & 0.7 | 4.3 & 1000 | 840 & 390 | 260 & 2500 | 2500 & ``inf''\\
+\enddata
+\tablecomments{Summary of the parameters required to reproduced the gain and amplitude self-calibrations. The configurations are delineated as C40-6 | C40-3, respectively in the table. ``inf'' indicates the entire scan length, dictated by the time on a single pointing, which is typically 6.05 seconds.}
+\end{deluxetable}\label{table:selfcal}
+
 \clearpage
 
-\input{figures.tex}
+\begin{figure}[H]
+\begin{center}
+ \begin{minipage}{0.49\textwidth}
+  \includegraphics[width=\textwidth]{f1.pdf}
+ \end{minipage}
+ \begin{minipage}{0.49\textwidth}
+  \vfill
+  \includegraphics[width=\textwidth]{f2.pdf}
+  \includegraphics[width=\textwidth]{f3.pdf}
+  \vfill
+ \end{minipage}
+\end{center}
+\caption{ALMA 879~\micron\space continuum observations of the triple protostellar system L1448 IRS3B and its wide companion IRS3A (\textbf{left}). The right panels are \ab2$\times$\space zoom-ins on IRS3B~and~IRS3A. The top right image shows the wide companion, IRS3A, (d\ab7\farcs9$\approx$2300~au), featuring possible spiral structure. The bottom right image zooms in on the proto-multiple system, IRS3B. The inner binary is separated by 0\farcs25 (75~au) and has a spiral circum-binary disk with the embedded source \ab0\farcs8 (230~au) away from the binary within one of the arms. The beam size of each panel is shown in lower right (\contbeam).}\label{fig:contimage}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.48\textwidth]{f4.pdf}
+   \includegraphics[width=0.48\textwidth]{f5.pdf}
+\end{center}
+   \caption{ALMA 879~\micron\space continuum observations of the triple protostellar system L1448 IRS3B\added{ with the difference continuum sources marked}. The left colored image is zoomed in on IRS3B and is plotting with a log color stretch. The inner binary is separated by 0\farcs25 (75~AU) and has a circum-binary disk with spiral structure and the tertiary is separated from the binary by \ab0\farcs8 (230~AU) within one of the arms. The ``protostars'' are the continuum positions previously discovered in \citet{2016Natur.538..483T}, while the ``clump'' is a new feature, resolved in these observations. The ``deficit'' indicates the location of depression of flux between IRS3B-a and the ``clump''. This is discussed in Sections~\ref{sec:dcont}~and~\ref{sec:discussion}. The beam size of each panel is shown in lower right (\contbeam\space using Briggs Robust parameter of 0.5).}\label{fig:zoomincont}
+\end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=0.48\textwidth]{f6.pdf}
+   \end{center}
+   \caption{Continuum (879~\micron) image of IRS3A, reconstructed with the \textit{superuniform} weighing scheme, half of the cell size, and zoomed 2x from the images in Figure~\ref{fig:contimage}\space to highlight the possible spiral substructure.} \label{fig:widesuperuniform}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f7.pdf} 
+   \includegraphics[width=0.45\textwidth]{f8.pdf} 
+   \includegraphics[width=0.45\textwidth]{f9.pdf} 
+\end{center}
+   \caption{\cso\space integrated intensity maps towards IRS3B over a selected range of velocities overlayed on continuum (grayscale). The \cso\space emission traces the rotating gas within the disk via Doppler-shifted emission. The panels correspond to low, medium, and high velocity ranges which are delineated as red(blue), respectively. Negative contours are not present in these integrated intensity maps; however, at the location of IRS3B-c, there is strong absorption that is evident in the high spectral resolution data cube, but is not represented here. The red lines indicate the region extracted for PV diagram construction, along the position angle of the major axis. \textbf{Low Velocity:} Velocity range starts at 4.68$\rightarrow$5.67~\kms (3.58$\rightarrow$4.68~\kms) and contours start at 8(8)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0023(0.0025)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:} Velocity range starts at 5.67$\rightarrow$6.66~\kms (2.48$\rightarrow$3.58~\kms) and contours start at 3(5)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.002(0.0016)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{High Velocity:} Velocity range starts at 6.66$\rightarrow$7.65~\kms (1.27$\rightarrow$2.48~\kms) and contours start at 5(5)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0018(0.0012)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \cso\space synthesized beam (\csobeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:irs3bc17omoment}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f10.pdf}
+   \includegraphics[width=0.45\textwidth]{f11.pdf}
+   \includegraphics[width=0.45\textwidth]{f12.pdf} 
+\end{center}
+   \caption{\cso\space integrated intensity maps toward IRS3A over a selected range of velocities overlayed on continuum (grayscale). The \cso\space emission exhibits a velocity gradient across the continuum emission. However, S/N is low in comparison to IRS3B. The panels correspond to low, medium, and high velocity ranges which are delineated as red(blue), respectively. The red lines indicate the region extracted for PV diagram construction, along the position angle of the major axis. \textbf{Low Velocity:} velocity ranges 5.2$\rightarrow$6.5~\kms (4.1$\rightarrow$5.2~\kms), contours start at 3(3)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0023(0.0025)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:}  velocity ranges 6.5$\rightarrow$7.4~\kms (3.0$\rightarrow$4.1~\kms), contours start at 3(3)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.002(0.0016)~Jy~beam$^{-1}$ for the red (blue) channels respectively. \textbf{High Velocity:} velocity ranges 7.4$\rightarrow$8.6~\kms (1.8$\rightarrow$3.0~\kms), contours start at 3(3)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0018(0.0012)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \cso\space synthesized beam (\csobeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:irs3ac17omoment}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=1\textwidth]{f13.pdf} 
+\end{center}
+   \caption{\cso\space velocity-weighted integrated intensity maps toward IRS3B and IRS3A over a selected range of velocities (1.27$\rightarrow$7.65~\kms) The \cso\space emission appears well ordered across the semi-major axis. The contours denote the 0.5~km~s$^{-1}$ velocity offsets from system velocity of 4.8~km~s$^{-1}$. The yellow markers indicate the three continuum sources. \added{The black lines indicate the position angle of the minor disk estimates as given by the \pdspy\space fitting routine in Table~\ref{table:pvtable}, of $90+26.7^{+  1.8}_{-  2.9}$\deg.} The \cso\space synthesized beam (\csobeam) is the bottom-right most ellipse.}\label{fig:irs3abc17omoment1}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f14.pdf}
+   \includegraphics[width=0.45\textwidth]{f15.pdf}
+   \includegraphics[width=0.45\textwidth]{f16.pdf}
+\end{center}
+   \caption{\htcop\space integrated intensity maps towards IRS3B over a selected range of velocities overlayed on continuum (grayscale). The top row spatial scale is set to match those of Figure~\ref{fig:irs3bc17omoment} and the bottom row scale is set to encapsulate the entire IRS3B system, to better demonstrate the spatial scales probed with this molecule. The top row is tapered with a 400~k$\lambda$\space Gaussian to best reduce the amount of noise and show the proper resolution to the spatial scales shown. The \htcop\space emission is primarily tracing the intermediate dense, gaseous material within the inner envelope, but the higher-velocity emission does originate near the protostars. The columns correspond to similar velocity ranges of \cso\space emission as shown in the previous figure, with low, medium, and high Doppler-shifted velocity ranges delineated as red(blue), respectively. Negative contours do not show additional structure and are suppressed for visual aid. The red lines indicate the region extracted for PV diagram construction, along the position angle of the major axis in a region much larger than the \cso\space PV diagram extraction to fully capture the emission. \textbf{Low Velocity:} velocity ranges 4.7$\rightarrow$5.7~\kms (3.6$\rightarrow$4.7~\kms)), contours start at 10(10)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.003(0.003)~Jy~beam$^{-1}$ for the top row and 0.005(0.005)~Jy~beam$^{-1}$ for the bottom row,  red(blue) channels respectively.  \textbf{Medium Velocity:} velocity ranges 5.7$\rightarrow$6.7~\kms (2.4$\rightarrow$3.5~\kms), contours start at 5(5)$\sigma$ and iterate by 5(3)$\sigma$ with the 1$\sigma$~level starting at 0.005(0.005)~Jy~beam$^{-1}$ for the top row and 0.005(0.005)~Jy~beam$^{-1}$ for the bottom row, red(blue) channels respectively. \textbf{High Velocity:} velocity ranges 6.7$\rightarrow$7.7~\kms (1.3$\rightarrow$2.4~\kms), contours start at 5(5)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.002(0.002)~Jy~beam$^{-1}$ for the top row and 0.005(0.005)~Jy~beam$^{-1}$ for the bottom row, for the red(blue) channels respectively. The \htcop\space synthesized beam (top:0\farcs374$\times$0\farcs310, bottom: \htcopbeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:h13copmomentc17o}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f17.pdf}
+   \includegraphics[width=0.45\textwidth]{f18.pdf}
+   \includegraphics[width=0.45\textwidth]{f19.pdf}
+\end{center}
+   \caption{\htcop\space integrated intensity map towards IRS3A generated at a position angle of 125\deg; whose emission predominately traces the intermediate dense, gaseous material of the inner envelope. The image is tapered with a 400~k$\lambda$\space Gaussian to best reduce the amount of noise and show the proper resolution to the spatial scales shown. The \htcop\space emission might trace a velocity gradient across the source, but \replaced{the compactness of the source}{the lack of strong emission coming from the disk itself} hinders resolving the kinematics. The columns correspond to low, medium, and high velocity ranges which are delineated as red(blue), respectively. \textbf{Low Velocity:} velocity ranges 5.2$\rightarrow$6.5~\kms (4.1$\rightarrow$5.2~\kms), contours start at 5(5)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.004(0.007)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:}  velocity ranges 6.5$\rightarrow$7.4~\kms (3.0$\rightarrow$4.1~\kms), contours start at 3(3)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.003(0.003)~Jy~beam$^{-1}$ for the red (blue) channels respectively. \textbf{High Velocity:} velocity ranges 7.4$\rightarrow$8.6~\kms (1.8$\rightarrow$3.0~\kms), contours start at 3(3)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.002(0.0025)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \htcop\space synthesized beam (\htcopbeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:irs3ah13copmoment}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f20.pdf}
+   \includegraphics[width=0.45\textwidth]{f21.pdf}
+   \includegraphics[width=0.45\textwidth]{f22.pdf}
+\end{center}
+   \caption{\htcn/\sot\space integrated intensity map towards IRS3B, appears to trace near the outflow launch location from the tertiary, IRS3B-c. There is pretty large asymmetry in the velocity channels covered by the red and blue-shifted emission. The panels correspond to low, medium, and high velocity ranges which are delineated as red(blue), respectively. \textbf{Low Velocity:} velocity ranges 5.2$\rightarrow$7.2~\kms (4$\rightarrow$4.8~\kms), contours start at 5(5)$\sigma$ and iterate by 2(5)$\sigma$ with the 1$\sigma$~level starting at 0.0025(0.0021)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:} velocity ranges 7.2$\rightarrow$9.2~\kms (3.2$\rightarrow$4~\kms), contours start at 5(5)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.0016(0.0016)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{High Velocity:} velocity ranges 9.2$\rightarrow$11.2~\kms (1.6$\rightarrow$3.2~\kms), contours start at 4(4)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0021(0.0021)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \htcn\space synthesized beam (\htcnbeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:irs3bh13cnmoment}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.45\textwidth]{f23.pdf}
+   \includegraphics[width=0.45\textwidth]{f24.pdf}
+   \includegraphics[width=0.45\textwidth]{f25.pdf}
+\end{center}
+   \caption{\htcn/\sot\space integrated intensity map towards IRS3A; whose emission appears to trace rotation within the inner disk. The panels correspond to low, medium, and high velocity ranges which are delineated as red(blue), respectively. The system velocity of the \htcn/\sot\space emission (\ab5.4~km~s$^{-1}$) agrees with system velocity of \cso\space, likely tracing \htcn\space emission and not \sot\space emission. \textbf{Low Velocity:} velocity ranges 5.2$\rightarrow$6.5~\kms (4.1$\rightarrow$5.2~\kms), contours start at 4(4)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.0021(0.0021)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:}  velocity ranges 6.5$\rightarrow$7.4~\kms (3.0$\rightarrow$4.1~\kms), contours start at 4(4)$\sigma$ and iterate by 2(2)$\sigma$ with the 1$\sigma$~level starting at 0.0016(0.0016)~Jy~beam$^{-1}$ for the red (blue) channels respectively. \textbf{High Velocity:} velocity ranges 7.4$\rightarrow$8.6~\kms (1.8$\rightarrow$3.0~\kms), contours start at 4(4)$\sigma$ and iterate by 3(3)$\sigma$ with the 1$\sigma$~level starting at 0.0021(0.0021)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \htcn\space synthesized beam (\htcnbeam) is the bottom-right most ellipse on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:irs3ah13cnmoment}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.44\textwidth]{f26.pdf}
+\includegraphics[width=0.44\textwidth]{f27.pdf}
+\end{center}
+\caption{PV-diagrams of IRS3B \cso\space emission generated at a position angle of 29\deg, with the cyan lines corresponding to the fit of 1.15~\solm, demonstrating the data could be reproduced reasonably well with a Keplerian disk orbiting a 1.15~\solm\space protostar. The cyan line traces the median fit for numeric Keplerian orbital fit routine while the black lines represent 100 randomly sampled MCMC fits, used to estimate errors. As evident, this methodology selectively fits the highest velocity emission that is symmetric in the protostellar system. The white/black contours trace regions starting from 3$\sigma$ at 2$\sigma$\space intervals, where $\sigma\approx$0.14~Jy~beam$^{-1}$. The red contours trace the regions selected for the MCMC fit which are defined as the 10 and 12$\sigma$\space levels as to not fit the diffuse large-scale emission.}\label{fig:l1448irs3b_c17o_pv}
+\end{figure}
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{f28.pdf}
+\end{center}
+\caption{\htcop\space emission towards IRS3B generated at a position angle of 29\deg, with the white dashed lines corresponding to the Keplerian fit of 1.15~\solm\space from the fit to \cso, demonstrating the data are not inconsistent with a 1.15~\solm\space protostar, similarly demonstrated from the \cso\space emission Keplerian fits. The PV diagram shows a large amount of asymmetry in the molecular line emission close to system velocity, with emission  at velocities in  excess of Keplerian particularly at the red-shifted velocities. These are possible indications of infalling material from the envelope given the spatial location this emission. The white contours trace regions starting from 3$\sigma$ at 2$\sigma$\space intervals, where $\sigma\approx$0.15~Jy}\label{fig:l1448irs3b_h13cop_pv}
+\end{figure}
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.44\textwidth]{f29.pdf}
+\end{center}
+\caption{Position-velocity diagrams of IRS3A \cso\space emission generated at a position angle of 125\deg, with the dotted lines corresponding to 1.4~\solm. The emission suffers from the lower spatial sampling across the source and the extended, resolved-out emission from the IRS3B$+$A envelope/core. Similarly, strong spatial integration (width of slice 0\farcs3) restrictions were placed when making the PV diagram to limit the inclusion of large-scale emission. \added{The white contours trace regions starting from 3$\sigma$ at 2$\sigma$\space intervals, where $\sigma\approx$0.15~Jy.}\deleted{Further constraints on the viewing distance (0\farcs5 displacement from the source center) were placed to help avoid the large scale emission.}}\label{fig:l1448irs3a_cso_pv}
+\end{figure}
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.44\textwidth]{f30.pdf}
+\end{center}
+\caption{Position-velocity diagram of IRS3A \htcn/\sot\space emission with the dotted lines corresponding to Keplerian velocities for a 1.4~\solm\space protostar. This PV diagram places a constraint on the possible protostellar mass parameter of \ab1.4~\solm. The IRS3A mass is less well constrained due to the compactness of the emission. Strong spatial integration (width of slice 0\farcs3) restrictions were placed when making the PV diagram to help limit the inclusion of large scale emission.\deleted{Further constraints on the viewing distance (0\farcs5 displacement from the source center) were placed to help limit contributions from the large scale emission.}}\label{fig:l1448irs3a_h13cn_pv}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.44\textwidth]{f31.pdf}
+\end{center}
+   \caption{Position-velocity diagram of IRS3A \htcop\space  generated at a position angle of 125\deg; whose emission predominately traces the intermediate dense, gaseous material of the inner envelope. The emission \deleted{suffers lower spatial sampling across the source and less emission is present towards the source}\added{is fainter and is coming from the outerdisk/inner-envelope}. The dotted line corresponds to a central protostellar mass of 1.4~\solm.}\label{fig:l1448irs3a_h13cop_pv}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+\begin{center}
+   \includegraphics[width=0.48\textwidth]{f32.pdf}
+   \includegraphics[width=0.48\textwidth]{f33.pdf}
+\end{center}
+   \caption{Positions of the various ``kinematic centers'' that have been fit from \cso\space emission at IRS3B in relation to continuum structure. The grayscale is the dust continuum from Figure~\ref{fig:contimage}. Left: The red colored texts detail the locations of continuum sources, presumed to be protostars. Right: A zoom in on the region indicated by the black rectangle in the left image. The red and blue triangles indicate the central Gaussian fit of the highest Doppler-shifted velocity emission with the yellow circle indicating the midpoint. The orange circle indicates the center that best constructs the PV diagram symmetrically. The green ellipse is the model Keplerian centroid fit with the respective error as indicated by the size of the ellipse (see Section~\ref{sec:kmodelresults}). The blue ellipse is the \cso\space beam (\csobeam) centered on the region of emission deficit for size comparison. The contours start at 10$\sigma$\space and iterate by 10$\sigma$\space with the 1$\sigma$~level starting at 8.5$\times10^{-5}$~Jy~beam$^{-1}$. The region of deficit, first identified in Figure~\ref{fig:zoomincont}\space is shown to be centered within the three various kinematic center fits and are marginally separated by less than a few beams.}\label{fig:kincenter}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{f34.pdf}
+\end{center}
+\caption{PV-diagram of \cso\space toward IRS3B-c, the tertiary. The white lines corresponding to a Keplerian curve of a 0.2~\solm\space protostellar source. These fits place an upper limit to the mass of the tertiary companion to $<$0.2~\solm, since any larger mass and we would expect to see emission extending to high velocity, indicating the tertiary would be affecting disk kinematics. The red dashed lines indicate the maximum Keplerian velocities at the radius of IRS3B-c in the rotating disk corresponding to the 1.15~\solm\space mass of the central potential. Emission outside of these bounds could be due to the tertiary affecting disk kinematics, but from this analysis, we cannot detect an obvious effect of the tertiary on the disk kinematics. The white/black contours trace regions starting from 14$\sigma$ at 4$\sigma$\space intervals, where $\sigma\approx$0.1~Jy~beam$^{-1}$.}\label{fig:l1448irs3b_c17o_pv_tert}
+\end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{f35.pdf}
+\includegraphics[width=0.5\textwidth]{f36.pdf}
+\end{center}
+\caption{IRS3B Kinematic Model comparison: A representative selection of channel maps that demonstrate the fit of the model to the data. The top figure is the blue Doppler shifted emission while the bottom figure is the red Doppler shifted emission. The first row contours are the model contours, generated at the 2, 3, 5, and 10$\sigma$ level overlaid the data channels selected at the same velocity. The second row is the residual contours (2 and 3$\sigma$) overlaid the same data channels. System velocity is \ab4.8~km~s$^{-1}$. It should be noted the highly correlated structure visible in the residuals. This reflects an imperfect fit to the data given that the circumstellar disk itself is asymmetric.}\label{fig:c17o_res}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.5\textwidth]{f37.pdf}
+\includegraphics[width=0.5\textwidth]{f38.pdf}
+\end{center}
+\caption{IRS3A Kinematic Model comparison: A representative selection of channel maps that demonstrate the fit of the model to the data. The top figure is the blue Doppler shifted emission while the bottom figure is the red Doppler shifted emission. The first row contours are the model contours, generated at the 2, 3, 5, and 10$\sigma$  level overlaid the data channels selected at the same velocity to not overshadow the emission. The second row is the residual contours overlaid the same data channels. System velocity is \ab5.2~km~s$^{-1}$. There is residual emission at scales much larger than the continuum disk, especially prevalent near the system velocity, likely due to large scale emission from the cloud that is not included in the disk.}\label{fig:h13cn_res}
+\end{figure}
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{f39.pdf}
+\includegraphics[width=0.49\textwidth]{f40.pdf}
+\end{center}
+\caption{The left plot is the continuum flux \added{density} radial profile of IRS3B. The right plot is the deprojected radial surface density profile of the dust continuum in black \deleted{points}, while the red line is the radial temperature profile of the disk. \replaced{The slope is -0.5 and the temperature is scaled such that the temperature of the disk}{The temperature profile is $\propto\text{R}^{-0.5}$ and is scaled such that} at 100~AU is described via (30~K)$\times(L_{*}$/\lsun)$^{0.25}\approx40.1$~K.}\label{fig:surfacedensity}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{f41.pdf}
+\includegraphics[width=0.49\textwidth]{f42.pdf}
+\end{center}
+\caption{The left plot is the continuum flux \added{density} radial profile of IRS3A. The right plot is the radial surface density profile of the dust continuum in black\deleted{points}, while the red line is the radial temperature profile of the disk. \replaced{The slope is -0.5 and the temperature is scaled such that the temperature of the disk}{The temperature profile is $\propto\text{R}^{-0.5}$ and is scaled such that} at 100~AU is described via (30~K)$\times(L_{*}$/\lsun)$^{0.25}\approx53.1$~K.}\label{fig:irs3asurfacedensity}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{f43.pdf}
+\end{center}   
+\caption{Toomre Q parameter plotted as a function of deprojected radius for IRS3B. The horizontal line indicates a Toomre Q parameter of one, at which the disk would be gravitationally unstable. As indicated, the disk Toomre Q parameter drops below 1 at a radius of \ab120~AU. The vertical line corresponds to the deprojected radius of IRS3B-c. The observed spiral arms also become most prominent at R $>$100~AU, where Toomre~Q approaches 1.}\label{fig:irs3btoomreq}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.48\textwidth]{f44.pdf}
+\end{center}   
+\caption{Toomre Q parameter plotted as a function of deprojected radius for IRS3A. The horizontal line indicates a Toomre Q parameter of one, at which the disk would be gravitationally unstable. The circumstellar disk of IRS3A is much less massive than IRS3B, coupled with a \replaced{more massive central gravitational source}{more massive protostar}, the disk is more stable against gravitational instabilities.}\label{fig:irs3atoomreq}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+   \begin{center}
+   \includegraphics[width=\textwidth]{f45.pdf}
+   \includegraphics[width=\textwidth]{f46.pdf}
+   \includegraphics[width=\textwidth]{f47.pdf}
+   \caption{Moment 0 map (integrated intensity) of \co, overlaid on the continuum (grayscale) image from Figure~\ref{fig:contimage}, split up according to velocity ranges, providing exquisite detailing of the location and collimated of the IRS3B outflows. The central outflow from IRS3B extends 10\arcsec\space(2880~au)\added{, beyond the edge of the primary beam of ALMA at 879~micron,} from launch location on either side. The panels correspond to low, medium-low, and medium velocity ranges which are delineated as red(blue), respectively. \textbf{Low Velocity:} velocity ranges 5.5$\rightarrow$10.5~km~s$^{-1}$ (4$\rightarrow$-1~km~s$^{-1}$), contours start at 3(3)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.1(0.1)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium-low Velocity:} velocity ranges 10.5$\rightarrow$15.5~km~s$^{-1}$ (-6$\rightarrow$-4~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.004)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:} velocity ranges 15.5$\rightarrow$20.5~km~s$^{-1}$ (-11$\rightarrow$-6~km~s$^{-1}$), contours start at 10(10)~$\sigma$ and iterate by 4(4)~$\sigma$ with the 1-$\sigma$~level starting at 0.02(0.02)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \co\space synthesized beam (\cobeam) is the bottom-right most overlay on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:comomentmap}
+\end{center}
+\end{figure}
+\begin{figure}[H]
+   \begin{center}
+   \includegraphics[width=\textwidth]{f48.pdf}
+   \includegraphics[width=\textwidth]{f49.pdf}
+   \caption{Same as Figure~\ref{fig:comomentmap} but for the \textbf{Medium-high Velocity:} velocity ranges 20.5$\rightarrow$25.5~km~s$^{-1}$ (-16$\rightarrow$-11~km~s$^{-1}$), contours start at 3(3)~$\sigma$ and iterate by 4(4)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.04)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{High Velocity:} velocity ranges 25.5$\rightarrow$30.5~km~s$^{-1}$ (-21$\rightarrow$-16~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.04)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \co\space synthesized beam (\cobeam) is the bottom-right most overlay on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:comomentmap2}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+
+\includegraphics[width=0.45\textwidth]{f50.pdf}
+\includegraphics[width=0.45\textwidth]{f51.pdf}
+\includegraphics[width=0.45\textwidth]{f52.pdf}
+\includegraphics[width=0.45\textwidth]{f53.pdf}
+\includegraphics[width=0.45\textwidth]{f54.pdf}
+   \caption{Similar to Figures~\ref{fig:comomentmap}~and~\ref{fig:comomentmap2} towards the IRS3A source with the same velocity ranges. \textbf{Low Velocity:} velocity ranges 5.5$\rightarrow$10.5~km~s$^{-1}$ (4$\rightarrow$-1~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 4(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.1(0.1)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium-low Velocity:} velocity ranges 10.5$\rightarrow$15.5~km~s$^{-1}$ (-6$\rightarrow$-4~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.004)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:} velocity ranges 15.5$\rightarrow$20.5~km~s$^{-1}$ (-11$\rightarrow$-6~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.02(0.02)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium-high Velocity:} velocity ranges 20.5$\rightarrow$25.5~km~s$^{-1}$ (-16$\rightarrow$-11~km~s$^{-1}$), contours start at 3(3)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.04)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{High Velocity:} velocity ranges 25.5$\rightarrow$30.5~km~s$^{-1}$ (-21$\rightarrow$-16~km~s$^{-1}$), contours start at 3(3)~$\sigma$ and iterate by 2(2)~$\sigma$ with the 1-$\sigma$~level starting at 0.04(0.04)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \co\space synthesized beam (\cobeam) is the bottom-right most overlay on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:comomentmapirs3a}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+\includegraphics[width=\textwidth]{f55.pdf}
+\includegraphics[width=\textwidth]{f56.pdf}
+\includegraphics[width=\textwidth]{f57.pdf}
+   \end{center}
+   \caption{Moment 0 map (integrated intensity) of \sio, overlaid on the continuum (grayscale) image from Figure~\ref{fig:contimage}. \sio\space shows locations of shocked gas fronts. \deleted{There is significant blue-shifted emission on the eastern side of the image, in the same location as the red-shifted outflow, which is coming from the L1448-C outflow, located \ab3\arcmin south of L1448 IRS3B.} The panels correspond to low, medium-low, and medium velocity ranges which are delineated as red(blue), respectively. \textbf{Low Velocity:} velocity ranges 5.5$\rightarrow$10.5~km~s$^{-1}$ (4$\rightarrow$-1~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.11(0.09)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium-low Velocity:} velocity ranges 10.5$\rightarrow$15.5~km~s$^{-1}$ (-6$\rightarrow$-4~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.01(0.01)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Medium Velocity:} velocity ranges 15.5$\rightarrow$20.5~km~s$^{-1}$ (-11$\rightarrow$-6~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.009(0.012)~Jy~beam$^{-1}$ for the red(blue) channels respectively. The \sio\space synthesized beam (\siobeam) is the bottom-right most overlay on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally.}\label{fig:siomomentmap}
+\end{figure}
+
+\begin{figure}[H]
+   \begin{center}
+\includegraphics[width=\textwidth]{f58.pdf}
+\includegraphics[width=\textwidth]{f59.pdf}
+\includegraphics[width=\textwidth]{f60.pdf}
+   \end{center} 
+   \caption{Similar to Figure~\ref{fig:siomomentmap} but for the \textbf{Medium-high Velocity:} velocity ranges 20.5$\rightarrow$25.5~km~s$^{-1}$ (-16$\rightarrow$-11~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.012(0.015)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{High Velocity:} velocity ranges 25.5$\rightarrow$30.5~km~s$^{-1}$ (-21$\rightarrow$-16~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.008(0.015)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \textbf{Extended-High Velocity:} velocity ranges 30.5$\rightarrow$50~km~s$^{-1}$ (-40$\rightarrow$-21~km~s$^{-1}$), contours start at 5(5)~$\sigma$ and iterate by 3(3)~$\sigma$ with the 1-$\sigma$~level starting at 0.025(0.025)~Jy~beam$^{-1}$ for the red(blue) channels respectively. \added{ There is significant blue-shifted emission on the eastern side of the image, in the same location as the red-shifted outflow, which is coming from the L1448-C outflow, located \ab3\arcmin south of L1448 IRS3B. }The \sio\space has additional emission well beyond the velocity range of the emission in \co\space and is presented as an additional panel (``extended-high velocity'') which only features the red-shifted emission. The \sio\space synthesized beam (\siobeam) is the bottom-right most overlay on each of the panels and the continuum synthesized beam (\contbeam) is offset diagonally. }\label{fig:siomomentmap2}
+\end{figure}
+
 
 \appendix
 
-\input{appendix.tex}
+\section{Observations}\label{sec:appobs}
 
-%\clearpage
-%\newpage
-%\input{extended.tex}
+The \added{ALMA} correlator was configured to observe \lco, \lcso, \lhtcop, \lhtcn, \lsio, and a broad 2~GHz continuum band centered at 335.5~GHz (894~\micron). A summary of the correlator setup is provided in Table~\ref{table:obssummary2}. The raw data were reduced using the Cycle 4 ALMA pipeline within the \textit{Common Astronomy Software Application} (CASA) \citep{2007ASPC..376..127M} version 4.7.0. All further processing was done using the CASA version 4.7.2 and the reduction sequence is described here. To maximize the sensitivity of the continuum observations, emission free channels from the higher resolution windows were added to the continuum after appropriate flagging of line emission. The total bandwidth recovered from this method was \ab1.2~GHz, which, in conjunction with the continuum spectral window bandwidth of 1.875~GHz, yields \ab3~GHz of aggregate continuum bandwidth with an average frequency center of 341.0~GHz.
+\added{
+Given the high signal-to-noise (S/N) of the sources, we performed self-calibration (summary to reproduce in Table~\ref{table:selfcal}) on the separate configurations (C40-3 and C40-6) to further increase the S/N by correcting short timescale phase and amplitude fluctuations. During the phase-only self-calibration, the solution intervals for each additional iteration were: ``inf'' (The entire scan length, dictated by the time on a single pointing), 30.25~seconds (5 integrations), and 12.1~seconds (2 integrations). During the amplitude self-calibration, the solution interval of ``inf'' was used. The final self-calibrated measurement sets from the two configurations were concatenated using the CASA task \textit{concat}. 
+}
+The resulting images were generated from this concatenated dataset using \textit{Briggs weighting} with a \textit{robust} parameter of 0.5~(Figure~\ref{fig:contimage}). The beamsize of the combined continuum image is \contbeam\space (32$\times$15~au). We achieved 69~$\mu$Jy~beam$^{-1}$\space sensitivity for the aggregate continuum data and the full list of frequencies, bandwidths, beamsizes, sensitivities, and tapering for the suite of molecules is provided in Table~\ref{table:obssummary2}.
+
+During the high-resolution execution, the central frequency of the SiO spectral window was set to 347.01~GHz with a bandwidth of 469~MHz, falling outside of the emission range for the target molecule. However, for the C40-3 configuration, the spectral setup was corrected and SiO was observed.
+
+
+
+
+\section{Optimal Disk tracing Molecular lines}
+To infer properties about the central potential from the circumstellar disk characteristics, we must disentangle the envelope and disk kinematics from the molecular line emission. Previous observations conducted by \citet{2016Natur.538..483T}\space of IRS3B included molecular lines \ceo\space and \tco. However, while emission from \ceo\space spatially coincides with the disk and is optically thin, it can have resolved-out emission towards the molecular line center, under-representing the underlying gas structure and reducing the fidelity of the tracer \citep{2020MNRAS.493L.108B}. Furthermore, \tco\space is a poor kinematic tracer for embedded Class 0 disks because it is a more abundant molecule that will have a high optical depth (and subsequently a larger degree of spatial filtering which limits the velocity range it is sensitive to) and confusion with the outflow. This tracer is better suited towards more evolved Class I sources (possibly IRS3A). Combining all previous observations of the sources, we find \cso\space is possibly the best tracer for Class 0 disks, being the least abundant molecule and thus experiencing the least amount of spatial filtering, both of which allow for accurate emission reconstruction near the line center. However, due to the low abundance, this molecule requires substantial integration time and is not suited for Class I disks.
+
+
+\section{Application of Radiative Transfer Models}\label{sec:apppdspy}
+We generate a set of \textit{priors} for the protostellar parameters based on the observational constraints. These \textit{priors} are then sampled via a uniform distribution and fed into \textit{emcee} to generate the samples, each sample describing a unique set of model parameters. These parameters are used to generate synthetic channel maps for the lines of interest, computed with RADMC-3D. These synthetic data cubes are Fourier transformed to recover a synthetic visibility dataset. These are re-gridded and subsequently cross-compared with the observed data in the uv-plane. The likelihood of the parameters for this comparison is then updated internally, the MCMC either probabilistically accepts the sample and migrates to this new point, or does not accept it by comparing the new likelihood to the previous sample. The whole process is repeated until convergence.
+
+\deleted{The Affine Invariant MCMC algorithm (\textit{emcee}) utilizes Bayesian statistics at its core which provides a way to marginalize over nuisance parameters (e.g., variance of the priors), map out the posterior for the model, and provide inferences on the parameters of interest. MCMC itself, provides a way to sample a large, degenerate sample of parameter space and move towards regions of higher likelihoods and samples the posterior distributions.}
+
+We assume the kinematic rotation of the disk is described by a Keplerian orbit, with an azimuthal velocity (in cylindrical coordinates) of $V(R) = \sqrt{GM_{\*}/R}$. We assume the molecular line emission comes from a flared disk geometry as motivated by viscous and irradiated disk evolution, where the mass density profile is described, in cylindrical coordinates with the origin at the gravitational source, by the equation:
+\begin{equation}
+\rho\left(R, z\right) = \frac{\Sigma(R)}{\sqrt{2\pi}h(R)}exp\left(-0.5\left(\frac{z}{h(R)}\right)^2\right)
+\end{equation}
+where R is the distance in the radial direction in cylindrical coordinates, $\Sigma$\space is the surface mass density of each molecule species,  and \textit{h} is the disk scale height. We assume the disk can be described via a power-law surface mass density profile that is truncated at some outer radius, of the form:
+\begin{equation}
+\Sigma\left(R\right) = \Sigma_{0}\times{R}^{-\gamma}.
+\end{equation}
+We also define
+\begin{equation}
+\Sigma_{0} = \frac{(2-\gamma)M_{disk}}{2\pi\left(R_{out}^{2-\gamma} - R_{in}^{2-\gamma}\right)}
+\end{equation}
+where R$_{out}$\space is the outer cutoff radius, R$_{in}$\space is the inner cutoff radius, and $\gamma$\space is the surface density power law exponent.
+
+Another assumption we make is that the vertical structure of the disk is set by Local Hydro-static Equilibrium (LHSE) with a vertically isothermal temperature profile and a radial power-law temperature profile of the form:
+\begin{equation}
+T\left(R\right) = T_{0}\left(\frac{R}{1~au}\right)^{-q}
+\end{equation}
+which then sets the scale height of the disk, under the balance of thermal pressure and gravity, to be 
+\begin{equation}
+h\left(R\right) = \left(\frac{k_{b}R^{3}T(R)}{GM_{\*}\mu m_{H}}\right)^{1/2}
+\end{equation}
+where $k_{b}$ is the Boltzmann constant, G is the gravitational constant, $m_{H}$ is the mass of hydrogen, and $\mu$\space is the mean molecular weight \citep[assuming classic protostellar mean molecular weight, $\mu\approx2.37$; ][]{2003ApJ...591.1220L}. Additionally, chemical variations such as gas freeze-out onto dust grains towards the midplane and outer disk are excluded from the models.
+
+Combining the aforementioned parameters that describe the disk structure plus the inclusion of disk geometric orientations, we have the following free parameters:  position angle (p.a.), inclination (inc.), temperature (T$_0$), stellar mass (M$_{*}$), disk radius (R$_D$), disk mass (M$_{disk}$), surface density power law ($\gamma$), system source velocity (V$_{sys}$), and uniform microturbulent line broadening ($\alpha$) (Table~\ref{table:pdspykinematic}). Furthermore, we have a number of fixed parameters that are used throughout the models but are not fit: molecular gas-to-H$_{2}$ abundance ratio (for IRS3B \cso\space=5.88$\times10^{-8}$; for IRS3A \htcn\space=2.04$\times10^{-7}$), inner disk cutoff radius (R$_{in}$ = 0.1~au), and the temperature power law index (q = 0.35).
+
+\added{The combined fitting is computationally expensive, requiring on order 10$^{4}$~core-hours to reach convergence. A bulk of the computation time (up to 10 minutes per individual model) is used when RADMC-3D attempts to ray-trace massive disks.}
+
+
+\section{Outflows}\label{sec:outflow}
+\subsection{\co\space Line Emission}\label{sec:coemission}
+The second most abundant molecule to H$_{2}$, $^{12}$CO, is shown as moment 0 maps in Figures~\ref{fig:comomentmap}, \ref{fig:comomentmap2}, and \ref{fig:comomentmapirs3a}. The \co\space integrated intensity maps towards IRS3B (Figures~\ref{fig:comomentmap}~and~\ref{fig:comomentmap2}) show clear signs of a collimated outflow originating from a region near IRS3B-ab and IRS3B-c that extends to \ab20\arcsec. Outflows are thought to be a signature of stellar birth with the highest velocity outflows ($>$20~km~s$^{-1}$) and high collimation are frequently found toward Class 0 protostars \citep[][]{1993ApJ...406..122A}. We observe asymmetric emission of the \co\space outflows with excess red-shifted emission dominating the data cube. The low velocity outflows appear to originate from IRS3B-ab while the high velocity jets appear to originate from both IRS3B-ab and -c. The outflows from IRS3B-ab and IRS3B-c are highly entangled at the lower velocity emission ($<10$~km~s$^{-1}$) but become more easily separated at higher velocity emission ($>20$~km~s$^{-1}$). The outflows of IRS3B-ab and IRS3B-c appear aligned within the wide opening angle (\ab45\deg) of the IRS3B-ab emission. However, both of these sources are marginally misaligned from the IRS3B-ab continuum disk minor axis ($<10$\deg). In the blue-shifted emission, there appears a faint but very wide opening angle (\ab65\deg) for the outflows which is resolved out in these observations but more clear in \citet{2016Natur.538..483T}. Additionally, there is a crescent shaped over-density along the blue-shifted emission, which could be due to orbital movement of the tertiary and/or precessions of the outflows. In the red-shifted emission there are 3 main over densities that occur along the line of the outflow, possibly indicative of irregular, high accretion events in the past. \co\space integrated intensity maps towards IRS3A (Figure~\ref{fig:comomentmapirs3a}) show low velocity, wide angle outflows towards line center, unlike the collimated outflows towards IRS3B.
+
+\subsection{\sio\space Line Emission}\label{sec:sioemission}
+The \sio\space emission (Figures~\ref{fig:siomomentmap}\space~and~ \ref{fig:siomomentmap2}) corresponds to shocks along the outflow. \sio\space most probably forms via dust grain sputtering which can inject either silicon atoms or \sio\space molecules into the gas \citep[][]{1997AA...322..296C}. This happens from neutral particle impacts on charged grains in addition to grain-grain collisions at sufficient velocities \citep[25-35~km~$s^{-1}$;][]{1997AA...322..296C}. Furthermore, we observe a relatively high asymmetry in the emission intensity between the red- and blue-shifted, while the radial extent (distance from launch location) is more symmetric about the outflow launch origin. Unlike the \co\space emission, the outflow launch location from \sio\space seems to coincide with IRS3B-c for both the high and low velocity emission rather than IRS3B-ab. However, the lower resolution leaves some ambiguity as to the true launch location.
+
+\section{Molecular Line Spectra}\label{sec:spectra}
+In order to visualize the structure and dynamics in 3D datacubes,  we construct moment 0 maps and PV diagrams to reduce the number of axis by either integrating along the frequency axis or along slices across the minor axis, respectively. We can also construct spectra, centered on the sources, and integrated radially outwards in annuli.
+
+Figure~\ref{fig:irs3bspec}\space is the \cso\space spectra for the IRS3B-c system. We extract the emission within an ellipse centered on IRS3B-c to define the main core of the IRS3B-c spectra in ``red'' and an annulus just outside of this ellipse to define the comparative IRS3B-ab disk spectra in ``red''. The IRS3B-c spectra features a deficit of emission towards line center due to the high optical depths towards this clump. Figure~\ref{fig:irs3babspec}\space is the \cso\space spectra for the IRS3B system. This spectra is centered on the kinematic center of the disk (Table~\ref{table:pvtable}) and is integrated out to the size of the gaseous disk (Table~\ref{table:obssummary3}). Figure~\ref{fig:irs3aspec}\space is the \cso\space emission towards IRS3A which is faint in these observations, making it not a suitable molecule for tracing disk kinematics.
+
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=\textwidth]{f61.pdf}
+   \end{center}
+   \caption{\cso\space integrated spectral emission profile of IRS3B-c, set to the rest frequency of \cso. The profiles were extracted by integrating the emission within an annulus, where the co-center of the annuli is set to the center point of IRS3B-c, while the inclination and position angle of the annuli is set to the IRS3B-ab parameters. The ``black'' profile is extracted from a central ellipse 2 times the size of the restoring beam, while the ``red'' profile is extracted from an annulus with the same width as the average restoring beam, three beam widths off of the source. The central emission features a deficit of emission towards line center. The profiles are normalized to highlight the emission profiles rather than the actual values of the emission.}\label{fig:irs3bspec}
+\end{figure}
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=\textwidth]{f62.pdf}
+   \end{center}
+   \caption{\cso\space integrated spectral emission profile of IRS3B-ab, set to the rest frequency of \cso. The profile is extracted by integrating the emission within an ellipse, where the center, inclination, and position angle are set to the center point of IRS3B-ab. The ``black'' profile is extracted from a central ellipse the same size as the gaseous disk in Table~\ref{table:obssummary3}. The red line is a Gaussian fit to the spectra, with parameters $\mu=$4.71$^{+0.02}_{-0.02}$~\kms\space and $\sigma=$1.06$^{+0.02}_{-0.02}$~\kms.}\label{fig:irs3babspec}
+\end{figure}
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=\textwidth]{f63.pdf}
+   \end{center}
+   \caption{\cso\space integrated spectral emission profile of IRS3A, set to the rest frequency of \cso. The profiles were extracted by integrating the emission within an ellipse, where the center, inclination, and position angle are set to the center point of IRS3A. The ``black'' profile is extracted from a central ellipse the same size as the gaseous disk in Table~\ref{table:obssummary3}. The \cso\space emission towards this source is fainter than the emission from other dense gas tracers, thought to trace disk kinematics like that of \htcn.  The red line is a Gaussian fit to the spectra, with parameters $\mu=$5.12$^{+0.15}_{-0.15}$~\kms\space and $\sigma=$1.95$^{+0.75}_{-0.17}$~\kms.}\label{fig:irs3aspec}
+\end{figure}
+
+\section{Tertiary Subtraction and Gaussian Fitting}\label{sec:tertsub}
+The continuum emission of the bright, embedded source, IRS3B-c, biases the analysis of the radial disk structure and circumstellar disk mass estimate of the IRS3B system. By removing this source, we can independently examine the disk and the tertiary source in order to characterize their properties separately~(Figure~\ref{fig:subclump}). In order to remove the tertiary source, we fit two Gaussians with a zero-level offset to the position of the source using the \textit{imfit} task in CASA (a point source and single Gaussian did not provide adequate fit while preserving the underlying disk emission). The offset serves to preserve the emission from the underlying IRS3B-ab disk emission. We also restricted the imfit task to a 0\farcs8$\times$0\farcs7\space ellipse around the source such that the fit does not extend into the surrounding emission from the spiral arms. With these parameters generated from the imfit task, we then constructed a model image of the tertiary. We used the CASA task \textit{setjy} to Fourier transform the model image and fill the model column of the measurement set with the model visibility data. We then use the task \textit{uvsub} to subtract this model from the data, producing the residual visibilities without the tertiary. A tertiary subtracted image is generated from this residual dataset and shown in Figure~\ref{fig:subclump} along with the model of the tertiary used to construct this dataset. The masses generated from this fit is \ab0.07~\solm, as described in Section~\ref{sec:dcont} and provided in Table~\ref{table:pvtable}. We then are able to reconstruct and taper the resulting visibilities to smooth over the substructure of the disk, in order to better fit the circum-multiple disk. The image (Figure~\ref{fig:subclumptaper}) is fit with a 2-D Gaussian using the \textit{imfit} in CASA and the results of the fit are provided in Table~\ref{table:obssummary3}.
+
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=0.48\textwidth]{f64.pdf}
+   \includegraphics[width=0.48\textwidth]{f65.pdf}
+   \end{center}
+   \caption{Continuum (879~\micron) images of IRS3B with the tertiary clump removed (left image) for analysis and the model of the tertiary clump (right image). The tertiary model was constructed using two 2D Gaussians with a zero-level offset in order to properly restore the underlying disk emission without introducing additional features. The left image was used to exclude the embedded tertiary mass from the dust component of the circumstellar disk while the right image image was then used for analysis of the compact dust emission around the tertiary.} \label{fig:subclump}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}
+   \includegraphics[width=0.48\textwidth]{f66.pdf}
+   \end{center}
+   \caption{Continuum (879~\micron) image of IRS3B with the tertiary removed, reconstructed with Briggs weighing robust parameter of 2 and tapered to 500k$\lambda$. This smooths over the substructure of the continuum disk to enable fitting of the disk with a single 2-D Gaussian profile, without over-fitting the substructure. The cyan line is the Gaussian fit of the circum-multiple disk of IRS3B, with the major and minor axis of the ellipses defined by the FWHM major and minor axis of the 2-D Gaussian fit.} \label{fig:subclumptaper}
+\end{figure}
+
 
 \end{document}
